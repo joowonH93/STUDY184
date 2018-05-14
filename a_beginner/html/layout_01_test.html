@@ -1,0 +1,59 @@
+<!-- layout_01_test.html -->
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <!-- meta:compat -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- css문서 불러오기 -->
+  <link rel="stylesheet" href="../css/src/layout_01_test.css" />
+  <title>Layout 구조 이해하기_test</title>
+  <!-- css -->
+  <style type="text/css">
+  </style>
+</head>
+
+<body>
+  <!-- design -->
+  <div id="wrap">
+    <div id="headBox">
+      <h1>logo</h1>
+      <div id="navigation">
+        <div class="utility_navigation">utility_navigation</div>
+        <div class="global_navigation">global_navigation</div>
+      </div>
+      <!-- // #navigation -->
+    </div>
+    <!-- // #headBox -->
+    <div class="container">
+      <div id="adBanner">adBanner</div>
+      <div id="contentBox">
+        <div class="snb">snb</div>
+        <div class="mv">mv</div>
+        <div class="best1">.best</div>
+        <div class="best2">.best</div>
+      </div>
+      <div id="contentList">
+        <div class="contentList01"></div>
+        <div class="contentList02"></div>
+        <div class="contentList03"></div>
+      </div>
+    </div>
+    <!-- // #container -->
+    <div id="footBox">
+      <h2>H2</h2>
+      <div class="info">
+        <div class="info_navi"></div>
+        <div class="address_con"></div>
+        <div class="copyright"></div>
+      </div>
+      <div class="family_menu"></div>
+    </div>
+    <!-- // #footBox -->
+  </div>
+  <script src="../js/base/jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+    (function($) {})(jQuery);
+  </script>
+</body>
+</html>

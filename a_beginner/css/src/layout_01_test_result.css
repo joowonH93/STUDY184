@@ -1,0 +1,52 @@
+/* layout_01_test_result.css */
+
+/* reset.css */
+html, body {margin:0;}
+h1, h2, h3, h4, h5, h6 {margin:0; padding:0;}
+ul, ol, li {margin:0; padding:0; list-style:none;}
+a {text-decoration:none; color:inherit;}
+.clearfix::after,
+.clearfix:after {content:" "; display:block; width:100%; height:0; clear:both;}
+
+/* design */
+#wrap {width:960px; height:2400px; background-color:#f90; margin:auto; padding:10px;}
+#wrap > div {width:100%;}
+
+/* #headBox ================================================== */
+#headBox {height:auto; background-color:#f6a;
+          padding:35px; box-sizing:border-box;}
+
+
+  h1 {width:180px; height:180px; background-color:#fff; float:left;
+  /* margin-top:35px; margin-left:35px; */ }
+  #navigation {width:650px; height:auto; background-color:#fff; float:right;
+    /* margin-top:35px; margin-right:35px; margin-bottom:35px; */ }
+    .utility_navigation {width:500px; height:60px; background-color:#0af; float:right;}
+    .global_navigation {width:100%; height:100px; background-color:#aa5; float:right; margin-top:20px;}
+
+/* .container  ================================================== */
+.container {height:1800px; background-color:#faf; }
+.container > div {width:100%;}
+  #adBanner {height:500px; background-color:#fff;}
+
+  #contentBox {width:100% height:900px; background-color:#ccc;}
+    .snb {width:20%; height:900px; background-color:#caf; float:left;}
+    .con_wrap {width:60%; height:900px; float:left;}
+    .con_wrap > .mv {width:100%; height:450px; background-color:#fa7; float:left;}
+    .con_wrap > .best {width:100%; height:450px; background-color:#f7c; float:left;}
+    #contentBox > .best {width:20%; height:900px; background-color:#caf; float:left;}
+
+  #contentList {width:100% height:400px; background-color:#aaa;}
+    .con_01 {width:30%; height:400px; float:left; background-color:#faf;}
+    .con_02 {width:40%; height:400px; float:left; background-color:#aaf;}
+    .con_03 {width:30%; height:400px; float:left; background-color:#7af;}
+
+/* #footBox  ================================================== */
+#footBox {height:auto; background-color:#5af; padding:35px; paddin-bottom:50px; box-sizing:border-box;}
+
+#footBox > h2 {width:150px; height:150px; background-color:#fff; float:left; /* margin-top:35px; margin-left:35px; */ margin-right:50px;}
+  .info {width:500px; height:250px; background-color:#fff; float:left; /* margin-top:35px; */}
+    .info_navi {width:100%; height:50px; background-color:#000; color:#fff;}
+    .address_con {width:100%; height:120px; background-color:#000; color:#fff; margin:15px auto;}
+    .copyright {width:100%; height:50px; background-color:#000; color:#fff;}
+  .family_menu {width:150px; height:50px; background-color:#fff; float:right; /* margin-top:35px; margin-right:35px; */}

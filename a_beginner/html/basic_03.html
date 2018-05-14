@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- basic_03.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <!-- meta:compat -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>기본 웹코드 이해하기2</title>
+  <!-- css -->
+  <style type="text/css">
+      div {width: 100%; height: 1000px; border-bottom:2px solid #f06;}
+      #header {background-color:#ac0;}
+      #banner {background-color:#ba0;}
+      #content {background-color:#c1f;}
+      #footer {background-color:#cff;}
+
+      ul {background-color:#fff;}
+      ul > li {boder-bottom-color:#0cf; boder-bottom-width:3px; border-bottom-style:dotted;}
+      .first {list-style-type:disc; color:#f06;}
+      .second {list-style-type:square; color:#60f;}
+      .third {list-style-type:lower-alpha; color:#6f0;}
+
+      .big {font-size:30px; font-weight:bold;}
+      .white {text-shadow:2px 2px 2px #aaa;}
+  </style>
+</head>
+<body>
+  <div id="basicWrap">
+    <div id="header">
+      <h1 id="logo">각 영역에 대해 이해하기</h1>
+      <p>
+        <a href="#header">최상단으로 가기</a>
+        <a href="#banner">광고배너가기</a>
+        <a href="#content">내용 확인하기</a>
+        <a href="#footer">사이트 정보보기</a>
+      </p>
+      <dl>
+        <dt class="more_content"><button type="button">내용 추가하기</button></dt>
+      </dl>
+    </div>
+    <div id=banner>
+      <h2>광고 배너 영역</h2>
+      <ul>
+        <li class="first">첫 번째 광고의 설명1</li>
+        <li class="second big">첫 번째 광고의 설명2</li>
+        <li class="third white">첫 번째 광고의 설명3</li>
+      </ul>
+      <ul>
+        <li class="first white">두 번째 광고의 설명1</li>
+        <li class="second big">두 번째 광고의 설명2</li>
+        <li class="third">두 번째 광고의 설명3</li>
+      </ul>
+      <ul>
+        <li class="first">세 번째 광고의 설명1</li>
+        <li class="second">세 번째 광고의 설명2</li>
+        <li class="third big on_mouse">세 번째 광고의 설명3</li>
+      </ul>
+    </div>
+    <div id="content">
+      <h2>내용 영역</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, nulla.<br />Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div id="footer">
+      <h2>내용 정보보기</h2>
+    </div>
+  </div>
+  <!-- javascript -->
+  <script type="text/javascript">
+    // Logo라는 변수(var:약칭)를 만들어서 이곳에 문서 내의 h1을 담기
+    var logo = document.getElementsByTagName('h1')[0];
+    // 개발자모드의 consle 메뉴에 Logo의 내용을 보여주기
+    // console.log(logo);
+
+    logo.addEventListener('click', function(){
+      logo.innerHTML = '<span>로고 내용 변경</span>';
+    });
+
+    var more = document.getElementsByClassName('more_content')[0];
+    var n = 0;
+    more.addEventListener('click', function() {
+      // console.Log(this.childNodes[0]);
+      n++;
+      var ddNode = document.createElements('dd');
+      var ddText = document.createTextNode('내용추가_' + n);
+      ddNode.appendChild(ddText);
+      this.appendChild(ddNode)
+    });
+  </script>
+</body>
+</html>

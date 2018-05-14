@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- ex_clearfix_01.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Document</title>
+	<style>
+		html, body {margin:0;}
+		h1, h2, h3, h4, h5, h6 {margin:0; padding:0;}
+		ul, ol, li {margin:0; padding:0; list-style:none;}
+		a {text-decoration:none; color:inherit;}
+		.test {width:500px; height:auto; background-color:#ccc; margin:auto; padding-bottom:1rem;}
+		ul {width:100%; height:auto; background-color:#aaa;}
+		.clearfix::after,
+		.clearfix:after {content:" "; display:block; clear:both; background-color:#00f;}
+		li {width:100px; height:100px; border:2px solid #fff; box-sizing:border-box; float:left; background-color:#afc;}
+	</style>
+</head>
+<body>
+	<div class="test">
+		<h1>float 처리하는 기능 이해하기</h1>
+		<ul class="clearfix">
+			<li>list_01</li>
+			<li>list_02</li>
+			<li>list_03</li>
+			<li>list_04</li>
+			<li>list_05</li>
+			<li>list_06</li>
+			<li>list_07</li>
+			<li>list_08</li>
+			<li>list_09</li>
+			<li>list_10</li>
+		</ul>
+	</div>
+</body>
+</html>

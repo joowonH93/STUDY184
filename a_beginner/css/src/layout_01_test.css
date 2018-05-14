@@ -1,0 +1,30 @@
+/* layout_01_test.css */
+body, html {margin:0;}
+#wrap {width:960px; height:auto; margin:auto; background-color:#FFDC64;}
+  #headBox {width:100%; height:250px; background-color:#FF9696;}
+    h1 {width:180px; height:180px; margin-top:35px; margin-left:35px; background-color:#fff; float:left;}
+    #navigation {width:650px; height:180px; margin-top:35px; margin-right:35px; background-color:#fff; float:right;}
+      .utility_navigation {width:500px; height:60px; margin:auto; background-color:#64FFFF; float:right;}
+      .global_navigation {width:650px; height:100px; margin-top:20px; background-color:#64FFFF; float:right;}
+
+  .container {width:100%; height:1800px; background-color:#9696FF;}
+    #adBanner {width:100%; height:15%; background-color:#aaa;}
+    #contentBox {width:100%; height:70%; background-color:#ccc;}
+      .snb {width:30%; height:100%; background-color:#f0c; float:left;}
+      .mv {width:40%; height:40%; background-color:#90c; float:left;}
+      .best1 {width:30%; height:100%; background-color:#f0b; float:right;}
+      .best2 {width:40%; height:60%; background-color:#777; float:left;}
+
+    #contentList {width:100%; height:15%; background-color:#eee;}
+      .contentList01 {width:30%; height:100%; background-color:#f00; float:left;}
+      .contentList02 {width:40%; height:100%; background-color:#0f0; float:left;}
+      .contentList03 {width:30%; height:100%; background-color:#00f; float:left;}
+
+  #footBox {width:100%; height:350px; margin:auto; background-color:#78DCFF;}
+    h2 {width:150px; height:150px; margin-top:35px; margin-left:35px; background-color:#fff; float:left;}
+    .info {width:500px; height:250px; margin-top:35px; margin-left:50px; background-color:#fff; float:left;}
+      .info_navi {width:100%; height:50px; background-color:#ddd;}
+      .address_con {width:100%; height:120px; margin:15px auto; background-color:#bbb;}
+      .copyright {width:100%; height:50px; background-color:#ccc;}
+    .family_menu {width:150px; height:50px; margin:35px; background-color:#fff; float:left;}
+    

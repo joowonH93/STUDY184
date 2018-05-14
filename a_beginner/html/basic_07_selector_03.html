@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- basic_07_selector_03.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<!-- meta:compat -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- css -->
+	<style>
+		html, body {margin:0; padding:0; border:0;}
+    li {list-style:none;}
+    a{color:inherit;}
+    li:first-child {color:#f06;} 
+    li:nth-child(3n-1) {background-color:#ca9;}
+    li:hover {color:#fff; font-weight:bold; background-color:#f06;}
+    li:hover ~ li {font-size:0.6rem;}
+    li:hover + li {background-color:#acc; box-shadow:2px 2px 2px rgba(0,0,0,0.7);}
+
+    #content {background-color:#acc; display:none;}
+	</style>
+	<title>Document</title>
+</head>
+<body>
+	<div id="wrap">
+    <div id="header">
+      <h1><a href="#">logo</a></h1>
+      <div id="gnb">
+        <h2>global navigation</h2>
+      </div>
+      <ul>
+        <li><a href="#">link_000</a></li>
+        <li><a href="#">link_001</a></li>
+        <li><a href="#">link_002</a></li>
+        <li><a href="#">link_003</a></li>
+        <li><a href="#">link_004</a></li>
+        <li><a href="#">link_005</a></li>
+        <li><a href="#">link_006</a></li>
+        <li><a href="#">link_007</a></li>
+        <li><a href="#">link_008</a></li>
+        <li><a href="#">link_009</a></li>
+        <li><a href="#">link_010</a></li>
+        <li><a href="#">link_011</a></li>
+        <li><a href="#">link_012</a></li>
+        <li><a href="#">link_013</a></li>
+        <li><a href="#">link_014</a></li>
+      </ul>
+    </div>
+    <div id="content">
+      <h2>content</h2>
+      <div class="con">lorem100</div>
+      <div class="con">lorem100</div>
+      <div class="con">lorem100</div>
+      <div class="con">lorem100</div>
+    </div>
+    <div id="footer">
+      <h2>footer</h2>
+    </div>
+  </div>
+
+	<!-- javascript -->
+	<script src="../js/base/jquery-3.3.1.js"></script>
+	<script>
+		(function($) {
+
+      $('body').css({'background-color':'#fa3'});
+
+      // $('h1').on('click', function(e) {
+      //   e.preventDefault();
+      //   $('#content').stop().slideToggle();
+      // });
+      // h1 클릭 시 content가 나옴
+
+      $('h1').on('mouseenter',function(e) {
+        e.preventDefault();
+        $('#content').stop().slideDown();
+      });
+      $('h1').on('mouseleave', function(e) {
+        e.preventDefault();
+        $('#content').stop().fadeOut();
+      });
+      // h1에 마우스오버 시 content가 나옴
+
+    })(jQuery);
+	</script>
+</body>
+</html>
