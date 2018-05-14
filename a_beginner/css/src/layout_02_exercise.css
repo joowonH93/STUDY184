@@ -1,0 +1,26 @@
+/* layout_02_exercise.css */
+
+/* reset.css */
+html, body {margin:0;}
+h1, h2, h3, h4, h5, h6 {margin:0; padding:0;}
+ul, ol, li, dl, dt, dd {margin:0; padding:0; list-style:none;}
+a {text-decoration:none; color:inherit;}
+.clearfix::after,
+.clearfix:after {content:" "; display:block; width:100%; height:0; clear:both;}
+
+/* design */
+.wrap {width:700px; height:745px; background-color:#000; margin:auto; padding:5px;}
+
+#header {width:100%; height:80px; background-color:#45B29F; padding:15px; box-sizing:border-box;}
+  h1 {width:100px; height:50px; background-color:#fff; float:left;}
+  .navigation > ul > li {width:100px; height:30px; background-color:#fff; margin-top:20px; margin-left:10px; float:right;}
+
+#banner {width:100%; height:250px; background-color:#FDF3C2;}
+.aside {width:100%; height:35px; background-color:#0B0366; color:#fff;}
+
+#contentBox {width:100%; height:300px; background-color:#FCD6F5;}
+  .articleBox01 {width:50%; height:100%; background-color:#FDA0FA; padding:30px; box-sizing:border-box;}
+    .articleBox01 > ul > li {width:140px; height:120px; background-color:#fff; float:left;}
+  .articleBox02 {width:50%; height:300px; background-color:#9E02BE; float:left;}
+  
+#footer {width:100%; height:80px; background-color:#FB9905;}
