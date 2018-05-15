@@ -1,0 +1,110 @@
+/* layout_02_test_result.css */
+
+/* reset.css*/
+html, body {margin:0;}
+ul, ol, li {margin:0; padding:0; list-style:none;}
+
+/** mpbo
+
+  * margin: 외부 여백
+  * margin: 30px; - 사방 30px
+  * margin: 30px 50px; 위아래 30px 좌우 50px
+  * margin: 30px auto; 위아래 30px 좌우 자동으로(가운데)
+
+  *** margin:auto; 와 float기능을 함께 사용할 수 없다
+
+  **********
+
+  * padding: 내부 여백
+  * padding: 40px; - 사방 40px
+  * padding: 40px 10px; - 위아래 40px 좌우 10px
+
+  *** padding: 30px auto; - error(Padding에는 auto수치가 없음)
+  *** padding기능 사용 시 box-sizing 속성을 사용할 수 있고
+    값은 content-box(기본) | border-box(정해진 크기의 안쪽으로 공간을 생성)
+
+  */
+
+
+.wrap {width:800px; height:350px; background-color:#caf; margin:0 auto; padding:25px; box-sizing:border-box;}
+.wrap > div {width:250px; height:300px; float:left; padding:25px; box-sizing:border-box;}
+  .one_box {background-color:#ff0;}
+  .in_box {width:200px; height:250px; background-color:#fff;}
+  .two_box {background-color:#f0f;}
+  .in_box {width:200px; height:250px; background-color:#fff;}
+  .third_box {background-color:#0ff;}
+  .in_box {width:200px; height:250px; background-color:#fff;}
+
+/* ********** */
+
+.margin {width:800px; height:auto; margin:auto; padding:1rem; box-sizing:border-box; background-color:#ccc;}
+.box > ul {width:100%; height:500px; background-color:#fff;}
+.box > ul > li {list-style:none; width:100px; height:100px; float:left; background-color:#777; color:#fff; font-weight:bold; line-height:100px; text-align:center;}
+.box > ul > li:nth-child(3n-1) {background-color:#57a;}
+.box > ul > li:nth-child(3n-2) {background-color:#a75;}
+
+/* ********** */
+
+.margin li:nth-child(1) {margin:10px;}
+  /* 사방 10px */
+.margin li:nth-child(2) {margin:10px 50px;}
+  /* 위아래 10px 좌우 50px */
+.margin li:nth-child(3) {margin:10px 100px 50px;}
+  /* 위 10px 좌우 100px 아래 50px */
+.margin li:nth-child(4) {margin:10px 100px 50px 30px;}
+  /* 위 10px 오른쪽 100px 아래 50px 왼쪽 30px  margin은 시계방향으로 돈다 */
+
+/* ********** */
+
+/* 단위(unit) : 16px == 12pt == 100% == 1em == 1rem */
+
+.padding {width:800px; width:50rem; height:auto; box-sizing:border-box; padding:1rem; background-color:#fac; margin:auto;}
+
+.padding > ul > li:nth-child(1){padding:30px;}
+.padding > ul > li:nth-child(2){padding:30px 5px;}
+.padding > ul > li:nth-child(3){padding:30px 100px 5px;}
+.padding > ul > li:nth-child(4){padding:30px 10px 100px 5px;}
+
+/* ********** */
+
+/** border란 테두리 외곽선
+  * border-width: 0.3rem;   - 선의 두께
+  * border-style: solid(직선) | dotted(점선 | dashed(쇄선) | ridge(액자처럼) | double(이중선)   - 선의 모양
+  * border-color: rgba(255, 255, 100, 0.5)   - 선의 색상; 
+**/
+
+
+.border {width:800px; width:50rem; height:auto; box-sizing:border-box; padding:1rem; background-color:#cca; margin:auto;}
+
+.border > ul > li:nth-child(1){border-width:1rem; border-style:dotted; border-color:#ffa;}
+.border > ul > li:nth-child(2){border:border-width:0.5rem; border-style:dashed; border-color:#ac0;}
+.border > ul > li:nth-child(3){border:10px ridge #fff;}
+.border > ul > li:nth-child(4){border-left:20px double #faa; 
+  border-top:20px solid #aaf; 
+  border-bottom-width:30px; border-bottom-style:double; border-bottom-color:#afa;}
+.border > ul > li:nth-child(5){border:5px solid #fac; box-sizing:border-box;}
+.border > ul > li:nth-child(6){border:10px solid #fa0; box-sizing:border-box; padding:20px;}
+.border > ul > li:nth-child(7)
+  {color:#555; margin-top:70px; width:0; height:0; 
+  border:30px solid #333; 
+  background-color:rgba(0,0,0,0) !important;
+  border-top-color:transparent; 
+  border-right-color:rgba(0,0,0,0);
+  border-bottom-color:rgba(0,0,0,0);}
+
+/** 속성값의 말미에 !important를 사용하면 강제성을 띈다
+  * 수정처리가 거의 불가능에 가깝다!
+  * 가급적 사용하지 않는 것을 권장
+**/
+
+/* ********** */
+
+.outline {width: 800px; height: auto; border-color: #ccc; margin: auto; padding: 1rem; border-bottom: border-box;}
+
+.outline li:nth-child(1) {outline-width:10px; outline-style: dashed; outline-color: #aaf;}
+.outline li:nth-child(2) {outline:20px solid #ff0}
+.outline li:nth-child(3) {outline:20px solid #af0; outline-top-width:none;}
+
+/** margin, padding, border는 부피 O, 다른 요소와 부딪히면 밀어냄
+  * outline은 부피를 가지지 X(안개와 같음), 한쪽만 처리X, 주로 focus
+**/

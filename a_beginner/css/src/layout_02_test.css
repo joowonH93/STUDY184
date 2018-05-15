@@ -1,0 +1,15 @@
+/* layout_02_test.css */
+
+/* reset.css*/
+html, body {margin:0;}
+h1, h2, h3, h4, h5, h6 {margin:0; padding:0;}
+ul, ol, li {margin:0; padding:0; list-style:none;}
+a {text-decoration:none; color:inherit;}
+
+#box {width:800px; height:350px; background-color:#caf; padding:25px; margin:auto; box-sizing:border-box;}
+    #contentBox01 {width:250px; height:300px; background-color:#ff0; margin:auto; float:left;}
+      .box01 {width:200px; height:250px; background-color:#fff;  margin:25px;}
+    #contentBox02 {width:250px; height:300px; background-color:#f0f; margin:auto; float:left;}
+      .box02 {width:200px; height:250px; background-color:#fff; margin:25px;}
+    #contentBox03 {width:250px; height:300px; background-color:#0ff; margin:auto; float:left;}
+      .box03 {width:200px; height:250px; background-color:#fff; margin:25px;}
