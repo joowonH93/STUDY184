@@ -9,11 +9,10 @@ a {text-decoration:none; color:inherit;}
 .clearfix:after {content:" "; display:block; width:100%; height:0; clear:both;}
 
 /* design */
-#wrap {width:960px; height:850px; margin:auto; background-color:#FD0CD9;}
+#wrap {width:960px; height:850px; text-align:center; background-color:#E4007F; margin:auto;}
 
-  #header {width:100%; height:100px; background-color:#6BDFFD;}
-  .nav {width:100%; height:50px; background-color:#2E00E3;}
+#header {width:100%; height:100px; background-color:#00A0E9;}
+.navi {width:100%; height:50px; background-color:#1D2088;}
 
-  #section {width:100%; height:580px; background-color:#fff;}
-
-  #footer {width:100%; height:120px; background-color:#6BDFFD;}
+#section {width:100%; height:580px; background-color:#fff;}
+#header {width:100%; height:120px; background-color:#00A0E9;}
