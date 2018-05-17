@@ -1,16 +1,51 @@
 /* semantic_01.css */
 
-#wrap {margin:auto; box-sizing:border-box; padding:0.5rem;
-  width:960px; height:auto; background-color: #f09;}
+#wrap {margin:auto; box-sizing:border-box; padding:0.5rem; text-align:center;
+  width:960px; width:60rem; height:auto; background-color: #f09;}
 
   #headBox {margin-bottom:0.5rem;
-    width:100%; height:150px; background-color:#0af;}
+    width:100%; height:150px; height:9.375rem; background-color:#0af;}
+    #headBox > h1 {width:20%; height:100%;background-color:#9a5;}
 
-  #gnb {width:100%; height:50px; background-color:#06a;}
+  #gnb {width:100%; height:auto; background-color:#06a;}
+    #gnb > h2{width:0; height:0; position:relative; z-index:-1;}
+    #gnb > ul{width:100%; height:50px; height:3.125rem; background-color:#fff;}
+    #gnb > ul > li {/*margin-right:1.33333%;*/ 
+      margin-right:calc(4% / 3); width:24%; height:100%; float:left; background-color: #faa;}
+    #gnb > ul > li:last-child {margin-right: 0;}
 
   #contentBox {margin:0.5rem 0; box-sizing:border-box; padding:0.5rem;
     width:100%; height:auto; background-color:#fff;}
-    .side_view {float:left; width:40%; height:580px; background-color: #fa0;}
-    .content_view {float:right; width:60%; height:580px; background-color: #afa;}
+    #contentBox > h2 {width:0; height:0; position:relative; z-index:-1;}
 
-  #footBox {width:100%; height:120px; background-color:#0af;}
+    .side_view {box-sizing:border-box; float:left; padding:0.5rem; width:40%; height:auto; background-color: #fa0;}
+
+      .side_view > h3{margin-bottom: 1rem;width:100%; height:100px; height:6.25rem;background-color:#9a5;}
+      .side_view > ul{width:100%; height:470px; height:29.375rem; background-color:#ccc;}
+      .side_view > ul > li{margin-bottom:10px; margin-bottom: 0.625rem; width:100%; height:auto;background-color:#fff;border-bottom:10px solid #fa0; border-bottom:0.625rem solid #a60; font-size:14px;}
+      .side_view > ul > li:last-child {margin-bottom: 0;}
+
+    .content_view {float:left; width:60%; height:auto; background-color: #afa;}
+     .content_view > h3 {width:0; height:0; position:relative; z-index:-1;} 
+    /* .content_view > h3 {width:0; height:0; font-size:0;} */
+    /* .content_view > h3 {width:0; height:0; overflow:hidden;} */
+    /* .content_view > h3 {width:0; height:0; text-indent:-9999rem; color:#334;} */
+    .content_view > .con1 {width: 100%; height:140px; background-color: #aaf;}
+    .content_view > .con1 > h4 {width:0; height:0; position:relative; z-index:-1;}
+    .content_view > .con1 > ul {padding: 10px; box-sizing:border-box; width: 100%;height: 140px;}
+    .content_view > .con1 li:nth-child(1) {width:50px;height:100%;background-color:#046;float: left;}
+    .content_view > .con1 li:nth-child(2) {width:50px;height:100%; background-color:#046;float: right;}
+
+    .content_view > div > h4 {width: 100%; height:50px; background-color: #000; color:#fff;}
+
+    .content_view > div > .con {margin-bottom: 10px;width: 100%;height: 130px;background-color: #9a5;}
+    .content_view > div > .con:last-child {margin-bottom: 0;}
+    
+    .content_view > div h5 {width:0; height:0; position:relative; z-index:-1;} 
+    .content_view > div > .con > ul {padding: 10px; float:left; box-sizing:border-box; width: 100%; height:100%; background-color:#af0;}
+    .content_view > div > .con li {float:left; margin-right: 10px; width:124px; height: 100%; background-color:#fff;}
+    .content_view > div > .con li:list-child {margin-right: 0;}
+
+  #footBox {width:100%; height:120px; height:7.5rem; background-color:#0af; }
+    #footBox > h2 {float: left; width:20%; height:100%; height:7.5rem; background-color: #9a5;}
+    #footBox > .f_box {margin-top:60px; margin-top:3.75rem; width:79%; height:60px; height:3.75rem; float:right; background-color:#fff;}
