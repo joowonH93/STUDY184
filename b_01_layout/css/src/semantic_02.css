@@ -1,10 +1,10 @@
 /* semantic_02.css */
 
 /* #wrap ************************************************** */
-#wrap {margin:auto; padding:10px; 
+#wrap {margin:auto; padding:1px; padding:0.0625rem; 
   width:960px; width:60rem; height:auto; min-height:100px; min-height:6.25rem;
   text-align:center;
-  background-color:#FF7373;}
+  background-color:#eee;}
 
 /* #headBox ************************************************** */
 #headBox {padding:25px 10px; padding:1.5625rem 0.625rem; box-sizing:border-box;
