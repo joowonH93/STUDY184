@@ -1,0 +1,115 @@
+/* semantic_02.css */
+
+/* #wrap ************************************************** */
+#wrap {margin:auto; padding:10px; 
+  width:960px; width:60rem; height:auto; min-height:100px; min-height:6.25rem;
+  text-align:center;
+  background-color:#FF7373;}
+
+/* #headBox ************************************************** */
+#headBox {padding:25px 10px; padding:1.5625rem 0.625rem; box-sizing:border-box;
+  width:100%; height:112px; height:7rem; background-color:#fff;}
+  #headBox > h1 {float:left;
+    width:60px; width:3.75rem; height:100%; background-color:#FF7373;}
+  #headBox > div {float:right;
+    width:220px; width:13.75rem; height:32px; height:2rem; background-color:#DFDFDF;} 
+
+/* #adBox ************************************************** */
+#adBox {width:100%; height:625px; height:39.0625rem; background-color:#DFDFDF;}
+
+/* #goodBox ************************************************** */
+#goodBox {width:100%; height:auto; background-color:#fff;}
+  #goodBox ul {width:100%; height:275px; height:17.1875rem; background-color:#999;}
+  #goodBox ul > li {float:left;
+    width:240px; width:15rem; height:100%;}
+  #goodBox ul > li:nth-child(2n) {background-color:#777;}
+
+/* #snbBox ************************************************** */
+#snbBox {padding-top:75px; padding-top:4.6875rem; box-sizing:border-box;
+  width:100%; height:400px; height:25rem; background-color:#DFDFDF;}
+  #snbBox > h2 {margin:auto;
+    width:300px; width:18.75rem; height:65px; height:4.0625rem; background-color:#FF7373;}
+  
+  /* #snbBox ul ************************************************** */
+  #snbBox ul {margin:42px auto; margin:2.625rem auto;
+    width:780px; width:48.75rem; height:176px; height:11rem; background-color:transparent;}
+    #snbBox ul > .con {float:left; margin-right:100px; margin-right:6.25rem;
+      width:220px; width:13.75rem; height:100%; background-color:#999;}
+      #snbBox ul > li {float:left; margin-right:65px; margin-right:4.0625rem;
+        width:110px; height:100%; background-color: #999;}
+      #snbBox ul > li:last-child {margin-right:0;}
+        #snbBox ul dl {width:100%; height:100%;}
+        #snbBox ul dl dd {width: 100%; height:88px; height:5.5rem; background-color: #999;}
+        #snbBox ul dl dd:first-of-type {background-color:#777;}
+
+/* #tasteBox ************************************************** */
+#tasteBox {width:100%; height:365px; height:22.8125rem; background-color:#fff;}
+  #tasteBox > div {float:left; padding:75px 180px 64px 100px; padding:4.6875rem 11.25rem 4rem 6.25rem; box-sizing:border-box;
+    width:480px; width:30rem; height:365px; height:22.8125rem; background-color:#777;}
+  #tasteBox > div:last-child {background-color:transparent;}
+    #tasteBox ul {width:200px; width:12.5rem; height:226px; height:14.125rem; background-color:transparent;}
+    #tasteBox ul > li:first-child {margin-bottom:18px; margin-bottom:1.125rem;
+      height:48px; height:3rem; background-color: #777;}
+    #tasteBox ul > li:last-child {height:160px; height:10rem; background-color: #999;}
+
+/* #eduBox ************************************************** */
+#eduBox {padding-top:88px; padding-top:5.5rem; box-sizing:border-box;
+  width:100%; height:550px; height:34.375rem; background-color:#DFDFDF;}
+  #eduBox > h2 {margin:auto;
+    width:300px; width:18.75rem; height:65px; height:4.0625rem; background-color:#FF7373;}
+    #eduBox ul {margin:35px auto 0; margin:2.1875rem auto 0;
+    width:940px; width:58.75rem; height:285px; height:17.8125rem;}
+      #eduBox ul > li {padding:30px; padding:1.875rem; box-sizing:border-box;
+        float:left; margin-right:20px; margin-right:1.25rem; 
+        width:460px; width:28.75rem; height:100%; background-color:#777;}
+      #eduBox ul > li:last-child {margin-right:0; background-color:#999;}
+
+        /* #eduBox dl ************************************************** */
+        #eduBox ul dl {width:100%; height:100%; background-color:transparent; text-align:left;}
+        #eduBox ul dl > dt {margin-bottom:30px; margin-bottom:1.875rem;
+          width:265px; width:16.5625rem; height:48px; height:3rem; background-color:#777;}
+        #eduBox ul dl > dd {float:left; width:190px; width:11.875rem; height:147px; height:9.1875rem; background-color:#fff;}
+        #eduBox ul dl > dd:last-child {margin-left:20px; margin-left:1.25rem;}
+
+/* #originBox ************************************************** */
+#originBox {padding:90px; padding:5.625rem; box-sizing:border-box;
+  width:100%; height:560px; height:35rem; background-color:#fff;}
+  #originBox > h2 {width:220px; width:13.75rem; height:48px; height:3rem; background-color:#FF7373;}
+  #originBox > ul {margin-top:25px; margin-top:1.5625rem;
+    width:100%; height:307px; height:19.1875rem;}
+    #originBox li {float:left; height:100%; background-color: #DFDFDF;}
+    #originBox li:first-child {margin-right:100px; margin-right:6.25rem;
+      width:300px; width:18.75rem;}
+    #originBox li:last-child {width:380px;}
+
+/* #partsBox ************************************************** */
+#partsBox {padding-top:65px; padding-top:4.0625rem; box-sizing:border-box;
+  width:100%; height:590px; height:36.875rem; background-color:#DFDFDF;}
+  #partsBox > h2 {margin:auto;
+    width:300px; width:18.75rem; height:50px; height:3.125rem; background-color:#ff7373;}
+    #partsBox > ul {margin:40px auto 35px; margin:2.5rem auto 2.1875rem;
+      width:940px; width:58.75rem; height:auto; background-color:#000;}
+      #partsBox li {float:left; width:470px; width:29.375rem; height:200px; height:12.5rem;}
+      #partsBox li > div {float:left; width:235px; width:14.6875rem; height:100%; background-color:#777;}
+      #partsBox li > div:nth-child(2n) {background-color:#aaa;}
+      #partsBox .reverse > div {float:right;}
+
+/* #mapBox ************************************************** */
+#mapBox {padding-top:90px; padding-top:5.625rem; box-sizing:border-box;
+  width:100%; height:560px; height:35rem; background-color:#fff;}
+  #mapBox > h2 {margin:auto;
+    width:300px; width:18.75rem; height:48px; height:3rem; background-color: #ff7373;}
+  #mapBox > ul {margin:50px auto 85px; margin:3.125rem auto 5.3125rem;
+    width:760px; width:47.5rem; height:285px; height:17.8125rem;}
+    #mapBox li {float:left; margin-right:20px; margin-right:1.25rem;
+      width:370px; width:23.125rem; height:100%; background-color:#DFDFDF;}
+    #mapBox li:last-child {margin-right:0;}
+
+/* #footBox ************************************************** */
+#footBox {padding:36px 90px 0; padding:2.25rem 5.625rem 0; box-sizing:border-box;
+  width:100%; height:270px; height:16.875rem; background-color:#666;}
+  #footBox > h2 {float:left; margin-right:100px; margin-right:6.25rem;
+    width:140px; width:8.75rem; height:128px; height:8rem; background-color:#ff7373;}
+  #footBox li {float:left; height:128px; height:8rem; background-color:#fff;}
+  #footBox li:first-child {margin-right:20px; margin-right:1.25rem; width:220px; width:13.75rem;}
+  #footBox li:last-child {width:300px; width:18.75rem;}
