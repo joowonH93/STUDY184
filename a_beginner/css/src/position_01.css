@@ -1,0 +1,32 @@
+/* position_01.css */
+
+body {height:2500px; height:156.25rem;}
+
+h1 {padding:16px; padding:1rem; box-sizing:border-box;
+  width:100%; height:auto; background-color:#07a;
+  color:#fff; text-align:center;}
+
+.position {margin:auto; margin-top:32px; margin-top:2rem; border:3px solid #0af; border:0.1875rem solid #0af;
+  width:1200px; width:75rem;
+  position:relative;}
+
+.position > div {float:left; box-sizing:border-box; border:1px solid #777;
+  width:150px; width:9.375rem; height:150px; height:9.375rem;
+  text-align:center; line-height:150px; line-height:9.375rem;}
+
+.basic {background-color:#1af;}
+
+.static {background-color:#f87;
+  position:static; top:200px; left:-200px; z-index:-100;}
+
+.absolute {background-color:#3ca;
+  position:absolute; top:0; right:-50px;}
+/* absolute는 부모 속성을 기준으로 움직인다 */
+
+.relative {background-color:#fd9;
+  position:relative; top:100px; left:100px;}
+/* relative는 자기 자신을 기준으로 움직인다 */
+
+.fixed {background-color:#5e0;
+  position:fixed; top:100px; right:0;}
+/* 브라우저 화면을 기준으로 움직인다 */
