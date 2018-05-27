@@ -1,0 +1,66 @@
+/* position_04.css */
+
+#wrap {margin:auto; padding:10px; box-sizing:border-box;
+  width:960px; height:auto; min-height:100px;
+  background-color:#ccc;}
+
+#headBox {width:100%; height:auto; min-height:70px;
+  background-color:#99a;}
+
+.banner_area {width:100%; height:auto; min-height:600px;
+  background-color: #dfdfdf;}
+
+.banner_wrap {position:relative; margin-bottom:1rem;
+  width:100%; height:500px; background-color:#acf;}
+
+.banner {width:100%; height:500px;
+  background-color:#f0a; color:#fff;}
+
+
+/* ****************************** */
+
+
+.indicator {
+  position:absolute; left:50%; margin-left:-100px; bottom:15px; 
+  box-sizing:border-box; padding:5px;
+  width:200px; height:50px; background-color:#fa0;
+  border-radius:1rem;}
+
+.indicator > li {margin-right:10px; float:left;
+  width:40px; height:40px;
+  border-radius:100%;
+  overflow:hidden; /*모양 밖으로 넘치는 부분을 없앤다*/
+  background-color:#fff;}
+.indicator > li:last-child {margin-right:0;}
+
+.indicator a {
+  display:block; width:100%; height:100%;}
+.indicator a:focus {background-color:#5c3;}
+
+
+/* ****************************** */
+
+
+div.l_btn {
+  position:absolute; top:50%; margin-top:-100px;
+  left:0;
+  width:50px; height:200px; background-color:#bb7;}
+
+div.r_btn {
+  position:absolute; top:50%; margin-top:-100px;
+  right:0;
+  width:50px; height:200px; background-color:#afa;}
+
+
+/* ****************************** */
+
+.btn {position:absolute; top:50%; margin-top:-100px; left:0;
+  width:100%; height:0;}
+
+.btn > button {width:50px; height:200px; background-color:#cca;
+  border:0; cursor:pointer;}
+.btn > button:hover {background-color:#faa;}
+.btn > button:focus {background-color:#777; color:#fff;}
+
+.btn > .l_btn {float:left;}
+.btn > .r_btn {float:right;}

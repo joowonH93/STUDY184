@@ -1,0 +1,34 @@
+/* position_05_banner_test.css */
+
+#bannerWrap {
+  margin:auto;
+  overflow:hidden;
+  position:relative;
+  width:1366px; width:85.375rem; height:700px; height:43.75rem;
+  border:1px solid #777; border:0.0625rem solid #777;}
+
+
+/* button */
+.btn {position:absolute; top:50%; left:0;
+  margin-top:-75px; margin-top:-4.6875rem;
+  width:100%; height:0;}
+.btn > button {width:40px; width:2.5rem; height:150px; height:9.375rem;
+  background-color:#fff; float:left;}
+.btn > button:last-of-type {float: right;}
+
+
+/* banner */
+.banner {width:400%; height:100%;
+  background-color:#ccc;
+  transition:all 300ms; margin-left:0;}
+
+.banner > div {
+  width:25%; /*width:calc(100%/4);*/ height:100%;
+  text-align:center; line-height:700px; line-height:43.75rem;
+  font-size:48px; font-size:3rem; font-weight:bold;
+  float:left;}
+
+.banner_01 {background-color: #7ff;}
+.banner_02 {background-color: #8fa;}
+.banner_03 {background-color: #9f7;}
+.banner_04 {background-color: #10f;}
