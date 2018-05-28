@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- test.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>pageTitle</title>
+
+  <!-- design -->
+  <style>
+    /* position_test01 ------------------------------------------ */
+    .wrap {margin: auto;
+      position:relative;
+      width:800px; height:600px; background-color:#f0a;}
+
+    .wrap:before {content:" "; display:block;
+      position:absolute; top:0; left:0;
+      width:100%; height:100%; background-color:rgba(0,0,0,0.3);}
+
+    .modal {position:absolute; top:30%; left:50%; margin-left:-250px;
+      width: 500px; height: 150px; background-color: #0af;
+      text-align:center; line-height:150px; color:#fff; font-size:1.2rem;}
+
+    /* position_test02 ------------------------------------------ */
+    ul, li {padding: 0; margin: 0; list-style:none;}
+    .hidden {display:block; width: 0; height: 0; position:relative; z-index: -100;}
+
+    .wrap2, .wrap3, .wrap4 {margin: auto; margin-top:50px;
+      position:relative;
+      width: 800px; height: 600px; background-color: #f0a;}
+
+    .side_indicator {position:absolute;
+      right:30px; top:50%; margin-top: -175px;
+      width: 50px; height: 350px; background-color: #0af;
+      border-radius:5px;}
+    .side_indicator > ul {padding:10px; box-sizing:border-box; width: 100%; height: 100%;}
+    .side_indicator li {width: 30px; height: 30px; background-color: #fff; border-radius:100%; margin-bottom:45px;}
+    .side_indicator li:last-child {margin-bottom:0;}
+
+    /* position_test03 ------------------------------------------ */
+    .indicator a {position:relative; display:block; width: 100%; height: 100%; background-color: #4fa; border-radius:100%;}
+    .indicator span {position:absolute; right:40px; top:-5px;
+      box-sizing:border-box; padding:5px 10px;
+      display:none; width: 200px; height: 40px; background-color: #fca; font-size:0.6rem;}
+
+    .indicator:hover a {background-color: #fa0;}
+    .indicator:hover span,
+    .indicator a:focus span {display:block;}
+
+    /* position_test04 ------------------------------------------ */
+    :root{font-size:20px;}
+    .title_box {position:absolute; top:30%; left:20px; z-index:200;
+      padding: 10px; box-sizing:border-box;
+      width: 450px; height: 200px; background-color:rgba(100,0,100,0.6); color:#fff;}
+    .title_box > h1 {font-size:1.5rem; margin: 0; text-transform:capitalize;}
+    /* text-transform:uppercase; 대문자로 */
+    /* text-transform:lowercase; 소문자로 */
+    /* text-transform:capitalize; 첫글자만 대문자로 */
+    .title_box > p {font-size:0.5rem;}
+
+    .img1 {position:absolute; right:220px; bottom: 0; z-index:100;
+      width: 250px; height: 400px; background-color: #5bb;}
+    .img2 {position:absolute; right: 20px; bottom: 0;
+      width: 250px; height: 500px; background-color: #798;}
+
+  </style>
+</head>
+
+<body>
+  <!-- design -->
+  <div class="wrap">
+    <div class="modal">
+      화면 상의 가운데 나타나는 팝업 형태의 창
+    </div>
+  </div><!-- // .wrap -->
+
+
+  <div class="wrap2">
+    <div class="side_indicator">
+      <ul>
+        <li><span class="hidden">1</span></li>
+        <li><span class="hidden">2</span></li>
+        <li><span class="hidden">3</span></li>
+        <li><span class="hidden">4</span></li>
+        <li><span class="hidden">5</span></li>
+      </ul>
+    </div>
+  </div><!-- // .wrap2 -->
+
+
+  <div class="wrap3">
+    <div class="side_indicator">
+      <ul>
+        <li class="indicator"><a href="#"><span>list hover 처리 시 나오는 텍스트1</span></a></li>
+        <li class="indicator"><a href="#"><span>list hover 처리 시 나오는 텍스트2</span></a></li>
+        <li class="indicator"><a href="#"><span>list hover 처리 시 나오는 텍스트3</span></a></li>
+        <li class="indicator"><a href="#"><span>list hover 처리 시 나오는 텍스트4</span></a></li>
+        <li class="indicator"><a href="#"><span>list hover 처리 시 나오는 텍스트5</span></a></li>
+      </ul>
+    </div>
+  </div><!-- // .wrap3 -->
+
+  <div class="wrap4">
+    <div class="title_box">
+      <h1>title</h1>
+      <p>lorem ipsum dolor sit amet,<br />
+      consectetur adipisicing elit. Error in<br />
+      consectetur vitae ex recusandae<br />
+      numquam, illum quos.</p>
+
+    </div>
+    <div class="img1"></div>
+    <div class="img2"></div>
+  </div><!-- // .wrap4 -->
+
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.js"></script>
+</body>
+</html>

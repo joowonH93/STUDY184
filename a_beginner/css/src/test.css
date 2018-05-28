@@ -1,0 +1,7 @@
+/* test.css */
+
+.wrap {margin: auto; width: 800px; height: 600px; background-color: #f0a; 
+  position:relative;}
+
+.title_box {width: 450px; height: 200px;
+  position:absolute; top:30%; left:20px; rgba:255 255 255 0.5;}

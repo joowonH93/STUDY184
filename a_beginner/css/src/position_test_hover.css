@@ -1,0 +1,20 @@
+/* position_test_hover.css */
+ul, li {padding: 0; margin: 0; list-style:none;}
+
+.wrap {margin: auto;
+  width: 800px; height: 600px; background-color: #f0a; 
+  position:relative;}
+
+.side_indicator {
+  padding: 10px; box-sizing:border-box;
+  width: 50px; height: 350px; background-color: #0af;
+  position:absolute; top:50%; margin-top: -175px; right: 30px;}
+
+  .side_indicator > ul {width: 100%; height: 100%;}
+
+  .side_indicator li {margin-bottom: 45px; border-radius:1rem;
+    width: 30px; height: 30px; background-color: #fff;
+    cursor:pointer;}
+  .side_indicator li:last-of-child {margin-bottom: 0;}
+
+  .side_indicator li:hover span {margin-right:50px; float:right; display:block; width:200px; height:40px; background-color:#06c;}
