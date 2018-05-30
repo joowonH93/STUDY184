@@ -1,0 +1,13 @@
+/*position_test_01.css*/
+
+.wrap {margin: auto;
+  position:relative;
+  width:800px; height:600px; background-color:#f0a;}
+
+.wrap:before {content:" "; display:block;
+  position:absolute; top:0; left:0;
+  width:100%; height:100%; background-color:rgba(0,0,0,0.3);}
+
+.modal {position:absolute; top:30%; left:50%; margin-left:-250px;
+  width: 500px; height: 150px; background-color: #0af;
+  text-align:center; line-height:150px; color:#fff; font-size:1.2rem;}
