@@ -1,0 +1,186 @@
+/*rwd_test_01.css*/
+
+/*common area*/
+body{background-color: #fff; width: 100%; height: 100%;}
+#wrap {margin:auto; width:100%; height:auto; overflow: hidden;}
+#headBox {position:fixed;
+  box-sizing:border-box; padding:10px;
+  width:100%; background-color:#333;}
+  #headBox > .h_box {margin:auto; width:100%; height:100%;}
+  #headBox h1 {float:left; height:100%; background-color:#33B88F;}
+  #naviBox {width:100%; height:100%;}
+  #headBox > .h_box .unb1 {float:right; background-color:#33B88F;}
+    #headBox #naviBox ul {width:100%; height:100%;}
+    #headBox #naviBox ul > li {float:right; background-color:#33B88F;}
+  #headBox >.h_box .unb2 {float:right; background-color:#33B88F;}
+#adBox {position:relative; width:100%; background-color:#ba7;}
+  #adBox > .ad_box {width:100%; height:100%;}
+  #adBox li {background-color:rgba(255,255,255,0.5);}
+  #adBox li:last-child {margin-bottom:0;}
+
+  #adBox > .l_btn {position:absolute;
+    top:50%; left:50%;
+    width:50px; height:100px; background-color:transparent;}
+  #adBox > .r_btn {position:absolute;
+    top:50%; right:50%;
+    width:50px; height:100px; background-color:transparent;}
+
+#conBox {margin:auto; width:100%; background-color:#547D77;}
+  #conBox > h2 {width:192px; height:156px; background-color:#33B88F;}
+  #conBox > .c_box {float:left; width:100%; height:auto;}
+  #conBox li {float:left; background-color:#fff;}
+#eventBox {margin:auto; width:100%; background-color:#957DE9;}
+  #eventBox > .event_box {width:100%; height:100%;}
+  #eventBox li {float:left; height:100%;}
+  #eventBox li:nth-child(1) {background-color:#957DE9;}
+  #eventBox li:nth-child(2) {background-color:#95ABE9;}
+  #eventBox li:nth-child(3) {background-color:#95D2E9;}
+#footBox {width:100%; background-color:#333;}
+  #footBox > .f_box {margin:auto;
+    box-sizing:border-box; padding:20px;
+    width:960px; height:100%;}
+
+
+/*mobile > 320*/
+@media screen and (max-width:320px) {
+
+#headBox {padding:5px; height:40px;}
+  #headBox h1 {width:100px;}
+  #headBox >.h_box .unb1 {margin-left:5px; width:30px; height:25px;}
+  #headBox >.h_box .unb2 {width:25px; height:25px;}
+#adBox {box-sizing:border-box; padding-left:25px; padding-right:25px; padding-top:39.0625vw; height:480px;}
+  #adBox li {width:84.375vw; height:60px; margin-bottom:20px;}
+  #adBox > .l_btn {display:none;}
+  #adBox > .r_btn {display:none;}
+#conBox {height:330px;}
+  #conBox > h2 {display:none;}
+  #conBox > .c_box {margin:auto; padding-top:40px; padding-bottom: 15px; width:320px; }
+  #conBox li {width:46.875vw; height:135px; margin-right:5px; margin-bottom:5px;}
+  #conBox li:nth-child(2n) {margin-right:0;}
+  #conBox li:nth-child(3) {margin-bottom:0;}
+  #conBox li:nth-child(4) {margin-bottom:0;}
+#eventBox {height:480px;}
+  #eventBox li:nth-child(1) {width:100%;}
+  #eventBox li:nth-child(2) {display:none;}
+  #eventBox li:nth-child(3) {display:none;}
+#footBox {height:40px;}
+
+}
+
+/*mobile*/
+@media screen and (min-width:321px) and (max-width:480px) {
+
+#headBox {height:60px;}
+  #headBox h1 {width:125px;}
+  #headBox >.h_box .unb1 {margin-left:10px; width:45px; height:38px; }
+  #headBox >.h_box .unb2 {width:36px; height:38px;}
+#adBox {box-sizing:border-box; padding-left:35px; padding-right:35px; padding-top:41.666666vw; height:720px;}
+  #adBox li {width:85.416666vw; height:90px; margin-bottom:30px;}
+    #adBox > .l_btn {display:none;}
+    #adBox > .r_btn {display:none;}
+#conBox {height:495px;}
+  #conBox > h2 {display:none;}
+  #conBox > .c_box {margin:auto; padding-top:60px; padding-bottom:25px; width:480px; }
+  #conBox li {width:46.875vw; height:200px; margin-right:10px; margin-bottom:10px;}
+  #conBox li:nth-child(2n) {margin-right:0;}
+  #conBox li:nth-child(3) {margin-bottom:0;}
+  #conBox li:nth-child(4) {margin-bottom:0;}
+#eventBox {height:720px;}
+  #eventBox li:nth-child(1) {width:100%;}
+  #eventBox li:nth-child(2) {display:none;}
+  #eventBox li:nth-child(3) {display:none;}
+#footBox {height:60px;}
+
+}
+
+
+/*tablet*/
+@media screen and (min-width:481px) and (max-width:768px) {
+
+#headBox {height:60px;}
+  #headBox h1 {width:174px;}
+  #headBox >.h_box .unb1 {margin-left:10px; width:45px; height:38px; }
+  #headBox >.h_box .unb2 {width:36px; height:38px;}
+#adBox {height:450px;}
+  #adBox > .l_btn {position:absolute;
+    top:50%; left:50%; margin-left:-45vw;
+    width:50px; height:100px; background-color:transparent;}
+  #adBox > .r_btn {position:absolute;
+    top:50%; right:50%; margin-right:-45vw;
+    width:50px; height:100px; background-color:transparent;}
+#conBox {box-sizing:border-box; padding:25px; height:180px;}
+  #conBox > h2 {display:none;}
+  #conBox > .c_box {margin:auto; width:100%; height:100%;}
+  #conBox li {width:16.927083vw; height:120px; margin-right:7.161458vw;}
+  #conBox li:last-child {margin-right:0;}
+#eventBox {height:540px;}
+  #eventBox li:nth-child(1) {width:50%;}
+  #eventBox li:nth-child(2) {width:50%;}
+  #eventBox li:nth-child(3) {display:none;}
+#footBox {height:120px;}
+
+}
+
+
+/*pc*/
+@media screen and (min-width:769px) and (max-width:960px) {
+
+#headBox {height:60px;}
+  #headBox > .h_box {width:960px;} 
+  #headBox h1 {width:250px;}
+  #headBox >.h_box .unb1 {margin-left:10px; width:170px; height:30px; background-color:transparent;}
+    #headBox #naviBox ul > li {margin-left:10px; width:50px; height:100%;}
+    #headBox #naviBox ul > li:last-child {margin-left:0;}
+  #headBox >.h_box .unb2 {width:50px; height:30px;}
+#adBox {height:450px;}
+  #adBox > .l_btn {position:absolute;
+    top:50%; left:50%;  margin-left:-35vw;
+    width:50px; height:100px; background-color:transparent;}
+  #adBox > .r_btn {position:absolute;
+    top:50%; right:50%;  margin-right:-35vw;
+    width:50px; height:100px; background-color:transparent;}
+#conBox {box-sizing:border-box; padding:30px; width:960px; height:210px;}
+  #conBox > h2 {display:none;}
+  #conBox > .c_box {margin:auto; width:100%; height:100%;}
+  #conBox li {width:15.625vw; height:150px; margin-right:55px;}
+  #conBox li:last-child {margin-right:0;}
+#eventBox {width:960px; height:540px;}
+  #eventBox li:nth-child(1) {width:33.333333%;}
+  #eventBox li:nth-child(2) {width:33.333333%;}
+  #eventBox li:nth-child(3) {width:33.333333%;}
+#footBox {height:120px;}
+  #footBox h2 {width:250px; height:45px; background-color:#33B88F;}
+
+}
+
+
+/*pc-full*/
+@media screen and (min-width:961px) {
+
+#headBox {height:60px;}
+  #headBox > .h_box {width:960px;} 
+  #headBox h1 {width:250px;}
+  #headBox >.h_box .unb1 {margin-left:10px; width:170px; height:30px; background-color:transparent;}
+    #headBox #naviBox ul > li {margin-left:10px; width:50px; height:100%;}
+    #headBox #naviBox ul > li:last-child {margin-left:0;}
+  #headBox >.h_box .unb2 {width:50px; height:30px;}
+#adBox {height:450px;}
+  #adBox > .l_btn {position:absolute;
+    top:50%; left:50%; margin-left:-30vw;
+    width:50px; height:100px; background-color:transparent;}
+  #adBox > .r_btn {position:absolute;
+    top:50%; right:50%; margin-right:-30vw;
+    width:50px; height:100px; background-color:transparent;}
+#conBox {box-sizing:border-box; padding:30px; width:960px; height:210px;}
+  #conBox > h2 {display:none;}
+  #conBox > .c_box {margin:auto; width:100%; height:100%;}
+  #conBox li {width:170px; height:150px; margin-right:55px;}
+  #conBox li:last-child {margin-right:0;}
+#eventBox {width:960px; height:540px;}
+  #eventBox li:nth-child(1) {width:33.333333%;}
+  #eventBox li:nth-child(2) {width:33.333333%;}
+  #eventBox li:nth-child(3) {width:33.333333%;}
+#footBox {height:120px;}
+  #footBox h2 {width:250px; height:45px; background-color:#33B88F;}
+
+}
