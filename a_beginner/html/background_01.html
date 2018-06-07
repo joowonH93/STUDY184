@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- background_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/src/background_01.css" />
+
+  <!-- [if lte IE9] >
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/pie/PIE_IE9.js"></script>
+  < ![endif] -->
+  
+  <link rel="apple-touch-icon" href="../favicon.gif">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.gif">
+
+  <title>background web</title>
+</head>
+
+<body>
+  <!-- design -->
+  <div class="wrap">
+    <h1>icon 이미지 배치하기</h1>
+    <p>
+      <strong>background image 왜 쓸까?</strong><br />
+      background-image는 이미지를 배경으로 처리하고, 내부에 글자 또는 다양한 이미지, 버튼 등의 형태를 취할 때 사용하는 방법<br />
+      이미지와 다른 요소가 겹칠 때 사용하는 기법<br />
+      background-image 형태는 해당 자료를 컴퓨터에 저장하기 때문에 새로고침을 하거나 반복적으로 접근할 경우 데이터 사용량이 적다.<br />
+      일반적으로 자주 변경되거나(수시로 바꾸거나) 임시로 저장하는 경우에는 img를 사용하고,<br />
+      장기적으로 사용하는 이미지는 background-image를 사용하기도 한다.
+    </p>
+    <ul class="icon">
+      <li>home</li>
+      <li>check</li>
+      <li>react</li>
+      <li><a href="#">
+        <span class="hidden">
+        <strong>image replace 기법:</strong>
+        이미지를 글자를 대신하여 존재하게 하고,
+        대신에 내용은 숨김처리하여,
+        보이지 않게 처리하는 방법<br />
+        단, 내용을 숨길 때 display:none은 사용하는 것이 아니다.
+        </span></a>
+      </li>
+    </ul>
+    <div class="bgtest">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati et quia deleniti assumenda repellendus quaerat laudantium suscipit expedita consectetur placeat modi consequuntur labore ut, nostrum sit quae distinctio eos iusto!</p>
+    </div>
+  </div><!-- // .wrap -->
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+  <script src="../js/src/background_01.js"></script>
+</body>
+</html>

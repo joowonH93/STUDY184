@@ -1,0 +1,78 @@
+/*background_02.css*/
+
+.wrap {margin:auto; width:960px; height:auto; background-color:#fafafa;}
+
+h1 {background-color:#04f;
+    color:#fff; text-align:center; font-weight:bold; font-size:0.7rem;}
+
+.icons {box-sizing:border-box; padding: 0.5rem;
+        width: 100%; height: auto;}
+.icons::after, .icons:after {content:" "; display:block; clear:both;}
+
+.icons > li {float:left; margin:1rem;
+             width:56px; height:56px; border:2px solid #777;}
+/*.icons > li > a {display:block; width:100%; height:100%;}
+.icons > li > a > span {display:block; width:0; height:0; overflow:hidden;}*/
+
+.icons > li > a {
+  background-image:url("../../img/background_test/icons_01.png");
+  background-repeat:no-repeat;
+  /*transition:all 500ms ease;*/}
+/*.icons > li > a:hover {background-position:-146px -158px;}*/
+
+.icons > li:nth-child(1) > a {background-position:-30px -34px;}
+.icons > li:nth-child(1) > a:hover {background-position:-30px -158px;}
+
+.icons > li:nth-child(2) > a {background-position:-146px -34px;}
+.icons > li:nth-child(2) > a:hover {background-position:-146px -158px;}
+
+.icons > li:nth-child(3) > a {background-position:-262px -34px;}
+.icons > li:nth-child(3) > a:hover {background-position:-262px -158px;}
+
+.icons > li:nth-child(4) > a {background-position:-378px -34px;}
+.icons > li:nth-child(4) > a:hover {background-position:-378px -158px;}
+
+.icons > li:nth-child(5) > a {background-position:-494px -34px;}
+.icons > li:nth-child(5) > a:hover {background-position:-494px -158px;}
+
+.icons > li:nth-child(6) > a {background-position:-610px -34px;}
+.icons > li:nth-child(6) > a:hover {background-position:-610px -158px;}
+
+.icons > li:nth-child(7) > a {background-position:-726px -34px;}
+.icons > li:nth-child(7) > a:hover {background-position:-726px -158px;}
+
+.icons > li:nth-child(8) > a {background-position:-726px -282px;}
+.icons > li:nth-child(8) > a:hover {background-position:-30px -406px;}
+
+
+
+.icons2 {box-sizing:border-box; padding:1rem;
+        width:100%; height:auto;}
+.icons2::after, .icon2:after {content:" "; display:block; clear:both;}
+
+.icons2 > li {float:left; margin:1rem; border:2px solid #777;}
+
+.icons2 > li:nth-child(1) {width:62px; height:61px;}
+.icons2 > li:nth-child(2) {width:62px; height:62px;}
+.icons2 > li:nth-child(3) {width:49px; height:62px;}
+.icons2 > li:nth-child(4) {width:61px; height:41px;}
+.icons2 > li:nth-child(5) {width:61px; height:61px;}
+
+.icons2 > li > a {background-image:url("../../img/background_test/icons_02.png");
+                 background-repeat:no-repeat;
+                 /*transition:all 400ms ease;*/}
+
+.icons2 > li:nth-child(1) > a {background-position:-30px -23px;}
+.icons2 > li:nth-child(1) > a:hover {background-position:-30px -588px;}
+
+.icons2 > li:nth-child(2) > a {background-position:-250px -133px;}
+.icons2 > li:nth-child(2) > a:hover {background-position:-250px -697px;}
+
+.icons2 > li:nth-child(3) > a {background-position:-476px -243px;}
+.icons2 > li:nth-child(3) > a:hover {background-position:-476px -812px;}
+
+.icons2 > li:nth-child(4) > a {background-position:-801px -364px;}
+.icons2 > li:nth-child(4) > a:hover {background-position:-801px -930px;}
+
+.icons2 > li:nth-child(5) > a {background-position:-1021px -464px;}
+.icons2 > li:nth-child(5) > a:hover {background-position:-1021px -1029px;} 
