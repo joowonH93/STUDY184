@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=1200, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+<!--   <meta name="viewport" content="width=1200, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" /> -->
 
   <link rel="stylesheet" href="../css/base/reset.css" />
   <link rel="stylesheet" href="../css/src/pantech_layout_01_m.css" />
@@ -26,8 +26,25 @@
     <div class="head_wrap area_wrap">
       <header  id="headBox">
         <span class="hidden">headBox</span>
+        <h1><a href="#">pantech</a></h1>
+        <div class="gnb_box">
+          <ul>
+            <li><a href="#">기업정보</a></li>
+            <li><a href="#">제품정보</a></li>
+            <li><a href="#">경영정보</a></li>
+            <li><a href="#">채용정보</a></li>
+            <li><a href="#">홍보센터</a></li>
+          </ul>
+        </div>
+        <div class="etc_box">
+          <ul>
+            <li><a href="#">EN</a></li>
+            <li><a href="#">search</a></li>
+          </ul>
+        </div>
       </header>
     </div> <!-- .head_wrap -->
+
 
     <div class="ad_wrap area_wrap">
       <article id="adBox">
@@ -37,7 +54,7 @@
           <p><br />
           ─<br />
           <br />
-          What is done is done But the die is cast, We will move forward</p>          
+          What is done is done But the die is cast, We will move forward</p>
         </div>
         <ul class="ad_indicator">
           <li class="indicator"><a href="#"></a></li>
@@ -47,6 +64,7 @@
       </article>
     </div> <!-- .ad_wrap -->
 
+
     <div class="info_wrap area_wrap">
       <article id="infoBox">
         <span class="hidden">infoBox</span>
@@ -55,10 +73,12 @@
           Notice
           </p>
         </div>
+
         <div class="text_box">
           <p>-사이트 점검 안내<br />
           -SKY 공인 서비스센터 공개 모집 안내 (2차)</p>
         </div>
+
         <div class="move">
           <a href="#">
             <span>IM-100</span></a>
@@ -70,36 +90,45 @@
       <article id="businessBox">
         <span class="hidden">businessBox</span>
         <h2>Business Network</h2>
-        <p class="p_box"><br />
-           ─<br />
-           <br />
-           팬택은 차별화 된 디자인과 기술력으로<br />
-           세상을 움직입니다.</p>
+        <p class="p_box">
+          <br />
+          ─<br />
+          <br />
+          팬택은 차별화 된 디자인과 기술력으로<br />
+          세상을 움직입니다.
+        </p>
+
         <article class="device_box">
-          <dl class="device01">
-            <dt>image</dt>
-            <dd>
-              <h3>Intelligent Mobile Device</h3>
-              <p><br />
-              팬택은 LTE 시대의 개막과 함께 세계 최초 모션인식 스마트폰 '베가 LTE'를 선보인 이래 국내 스마트폰 시장에서의 입지를 견고히 하고 있습니다.</p>
-            </dd>
-          </dl>
-          <dl class="device02">
-            <dt>image</dt>
-            <dd>
-              <h3>Smart Wearable Device</h3>
-              <p><br />
-              팬택은 스마트폰으로 축적된 첨단 기술력을 바탕으로 Smart Watch 등 다른 Wearable Devices 사업 확장을 위해 기술 확보에 주력하고 있습니다.</p>
-            </dd>
-          </dl>
-          <dl class="device03">
-            <dt>image</dt>
-            <dd>
-              <h3>Advanced IoT Device</h3>
-              <p><br />
-              팬택은 LTE 기반 M2M 모듈 및 라우터를 중심으로 IoT 관련 서비스로 확장할 수 있도록 준비해 나가고 있습니다.</p>
-            </dd>
-          </dl>
+          <div class="device01">
+            <div><img src="#" alt="설명"></div>
+            <dl>
+              <dt>Intelligent Mobile Device</dt>
+              <dd>
+                <p>
+                팬택은 LTE 시대의 개막과 함께 세계 최초 모션인식 스마트폰 '베가 LTE'를 선보인 이래 국내 스마트폰 시장에서의 입지를 견고히 하고 있습니다.</p>
+              </dd>
+            </dl>
+          </div>
+          <div class="device02">
+            <div><img src="#" alt="설명"></div>
+            <dl>
+              <dt>Smart Wearable Device</dt>
+              <dd>
+                <p>
+                팬택은 스마트폰으로 축적된 첨단 기술력을 바탕으로 Smart Watch 등 다른 Wearable Devices 사업 확장을 위해 기술 확보에 주력하고 있습니다.</p>
+              </dd>
+            </dl>
+          </div>
+          <div class="device03">
+            <div><img src="#" alt="설명"></div>
+            <dl>
+              <dt>Advanced IoT Device</dt>
+              <dd>
+                <p>
+                팬택은 LTE 기반 M2M 모듈 및 라우터를 중심으로 IoT 관련 서비스로 확장할 수 있도록 준비해 나가고 있습니다.</p>
+              </dd>
+            </dl>
+          </div>
         </article>
       </article>
     </div> <!-- .business_wra -->
@@ -142,102 +171,82 @@
 
       <aside id="sideBox">
         <span class="hidden">sideBox</span>
-        <ul class="side_menu">
-          <li>
-            <a href="#">
-              <div class="v1">
-                <span class="hidden">view1</span>
+        <div class="side_menu">
+          <ul class="clearfix hidden_wrap">
+            <li>
+              <a href="#">
                 <dl>
                   <dt>
-                    <span><img src="" alt=""></span>
-                    <span>COMPANY</span>
+                    <span class="view img_sample">
+                    <!-- <img src="#" alt="설명" /> -->
+                    </span>
+                    company
                   </dt>
-                  <dd>팬택만의 혁신적인 제품으때로<br />모바일 시대를 선도합니다.</dd>
+                  <dd>팬택만의 혁신적인 제품으로<br />모바일 시대를 선도합니다.</dd>
                 </dl>
-              </div>
-             
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="v1">
-                <span class="hidden">view1</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
                 <dl>
-                  <dt></dt>
-                  <dd>채용안내</dd>
+                  <dt>
+                    <span class="view img_sample">
+                    </span>
+                    채용안내
+                  </dt>
+                  <dd>인재를 최고로 생각하는 팬택의<br />미래는 여러분입니다.</dd>
                 </dl>
-              </span>
-              <span class="v2">
-                <span class="hidden">view2</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
                 <dl>
-                  <dt><p>인재를 최고로 생각하는 팬택의<br />미래는 여러분입니다.</p></dt>
-                  <dd>채용안내</dd>
+                  <dt>
+                    <span class="view img_sample">
+                    </span>
+                    SKY
+                  </dt>
+                  <dd>최신 스마트폰 소식, SW<br />다운로드, 이벤트 소식 등을<br />소개합니다.</dd>
                 </dl>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="v1">
-                <span class="hidden">view1</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
                 <dl>
-                  <dt></dt>
-                  <dd>SKY</dd>
+                  <dt>
+                    <span class="view img_sample">
+                    </span>
+                    SKY서비스
+                  </dt>
+                  <dd>고객 편의를 위해 제품 AS를<br />온라인으로 문의하세요.</dd>
                 </dl>
-              </span>
-              <span class="v2">
-                <span class="hidden">view2</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
                 <dl>
-                  <dt><p>최신 스마트폰 소식, SW<br />다운로드, 이벤트 소식 등을<br />소개합니다.</p></dt>
-                  <dd>SKY</dd>
+                  <dt>
+                    <span class="view img_sample">
+                    </span>
+                    SOLID
+                  </dt>
+                  <dd>새로운 꿈을 향한 발걸음,<br />SOLiD와 함께 합니다.</dd>
                 </dl>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="v1">
-                <span class="hidden">view1</span>
-                <dl>
-                  <dt></dt>
-                  <dd>SKY서비스</dd>
-                </dl>
-              </span>
-              <span class="v2">
-                <span class="hidden">view2</span>
-                <dl>
-                  <dt><p>고객 편의를 위해 제품 AS를<br />온라인으로 문의하세요.</p></dt>
-                  <dd>SKY서비스</dd>
-                </dl>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="v1">
-                <span class="hidden">view1</span>
-                <dl>
-                  <dt></dt>
-                  <dd>SOLID</dd>
-                </dl>
-              </span>
-              <span class="v2">
-                <span class="hidden">view2</span>
-                <dl>
-                  <dt><p>새로운 꿈을 향한 발걸음,<br />SOLiD와 함께 합니다.</p></dt>
-                  <dd>SOLID</dd>
-                </dl>
-              </span>
-            </a>
-          </li>
-        </ul>
+              </a>
+            </li>
+          </ul>
+        </div>
       </aside>
+
     </div> <!-- .about_side_wrap -->
 
     <div class="foot_wrap area_wrap">
-      <footer  id="footBox">
+      <footer id="footBox">
         <span class="hidden">footBox</span>
-        <h2><span class="hidden">logo</span><a href="#"></a></h2>
+        <h2>
+          <span class="hidden">logo</span>
+          <a href="#"></a>
+        </h2>
         <ul class="unb">
           <li><a href="#">법적고지</a>　·　</li>
           <li><a href="#">개인정보취급방침</a>　·　</li>
@@ -246,12 +255,13 @@
           <li><a href="#">사이버신문고</a>　·　</li>
           <li><a href="#">Sitemap</a></li>
         </ul>
-        <adress class="adress_box">
+        <div class="adress_box">
           <p>서울시 마포구 상암동 성암로179 팬택빌딩 1588-9111<br />
-           COPYRIGHT BY PANTECH ALL RIGHTS RESERVED.</p>
-        </adress>
+          COPYRIGHT BY PANTECH ALL RIGHTS RESERVED.</p>
+        </div>
       </footer>
     </div> <!-- .foot_wrap -->
+
     <button class="btn_top">top</button>
   </div>
 

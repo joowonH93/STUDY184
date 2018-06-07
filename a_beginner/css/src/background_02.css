@@ -60,7 +60,10 @@ h1 {background-color:#04f;
 
 .icons2 > li > a {background-image:url("../../img/background_test/icons_02.png");
                  background-repeat:no-repeat;
-                 /*transition:all 400ms ease;*/}
+                 transition:background-position 400ms ease;}
+                 /*ease-in:점점 빠르게
+                 ease-out:점점 느리게
+                 ease-in-out:점점 빨랐다가 느리게*/
 
 .icons2 > li:nth-child(1) > a {background-position:-30px -23px;}
 .icons2 > li:nth-child(1) > a:hover {background-position:-30px -588px;}
@@ -75,4 +78,53 @@ h1 {background-color:#04f;
 .icons2 > li:nth-child(4) > a:hover {background-position:-801px -930px;}
 
 .icons2 > li:nth-child(5) > a {background-position:-1021px -464px;}
-.icons2 > li:nth-child(5) > a:hover {background-position:-1021px -1029px;} 
+.icons2 > li:nth-child(5) > a:hover {background-position:-1021px -1029px;}
+
+
+/*gradient*/
+
+.linear, .radial {margin-bottom:1rem;
+                  width:100%; height:auto; background-color:#ffc;}
+.linear > h2 ,
+.radial > h2 {padding-bottom:1rem; background-color:#fa0;
+              text-align:center; color:#fff; text-transform:uppercase;}
+.linear > ul ,
+.radial > ul {width:100%; height:auto;}
+.linear li ,
+.radial li {margin-bottom:1rem;
+            width:100%; height:200px; background-color:#aaa;}
+
+/*.linear li:first-child
+{background-color:#f06;
+ background-image:linear-gradient(#ff0, #0ad, #f06);}*/
+
+ .linear li:first-child
+{background-color:#f06;
+ background-image:url(../../img/background_test/linear.png);
+ background-repeat:repeat-x;
+ background-image:linear-gradient(#ff0, #0ad, #f06);
+ /*background-size:contain;*/}
+
+.linear li:nth-child(2)
+{background-color:#f06;
+ background-image:linear-gradient(120deg, #ff0 20%, #0ad 20%, #f06 50%);}
+
+.linear li:last-child
+{background-color:#fff;
+ background-image:linear-gradient(120deg, rgba(255,255,10,0.5) 20%, #0ad 20%, #f06 50%);}
+
+.radial li:first-child {background-image:radial-gradient(ellipse, #ff0, #0ad, #f06);}
+.radial li:nth-child(2) {background-image:radial-gradient(ellipse closest-side, #ff0, #0ad, #f06);}
+.radial li:nth-child(3) {background-image:radial-gradient(circle, #ff0, #0ad, #f06);}
+.radial li:last-child {background-image:radial-gradient(circle at 50% 0, #ff0, #0ad, #f06);}
+
+
+
+.gradient_hover {width:100%; height:300px;
+                 background-color:#0af;
+                 background-image:linear-gradient(65deg, #fa0 10%, rgba(0,0,0,0));
+                 transition:all 600ms ease;}
+
+.gradient_hover:hover {
+                 background-color:#fa0;
+                 background-image:linear-gradient(65deg, #fa0 10%, rgba(0,0,0,0) 30%);}
