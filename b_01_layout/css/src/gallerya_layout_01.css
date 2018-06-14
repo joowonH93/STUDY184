@@ -1,0 +1,146 @@
+/*gallerya_layout_01.css*/
+
+#wrap {width:100%; height:auto;}
+
+
+
+#headBox {position:fixed; z-index:1000; width:100%; height:231px;}
+  .head_box {margin:auto;
+    width:100%; height:68px; background-color:#161616;}
+    h1 {float:left;
+      width:150px; height:68px;
+      background-image:url("../../img/gallerya_folder/image/headBox/logo.png");
+      border-right:1px solid #363636;}
+    h1 > a {display:block; width:100%; height:100%;}
+
+    .head_box > .gnb {float:left; width:805px; height:100%;}
+    .head_box > .gnb > li {float:left;
+      width:160px; height:100%; border-right:1px solid #363636;}
+    .head_box > .gnb > li > a {display:block; width:100%; height:100%;
+      background-image:url("../../img/gallerya_folder/image/headBox/gnb_area.png");
+      background-repeat:no-repeat;}      
+    .head_box > .gnb > li > a:hover {display:block; width:100%; height:100%;
+      background-image:url("../../img/gallerya_folder/image/headBox/gnb_area_on.png");
+      background-repeat:no-repeat;
+      background-color:#fff;}
+
+    .head_box > .gnb > li:nth-child(1) > a {background-position:40px 27px;}
+    .head_box > .gnb > li:nth-child(2) > a {background-position:-120px 27px;}
+    .head_box > .gnb > li:nth-child(3) > a {background-position:-281px 27px;}
+    .head_box > .gnb > li:nth-child(4) > a {background-position:-442px 27px;}
+    .head_box > .gnb > li:nth-child(5) > a {background-position:-603px 27px;}
+
+    .head_box > .gnb > li > .gnb_1 {
+      /*overflow:hidden;*/
+      box-sizing:border-box;
+      width:162px; height:160px; background-color:#fff;
+      border-left:1px solid #e7e7e7;
+      border-right:1px solid #e7e7e7;
+      border-bottom:1px solid #e7e7e7;}
+    .head_box > .gnb > li > .gnb_1 > li {width:100%; height:15px; margin-bottom:9px;}
+    .head_box > .gnb > li > .gnb_1 > li > a {display:block; width:100%; height:100%;}
+
+    .head_box > .gnb > li > .gnb_1 > li:nth-child(1) > a {
+    background-image:url("../../img/gallerya_folder/image/headBox/gnb_hover/gnb_1_1.png"); 
+    background-repeat:no-repeat; 
+    background-position:55px 0;}
+    .head_box > .gnb > li > .gnb_1 > li:nth-child(2) > a {
+    background-image:url("../../img/gallerya_folder/image/headBox/gnb_hover/gnb_1_2.png"); 
+    background-repeat:no-repeat; 
+    background-position:30px 0;}
+    .head_box > .gnb > li > .gnb_1 > li:nth-child(3) > a {
+    background-image:url("../../img/gallerya_folder/image/headBox/gnb_hover/gnb_1_3.png"); 
+    background-repeat:no-repeat; 
+    background-position:55px 0;}
+    .head_box > .gnb > li > .gnb_1 > li:nth-child(4) > a {
+    background-image:url("../../img/gallerya_folder/image/headBox/gnb_hover/gnb_1_4.png"); 
+    background-repeat:no-repeat; 
+    background-position:55px 0;}
+    .head_box > .gnb > li > .gnb_1 > li:nth-child(5) > a {
+    background-image:url("../../img/gallerya_folder/image/headBox/gnb_hover/gnb_1_5.png"); 
+    background-repeat:no-repeat; 
+    background-position:43px 0;}
+    .head_box > .gnb > li > .gnb_1 > li:nth-child(6) > a {
+    background-image:url("../../img/gallerya_folder/image/headBox/gnb_hover/gnb_1_6.png"); 
+    background-repeat:no-repeat; 
+    background-position:37px 0;}
+
+
+
+
+
+
+
+    .head_box > .unb {margin-right:10px; float:right;
+      width:249px; height:100%;}
+    .head_box > .unb > li {float:left; height:100%;}
+    .head_box > .unb > li > a {display:block; width:100%; height:100%;
+      background-image:url("../../img/gallerya_folder/image/headBox/unb_area.png");
+      background-repeat:no-repeat;}
+    .head_box > .unb > li > a:hover {display:block; width:100%; height:100%;
+      background-image:url("../../img/gallerya_folder/image/headBox/unb_area_on.png");
+      background-repeat:no-repeat;}
+
+    .head_box > .unb > li:nth-child(1) > a {width:52px; background-position:0 27px;}
+    .head_box > .unb > li:nth-child(2) > a {width:45px; background-position:-53px 27px;}
+    .head_box > .unb > li:nth-child(3) > a {width:58px; background-position:-99px 27px;}
+    .head_box > .unb > li:nth-child(4) > a {width:53px; background-position:-158px 27px;}
+    .head_box > .unb > li:nth-child(5) > a {width:37px; background-position:-212px 27px;}
+
+
+
+    
+    .menu_box > .gnb_1 > li > a {display:block; width:100%; height:100%;}
+    .menu_box > .gnb_1 > li:nth-child(1) > a {
+    background-image:url("../../img/gallerya_folder/image/headBox/gnb_hover/gnb_1_1.png"); 
+    background-repeat:no-repeat; 
+    background-position:55px 0;}
+    .menu_box > .gnb_1 > li:nth-child(2) > a {
+    background-image:url("../../img/gallerya_folder/image/headBox/gnb_hover/gnb_1_2.png"); 
+    background-repeat:no-repeat; 
+    background-position:30px 0;}
+    .menu_box > .gnb_1 > li:nth-child(3) > a {
+    background-image:url("../../img/gallerya_folder/image/headBox/gnb_hover/gnb_1_3.png"); 
+    background-repeat:no-repeat; 
+    background-position:55px 0;}
+    .menu_box > .gnb_1 > li:nth-child(4) > a {
+    background-image:url("../../img/gallerya_folder/image/headBox/gnb_hover/gnb_1_4.png"); 
+    background-repeat:no-repeat; 
+    background-position:55px 0;}
+    .menu_box > .gnb_1 > li:nth-child(5) > a {
+    background-image:url("../../img/gallerya_folder/image/headBox/gnb_hover/gnb_1_5.png"); 
+    background-repeat:no-repeat; 
+    background-position:43px 0;}
+    .menu_box > .gnb_1 > li:nth-child(6) > a {
+    background-image:url("../../img/gallerya_folder/image/headBox/gnb_hover/gnb_1_6.png"); 
+    background-repeat:no-repeat; 
+    background-position:37px 0;}
+
+
+
+
+#adBox {position:relative; padding-top:68px; width:100%; height:650px;}
+  #adBox > .banner_box {width:100%; height:650px;}
+  #adBox > .banner_box > li {width:100%; height:100%;}
+  #adBox > .banner_box > li:nth-child(1) {
+    background-image:url("../../img/gallerya_folder/image/adBox/banner_image1.jpg");
+    background-position:0 68px;
+    background-attachment:fixed;
+    background-repeat:no-repeat;}
+
+  #adBox > .scroll {position:absolute; bottom:0; left:50%; margin-left:-30px;
+    width:60px; height:129px;
+    background-image:url("../../img/gallerya_folder/image/adBox/scroll_info.png");}
+
+  #adBox > .indicator {position:absolute; bottom:25px; right:22px;
+    width:134px; height:25px; background-image:url("../../img/gallerya_folder/image/adBox/indicator_box.png");}
+
+
+
+#noticeBox {width:100%; height:56px; background-color:#ccc;}
+
+#showBox {width:100%; height:795px; background-color:#fff;}
+
+#styleBox {width:100%; height:2093px; background-color:#ccc;}
+
+#footBox {width:100%; height:319px; background-color:#fff;}

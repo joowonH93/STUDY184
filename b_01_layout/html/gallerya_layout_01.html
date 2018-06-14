@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!-- gallerya_layout_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" /> -->
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/src/gallerya_layout_01.css" />
+
+  <!-- [if lte IE9] >
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/pie/PIE_IE9.js"></script>
+  < ![endif] -->
+  
+  <link rel="apple-touch-icon" href="../favicon.gif">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.gif">
+
+  <title>gallerya layout</title>
+</head>
+
+<body>
+  <!-- design -->
+  <div id="wrap" class="clearfix">
+    <header id="headBox">
+      <div class="head_box">
+        <h1>
+          <a href="#">
+            <span class="hidden">logo</span>
+          </a>
+        </h1>
+        <ul class="gnb">
+          <li>
+            <a href="#"><span class="hidden">store info</span></a>
+            <ul class="gnb_1">
+              <li>
+                <a href="#"><span class="hidden">gnb_1_1</span></a>
+              </li>
+              <li>
+                <a href="#"><span class="hidden">gnb_1_2</span></a>
+              </li>
+              <li>
+                <a href="#"><span class="hidden">gnb_1_3</span></a>
+              </li>
+              <li>
+                <a href="#"><span class="hidden">gnb_1_4</span></a>
+              </li>
+              <li>
+                <a href="#"><span class="hidden">gnb_1_5</span></a>
+              </li>
+              <li>
+                <a href="#"><span class="hidden">gnb_1_6</span></a>
+              </li>
+            </ul>
+
+          </li>
+          <li>
+            <a href="#"><span class="hidden">show window</span></a>
+          </li>
+          <li>
+            <a href="#"><span class="hidden">style</span></a>
+          </li>
+          <li>
+            <a href="#"><span class="hidden">card&mileage</span></a>
+          </li>
+          <li>
+            <a href="#"><span class="hidden">customer service</span></a>
+          </li>
+        </ul>
+        <ul class="unb">
+          <li>
+            <a href="#"><span class="hidden">login</span></a>
+          </li>
+          <li>
+            <a href="#"><span class="hidden">join</span></a>
+          </li>
+          <li>
+            <a href="#"><span class="hidden">sitemap</span></a>
+          </li>
+          <li>
+            <a href="#"><span class="hidden">language</span></a>
+          </li>
+          <li>
+            <a href="#"><span class="hidden">search</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- <div class="menu_box">
+        <ul class="gnb_1">
+          <li>
+            <a href="#"><span class="hidden">gnb_1_1</span></a>
+          </li>
+          <li>
+            <a href="#"><span class="hidden">gnb_1_2</span></a>
+          </li>
+          <li>
+            <a href="#"><span class="hidden">gnb_1_3</span></a>
+          </li>
+          <li>
+            <a href="#"><span class="hidden">gnb_1_4</span></a>
+          </li>
+          <li>
+            <a href="#"><span class="hidden">gnb_1_5</span></a>
+          </li>
+          <li>
+            <a href="#"><span class="hidden">gnb_1_6</span></a>
+          </li>
+        </ul>
+      </div> -->
+    </header>
+
+
+    <article id="adBox">
+      <ul class="banner_box">
+        <li>
+          <a href="#"><span class="hidden">image_01</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="hidden">image_02</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="hidden">image_03</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="hidden">image_04</span></a>
+        </li>
+      </ul>
+      <div class="scroll"></div>
+      <div class="indicator">
+        <!-- <ul class="play_Btn">
+          <li><button class="pause_btn">pause</button></li>
+          <li><button class="play_btn">play</button></li>
+        </ul> -->
+      </div>
+    </article>
+
+    <article id="noticeBox"></article>
+
+    <article id="showBox"></article>
+
+    <section id="styleBox"></section>
+
+    <footer id="footBox"></footer>
+  </div>
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+<!--   <script>
+    // $(function(){});
+    $(".head_box>.gnb>li").each(function(){
+      $(this).mouseenter(function(){
+        var liL = $(this).find('ul li').length;
+        // alert(liL);
+        var liH = $(this).find('ul li').outerHeight();
+        $(this).find('ul').stop().animate({'height':liH*liL});
+      }).mouseleave(function(){
+        $('.head_box>.gnb>li>ul').stop().animate({'height':0});
+      })
+    });
+    
+    </script> -->
+  <!-- <script src="../js/src/gallerya_layout_01.js"></script> -->
+</body>
+</html>
+
+
+
+
+
+<!-- <ul id="gnb">
+  <li class="list1"><a href="#">회사소개</a>
+    <ul>
+      <li><a href="">회사소개</a></li>
+      <li><a href="">연혁</a></li>
+      <li><a href="">오시는 길</a></li>
+    </ul>
+  </li>
+</ul>
+
+$('#gnb>li').each(function(){
+    $(this).mouseenter(function(){
+      var liL = $(this).find('ul li').length;
+      // alert(liL);
+      var liH = $(this).find('ul li').outerHeight();
+      $(this).find('ul').stop().animate({'height':liH*liL});
+    }).mouseleave(function(){
+      $('#gnb li ul').stop().animate({'height':0});
+    })
+  }) -->

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- test01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <!-- <link rel="stylesheet" href="../css/src/test01.css" /> -->
+
+  <!-- [if lte IE9] >
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/pie/PIE_IE9.js"></script>
+  < ![endif] -->
+  
+  <link rel="apple-touch-icon" href="../favicon.gif">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.gif">
+
+  <title>test</title>
+
+  <style>
+    *{padding:0;margin:0;}
+a{text-decoration:none;}
+body{background:black;}
+li{list-style:none;}
+
+#gnb{width:170px;}
+#gnb>li{display:block;}
+/* .header .menu{float:left;} */
+#gnb>li>a{display:block;padding:10px 30px;text-align:center;}
+#gnb>li.on>a, #gnb>li:hover>a{}
+#gnb>li>ul{height:0;overflow:hidden;}
+#gnb>li>ul>li{padding:5px 0 5px 20px;text-align:left;}
+
+#gnb>li>a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    padding: 10px 10px;
+    color: white;
+}
+#gnb>li>a:hover{color:#c3751c;}
+#gnb>li>a:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #c3751c;
+        transform: scaleX(0);
+        transform-origin: bottom left;
+
+        transition: transform 0.3s;
+    }
+#gnb>li>a:hover:after {
+            transform: scaleX(1);
+    }
+#gnb>li>ul>li>a{color:white;display:block;}
+#gnb>li>ul>li>a:hover{color:#c3751c;}
+  </style>
+</head>
+
+<body>
+  <!-- design -->
+  <body class="front">
+<ul id="gnb">
+  <li class="list1"><a href="#">회사소개</a>
+    <ul>
+      <li><a href="">회사소개</a></li>
+      <li><a href="">연혁</a></li>
+      <li><a href="">오시는 길</a></li>
+    </ul>
+  </li>
+</ul>
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+
+  <script>
+    $('#gnb>li').each(function(){
+    $(this).mouseenter(function(){
+      var liL = $(this).find('ul li').length;
+      // alert(liL);
+      var liH = $(this).find('ul li').outerHeight();
+      $(this).find('ul').stop().animate({'height':liH*liL});
+    }).mouseleave(function(){
+      $('#gnb li ul').stop().animate({'height':0});
+    })
+  })
+  </script>
+
+</body>
+</html>
