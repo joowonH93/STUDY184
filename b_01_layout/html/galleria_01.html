@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="../css/base/reset.css" />
   <link rel="stylesheet" href="../css/src/galleria_01.css" />
-<!--   <link rel="stylesheet" href="../css/src/galleria/wrap.css" />
+  <!-- <link rel="stylesheet" href="../css/src/galleria/wrap.css" />
   <link rel="stylesheet" href="../css/src/galleria/headBox.css" />
   <link rel="stylesheet" href="../css/src/galleria/adBox.css" />
   <link rel="stylesheet" href="../css/src/galleria/noticeBox.css" />
@@ -31,21 +31,90 @@
   <!-- design -->
   <div id="wrap" class="clearfix">
 
-    <header  id="headBox"></header>
+    <header id="headBox">
+      <h1 class="hidden_wrap"><a href="#"><span class="hidden">galleria department</span></a></h1>
+      <nav id="gnb">
+        <h2 class="hidden">global navigation</h2>
+        <ul class="hidden_wrap">
+          <li>
+            <a href="#"><span>store info(매장 정보)</span></a>
+            <ul class="sub_nav1 hidden_wrap">
+              <li><a href="#"><span>쇼핑뉴스</span></a></li>
+              <li><a href="#"><span>실시간 인기 브랜드</span></a></li>
+              <li><a href="#"><span>층별안내</span></a></li>
+              <li><a href="#"><span>오시는 길</span></a></li>
+              <li><a href="#"><span>다른 지점보기</span></a></li>
+              <li><a href="#"><span>갤러리아 면세점</span></a></li>
+            </ul>
+          </li>
+          <li><a href="#"><span>show window(상품보기)</span></a></li>
+          <li><a href="#"><span>style(스타일 제안)</span></a></li>
+          <li><a href="#"><span>card & mileage(카드 및 마일리지)</span></a></li>
+          <li><a href="#"><span>customer service(고객 맞춤 서비스)</span></a></li>
+        </ul>
+      </nav>
+      <nav id="unb">
+        <h2 class="hidden">utility navigation</h2>
+        <ul class="hidden_wrap">
+          <li><a href="#"><span>log in(로그인)</span></a></li>
+          <li><a href="#"><span>join(가입)</span></a></li>
+          <li><a href="#"><span>sitemap(사이트맵)</span></a></li>
+          <li><a href="#" tabindex="1"><span>language(언어)</span></a></li>
+        </ul>
+        <button type="button">
+          <span class="hidden">search button</span>
+        </button>
+      </nav>
+    </header><!-- // #headBox -->
 
-    <section id="adBox"></section>
+    <section id="adBox">
+      <h2 class="hidden">갤러리아 메인 광고</h2>
+      <header class="indicator">
+        <h3 class="hidden">indicator</h3>
+        <div class="banner_play_btn hidden_wrap">
+          <button type="button" class="play"><span>재생</span></button>
+          <button type="button" class="pause active"><span>정지</span></button>
+        </div>
+        <div class="banner_arrow_btn hidden_wrap">
+          <button type="button" class="prev_btn"><span>이전 광고보기</span></button>
+          <button type="button" class="next_btn"><span>다음 광고보기</span></button>
+        </div>
+        <ul class="indicator_selector_btn hidden_wrap">
+          <li class="active"><a href="#ad1"><span>해당 광고배너의 내용 간단설명</span></a></li>
+          <li><a href="#ad2"><span>해당 광고배너의 내용 간단설명</span></a></li>
+          <li><a href="#ad3"><span>해당 광고배너의 내용 간단설명</span></a></li>
+          <li><a href="#ad4"><span>해당 광고배너의 내용 간단설명</span></a></li>
+        </ul>
+      </header>
+      <article class="ad_banner">
+        <h3 class="hidden">banner</h3>
+        <div id="#ad1" class="banner_01 active"><h4 class="hidden">banner_01</h4></div>
+        <div id="#ad2" class="banner_02"><h4 class="hidden">banner_02</h4></div>
+        <div id="#ad3" class="banner_03"><h4 class="hidden">banner_03</h4></div>
+        <div id="#ad4" class="banner_04"><h4 class="hidden">banner_04</h4></div>
+      </article>
+      <div class="scroll_view">
+        <!-- 스크롤 이미지 배경이미지로 첨부 -->
+      </div>
+    </section><!-- // #adBox -->
 
-    <aside   id="noticeBox"></aside>
+    <aside id="noticeBox">
+      <h2><span class="hidden">공지사항</span></h2>
+    </aside><!-- // #noticeBox -->
 
-    <article id="showBox"></article>
+    <article id="showBox">
+      <h2><span class="hidden">인기 및 추천상품</span></h2>
+    </article><!-- // #showBox -->
 
     <article id="styleBox">
+      <h2><span class="hidden">품목별 신규상품</span></h2>
       <div class="style_area"></div>
-    </article>
+    </article><!-- // #styleBox -->
 
-    <footer  id="footBox">
+    <footer id="footBox">
+      <h2 class="hidden">갤러리아 사이트 정보</h2>
       <div class="footer_area"></div>
-    </footer>
+    </footer><!-- // #footBox -->
 
   </div>
 

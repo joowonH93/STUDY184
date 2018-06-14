@@ -1,3 +1,4 @@
 /* wrap.css */
 
-#wrap {width:100%; height:auto; min-height:100px;}
+#wrap {
+  width:100%; min-width:1200px; height:auto; min-height:100px;}

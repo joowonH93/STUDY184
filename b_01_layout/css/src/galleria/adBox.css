@@ -1,5 +1,114 @@
 /* adBox.css */
 
+/* overflow:지정된 영역이 넘쳤을 경우에 가용하는 기능
+   overflow:hidden / scroll / auto / normal
+   overflow-x:hidden / scroll / auto / normal
+   overflow-y:hidden / scroll / auto / normal
+
+   hidden - 지정영역이 넘는 부분은 숨김처리
+   scroll - 넘침여부와 관계없이 스크롤 영역 만들어 주기
+   auto - 내용에 따라 스크롤 유무를 판단하여 처리
+   normal - 아무런 처리하지 않는 기본상태
+*/
+
 #adBox {
+  overflow:hidden;
+  position:relative;
   margin-top:68px;
   width:100%; height:650px; background-color:#ccc;}
+
+/* .indicator -------------------------------------------------- */
+#adBox > .indicator {
+  position:absolute; bottom:25px; right:22px; z-index:400;
+  box-sizing:border-box; padding:6px 12px 6px;
+  width:134px; height:25px; background-color:#adf;
+  background-color:#333;
+  border-radius:12px;}
+
+#adBox > .indicator > .banner_play_btn {
+  position:relative;
+  float:left;
+  width:12px; height:12px;}
+#adBox > .indicator > .banner_play_btn > button {
+  display:none;
+  position:absolute; top:0; left:0;
+  width:100%; height:100%;
+  background-image:url("../../../img/galleria/galleria_img/adBox/play_btn.png");
+  background-repeat:no-repeat;
+  cursor:pointer;}
+  .play {background-position:-8px center;}
+  .pause {background-position:2px center;}
+  #adBox > .indicator > .banner_play_btn > button.active {display:block;}
+
+#adBox > .indicator > .banner_arrow_btn {
+  float:left;
+  margin-left:8px;
+  width:90px; height:12px;}
+#adBox > .indicator > .banner_arrow_btn > button {
+  width:8px; height:100%;
+  background-image:url(../../../img/galleria/galleria_img/adBox/slide_btn.png);
+  background-repeat:no-repeat;
+  cursor:pointer;}
+  .prev_btn {float:left; background-position:0 center;}
+  .next_btn {float:right; background-position:right center;}
+
+#adBox > .indicator > .indicator_selector_btn {
+  position:absolute; top:6px; right:26px;
+  width:64px; height:12px;}
+#adBox > .indicator > .indicator_selector_btn > li {
+  margin-right:5px;
+  float:left;
+  width:12px; height:100%;}
+#adBox > .indicator > .indicator_selector_btn > li:last-child {margin-right:0;}
+
+#adBox > .indicator > .indicator_selector_btn > li > a {
+  background-image:url("../../../img/galleria/galleria_img/adBox/indicator_sel.png");
+  background-position:-16px center;}
+#adBox > .indicator > .indicator_selector_btn > li.active > a {background-position:2px center;}
+ 
+
+
+
+
+/* .ad_banner -------------------------------------------------- */
+#adBox > .ad_banner {
+  position:relative;
+  width:100%; height:100%;}
+
+#adBox > .ad_banner > div {
+  position:absolute; top:0; left:0; z-index:100;
+  width:100%; height:100%;
+  text-align:center; line-height:650px; font-size:2rem; color:#fff;}
+  
+  .banner_01 {background-image:url("../../../img/galleria/galleria_img/adBox/banner_01.jpg");
+  background-repeat:no-repeat;
+  background-position:center 100%;
+  /*background-size:cover;*/}
+  .banner_02 {background-image:url("../../../img/galleria/galleria_img/adBox/banner_02.jpg");
+  background-repeat:no-repeat;
+  background-position:center 100%;
+  /*background-size:cover;*/}
+  .banner_03 {background-image:url("../../../img/galleria/galleria_img/adBox/banner_03.jpg");
+  background-repeat:no-repeat;
+  background-position:center 100%;
+  /*background-size:cover;*/}
+  .banner_04 {background-image:url("../../../img/galleria/galleria_img/adBox/banner_04.png");
+  background-repeat:no-repeat;
+  background-position:center 100%;
+  background-size:cover;}
+  /* 차후 자바스크립트를 통해 '.active'의 이름이
+     html문서에 삽입되어 기능을 처리하도록 함 */
+
+#adBox > .ad_banner > div.active {z-index:110;}
+
+
+
+
+/* .scroll_view -------------------------------------------------- */
+/* 최초의 위치에서 오른쪽에 있는 스크롤 바의 위치를 파악하여
+   그만큼의 비율을 bottom값에 적용하는 것 */
+#adBox > .scroll_view {
+  position:absolute; bottom:0; left:50%; z-index:400;
+  margin-left:-31px;
+  width:62px; height:130px;
+  background-image:url("../../../img/galleria/galleria_img/adBox/scroll_info.png");}
