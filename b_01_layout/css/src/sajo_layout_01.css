@@ -1,0 +1,35 @@
+/* sajo_layout_01.css */
+
+@import url("./sajo/wrap.css");
+
+
+/*#headBox----------------------------------------------------------*/
+@import url("./sajo/headBox.css");
+
+
+/*#adBox----------------------------------------------------------*/
+@import url("./sajo/adBox.css");
+
+
+/*#brandBox----------------------------------------------------------*/
+@import url("./sajo/brandBox.css");
+
+
+/*#businessBox----------------------------------------------------------*/
+@import url("./sajo/businessBox.css");
+
+
+/*#companyBox----------------------------------------------------------*/
+@import url("./sajo/companyBox.css");
+
+
+/*#newsBox----------------------------------------------------------*/
+@import url("./sajo/newsBox.css");
+
+
+/*#footBox----------------------------------------------------------*/
+@import url("./sajo/footBox.css");
+
+
+/*#quickBox----------------------------------------------------------*/
+@import url("./sajo/quickBox.css");

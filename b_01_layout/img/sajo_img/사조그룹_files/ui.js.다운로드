@@ -1,0 +1,565 @@
+var lastScroll = 0, snbPos = 0, $snb, $quickMenu, quickPos;
+
+$(document).ready(function(){
+	uiInit();
+	uiInitEvent();
+});
+
+//uiInit
+function uiInit(){
+	$snb = $(".snb");
+	if($snb.length){
+		snbPos = $snb.offset().top;
+	}
+	$quickMenu = $(".quick");
+	if($quickMenu.length){
+		quickPos = $quickMenu.offset().top;
+	}
+};
+
+//uiInitEvent (초기 실행)
+function uiInitEvent(){
+	categoryUnit();
+	gnb();
+	sliderWidth();
+	pageScrTop();
+	formFocus();
+	searchBoxFn();
+	$(window).on({
+		resize : function(){
+			sliderWidth();
+		},
+		scroll : function(){
+			snbFixed();
+			quickFixed();
+		}
+	});
+};
+
+//categoryUnit
+var categoryUnit = function(){
+	if(undefined != $(".container").attr("class")){
+		var cls = $(".container").attr("class").split(' ')[1];
+	}
+
+	switch(cls){
+		//브랜드소개
+		case 'brand':
+			$("#gnb .brand").addClass("active");
+			subVisualCycle();
+			break;
+		
+		//그룹소개
+		case 'group':
+			$("#gnb .group").addClass("active");
+			subVisualCycle();
+			break;
+
+		//제품소개
+		case 'product':
+			$("#gnb .product").addClass("active");
+			subVisualCycle();
+			break;
+		
+		//투자정보
+		case 'investmentInformation':
+			$("#gnb .investmentInformation").addClass("active");
+			subVisualCycle();
+			break;
+
+		//홍보센터
+		case 'prCenter':
+			$("#gnb .prCenter").addClass("active");
+			subVisualCycle();
+			break;
+
+		//ETC
+		case 'etc':
+			clickViewCnt();
+			default:
+	}
+}
+
+//gnb
+var gnb = function(){
+
+	var $depth1 = $(".depth1"),
+		$depth2 = $(".depth2"),
+		$header = $(".header_wrap");
+	$("#gnb .mn").on("mouseenter focus", function(){
+		var $myDepth1 = $(this).parents(".depth1");
+		overReset();
+		$myDepth1.addClass("on");
+		$header.addClass("gnb_open");
+	});
+	$("#gnb .depth2 a").on("mouseenter focus", function(){
+		var $myParent = $(this).parents("li");
+		overReset();
+		$myParent.addClass("on");
+	});
+	$("#gnb").on("mouseleave", function(){
+		$header.removeClass("gnb_open");
+		overReset();
+	});
+	var overReset = function(){
+		$depth1.removeClass("on");
+		$("#gnb .depth2 li").removeClass("on");
+	}
+
+};
+
+//SNB scroll fixed
+var snbFixed = function(){
+
+	if($snb.length){
+		var st = $(this).scrollTop(),
+		hdH = $(".header_wrap").height();
+		if (snbPos - hdH <= st){
+			$snb.addClass("fixed");
+		}else{
+			$snb.removeClass("fixed");
+		}
+		//console.log(snbPos)
+	}
+
+}
+
+//Quick scroll fixed
+var quickFixed = function(){
+
+	if($quickMenu.length){
+		var st = $(this).scrollTop(),
+			quickH = $quickMenu.height(),
+			hdH = $(".header_wrap").height();
+
+		if (quickPos+quickH-hdH <= st){
+			$quickMenu.addClass("fixed");
+		}else{
+			$quickMenu.removeClass("fixed");
+		}
+	}
+
+}
+
+//subVisualCycle
+function subVisualCycle(){
+	if($(".visual_bg").length){
+		var interval = null;
+		var intervaltime = 3000;
+		var animatetime = 1000;
+		$( '.visual_bg > li:eq(0)' ).addClass( "on" );
+		$(".visual_bg > li:not(.on)").css("opacity", 0);
+
+		interval = setInterval(function() {
+			var currentimg = $(".visual_bg > li.on");
+			currentimg.removeClass("on");
+
+			var nextimg = $(currentimg.next().size() > 0 ? currentimg.next() : ".visual_bg > li:eq(0)");
+			
+
+			nextimg.addClass("on");
+			currentimg.animate({ opacity : 0 }, animatetime );
+			nextimg.animate({ opacity : 1 }, animatetime );
+			
+		}, intervaltime);
+	}
+};
+
+//page scroll top button
+var pageScrTop = function(){
+	$(".page_top a").on('click', function(){
+		var sctPos = $(".wrap").offset().top;
+		$('html,body').stop().animate({'scrollTop':sctPos+'px'},500);
+	});
+}
+
+//slider : 반응형 (가로 가변 처리)
+var sliderWidth = function(){
+	if($(".main_slider").length){
+		var sliderWidth =  $(window).width();
+		$(".main_slider .showRoll .scene").css({
+			"width" : sliderWidth,
+			"height" : "600px"
+		})
+	}
+}
+
+//모달팝업창 열기
+function modalPopOpen(modalID){
+	var $target = $(modalID);
+	$target.css({
+		display:"block"
+	})
+	$("body").append('<div id="dmm"></div>');
+};
+//모달팝업창 닫기
+function modalPopClose(modalID){
+	var $target = $(modalID);
+	$target .css("display","none");
+	if($("#dmm").length){
+		$("#dmm").animate({opacity:0}, 200, function(){
+			$("#dmm").remove();
+		})
+	}
+};
+
+//index board paging
+var BoardPaging = function(initNum, targetID){
+
+	var itemParent = $(targetID),
+		item = itemParent.find("li"),
+		itemTotal = item.length,
+		btGroup = itemParent.siblings(".list_nav"),
+		currentIndex = 0;
+
+	btGroup.find(".list_prev").click(function(){
+		var index = currentIndex-1;
+
+		if(index <= 0){
+			currentIndex = 0;
+			item.css("display","block");
+			return;
+		}else{
+			item.eq(initNum*index-1).nextAll().css("display","block");
+			currentIndex = index;
+		}
+	})
+
+	btGroup.find(".list_next").click(function(){
+		var index = currentIndex+1;
+
+		if(index >= Math.ceil(itemTotal / initNum)){
+			index = currentIndex;
+			return;
+		}else{
+			item.eq(initNum*index).prevUntil().css("display","none");
+			currentIndex = index;
+		}
+	})
+}
+
+//입력테이블 focus 효과
+var formFocus = function(){
+	$(".input_form").delegate( "*", "focus blur", function() {
+		var $this = $(this);
+		focusChk($this);
+	});
+	//검색박스 focus 효과
+	$(".search_wrap").delegate( "*", "focus blur", function() {
+		var $this = $(this);
+		focusChk($this);
+	});
+}
+
+//focus체크
+var focusChk = function($this){
+	if(!$this.attr("readonly")){
+		setTimeout(function() {
+			$this.parent().toggleClass( "focused", $this.is( ":focus" ) );
+		}, 0 );
+	}
+}
+
+//펼침메뉴
+var clickViewCnt = function(){
+	$(".clause_sec dt").on("click", function(){
+		$(".clause_sec").removeClass("active");
+		$(this).parent().addClass("active");
+	})
+}
+
+var searchBoxFn = function(){
+
+	var $searchView = $(".search_view");
+
+	$(".option_menu .btn_search").on("mouseenter focus", function(){
+		$searchView.fadeIn(300, "linear").addClass("view")
+	});
+
+	$(".option_menu").on("mouseleave", function(){
+		$searchView.fadeOut(300, "linear").removeClass("view")
+	});
+
+	$(".btn_search_regist").on("click", function(){
+		$searchView.fadeOut(300, "linear").removeClass("view")
+	});
+
+	/*
+	$(document).on("click  keydown", function(e){
+		if($searchView.has(e.target).length === 0 && $searchView.hasClass("view")){
+			$searchView.fadeOut(300, "linear").removeClass("view");
+		}
+	})
+	*/
+	
+}
+
+
+//slider
+/* 롤링 스크립트 (디폴트값)
+new uiSlide({
+	obj:'#testWrap',	//타겟
+	first:2,			//첫장면 (1)
+	scene:'fade',		//전환효과 slide, fade (slide)
+	speed:500,			//전환속도 (1000)
+	auto:3000,			//자동롤링 시간 (0)
+	hover:true,			//자동롤링 : 마우스 오버시 멈춤 (false)
+	showNavi:'.target', //네비 true, false OR '.target' (false)
+	showArrow:true,		//버튼 : 이전 다음 (false)
+	showNumber:true,	//페이징 (false)
+	showPlay:true		//버튼 : 재생 멈춤 (false)
+	typeResponce:true //반응형
+});
+*/
+var uiSlide=function(o){
+	var	item='.scene',
+		obj=o.obj,
+		first,
+		speed,
+		auto,
+		scene=o.scene,
+		hover=o.hover,
+		navi=o.showNavi,
+		arrow=o.showArrow,
+		number=o.showNumber,
+		pause=o.showPlay,
+		hoverChk=true,
+		tgW=$(obj),
+		tgR=tgW.find('.showRoll>ul'),
+		pos=tgW.find('.showRoll>ul>'+item).outerWidth(),
+		responce = o.typeResponce,
+		intRoll;
+		(o.first) ? first=o.first : first=1;
+		(o.speed||o.speed==0) ? speed=o.speed : speed=1000;
+		(o.auto) ? auto=o.auto : auto=0;
+	//responce
+	if(responce){
+		pos=$(window).width();
+		//console.log(pos)
+	}
+	//navi
+	if(navi){
+		var tgNcon='';
+		tgR.find(item).each(function(i){
+			tgNcon+='<a href="#'+(i+1)+'" id="snid'+(i+1)+'"><span>'+(i+1)+'</span></a>';
+		});
+		$('<div class="showNavi">'+tgNcon+'</div>').clone().appendTo(tgW);
+		var tgN=tgW.find('.showNavi');
+		tgN.find('a').on({
+			click: function() {
+				if(!$(this).hasClass('on')) fnMove($(this).index()+1);
+				return false;
+			}
+		});
+		if(isNaN(navi)){
+			var tgNm=$(navi);
+			tgNm.on({
+				click:function(){
+					var tgNmChk=tgN.find('a').eq($(this).index());
+					if(tgNmChk.length) tgNmChk.click();
+					//$(this).addClass('on').siblings().removeClass('on');
+					return false;
+				}
+			});
+		};
+	};
+	//arrow (type !loop)
+	/*
+	if(arrow){
+		var btncon=(
+			'<div class="showArrow">'+
+			'<a href="#prev" class="prev"><span>prev</span></a>'+
+			'<a href="#next" class="next"><span>next</span></a>'+
+			'</div>'
+		);
+		$(btncon).clone().appendTo(tgW);
+		var tgA=tgW.find('.showArrow');
+		tgA.find('a').on({
+			click: function(){
+				if($(this).hasClass('next')&&!tgR.find(item+'.on').next().hasClass('shadow')){
+					fnMove(tgR.find(item+'.on').next().index());
+				}else if($(this).hasClass('prev')&&!tgR.find(item+'.on').prev().hasClass('shadow')){
+					fnMove(tgR.find(item+'.on').prev().index());
+				};
+				return false;
+			}
+		});
+	};
+	*/
+	//arrow (type loop)
+	if(arrow){
+		var btncon=(
+			'<div class="showArrow">'+
+			'<a href="#prev" class="prev"><span>prev</span></a>'+
+			'<a href="#next" class="next"><span>next</span></a>'+
+			'</div>'
+		);
+		$(btncon).clone().appendTo(tgW);
+		var tgA=tgW.find('.showArrow');
+		var tgNL=tgW.find('.showNavi > a').length;
+		tgA.find('a').on({
+			click: function(){
+				if($(this).hasClass('next')){
+					fnMove(tgR.find(item+'.on').next().index());
+				}else if($(this).hasClass('prev')&&!tgR.find(item+'.on').prev().hasClass('shadow')){
+					fnMove(tgR.find(item+'.on').prev().index());
+				}else if(tgR.find(item+'.on').prev().hasClass('shadow')){
+					fnMove(tgNL)
+				};
+				return false;
+			}
+		});
+	};
+	//number
+	if(number) $('<div class="showNumber"><strong></strong>/<span></span></div>').clone().appendTo(tgW);
+	//defalut
+	var eleFirst=tgR.find(item+':first'),
+		eleLast=tgR.find(item+':last');
+	$(eleFirst).clone().appendTo(tgR).addClass('shadow'); //슬라이드 효과를 위한, 첫번째 요소를 맨뒤에 추가하기
+	$(eleLast).clone().prependTo(tgR).addClass('shadow'); //슬라이드 효과를 위한, 마지막 요소를 맨앞에 추가하기
+	if(scene=='fade') tgR.css({left:-pos}).find(item).not('.shadow').css({position:'absolute',left:pos,top:0});
+
+	var fxFade=function(go){
+		tgR.find(item).css({zIndex:0}).stop().animate({opacity:0},speed).removeClass('on').eq(go).addClass('on').css({zIndex:1}).stop().animate({opacity:1},speed,function(){
+			tgR.find(item).removeClass('action').eq(go).addClass('action');
+		});
+		if(arrow) fnArrowChk();
+	};
+	var fxSlide=function(go,fn,lastChk){
+		if(fn=='auto'){
+			tgR.stop().animate({left:'-='+pos},speed,function(){
+				if(!lastChk) tgR.css({left:-pos});
+				tgR.find(item).removeClass('action').eq(go).addClass('action');
+			}).find(item).removeClass('on').eq(go).addClass('on');
+		}else if(fn=='move'){
+			tgR.stop().animate({left:-(pos*(go))},speed,function(){
+				tgR.find(item).removeClass('action').eq(go).addClass('action');
+			}).find(item).removeClass('on').eq(go).addClass('on');
+		};
+		if(arrow) fnArrowChk();
+	};
+	var fnNavi=function(go){
+		tgN.find('a').removeClass('on').eq(go-1).addClass('on');
+		if(isNaN(navi)) tgNm.find('a').removeClass('on').eq(go-1).addClass('on');
+	};
+	var fnNumber=function(){
+		var tgNum=tgW.find('.showNumber');
+		tgNum.find('strong').html(tgR.find(item+'.on').index());
+		tgNum.find('span').html(tgR.find(item).size()-2);
+	};
+	//move
+	var fnMove=function(go,effect){
+		if(tgR.find(item).size()-2<go) go=1;
+		if(scene=='fade'){//fade
+			fxFade(go);
+		}else{//slide
+			if(effect=='none') tgR.css({left:-(pos*(go))}).find(item).eq(go).addClass('on action');
+			fxSlide(go,'move');
+		};
+		if(navi) fnNavi(go);
+		if(number) fnNumber();
+		fnPlay('pause');
+		if(effect!='none') hoverChk=false;
+		if(arrow) fnArrowChk();
+	};
+	//auto
+	var fnAuto=function(){
+		var go,
+			lastChk=tgR.find('.on').index()<tgR.find(item).size()-2;
+		(lastChk) ? go=tgR.find('.on').next().index() : go=1;
+		if(scene=='fade'){//fade
+			fxFade(go);
+		}else{//slide
+			fxSlide(go,'auto',lastChk);
+		}
+		if(navi) fnNavi(go);
+		if(number) fnNumber();
+		fnPlay('play',auto,speed);
+	};
+	var fnPlay=function(value,auto,speed){
+		var dataAuto=Number(tgR.find(item+'.on').attr('data-auto'));
+		if(!dataAuto) dataAuto=auto;
+		if(value=='play'){
+			tgW.find('.showPlay').find('.play').addClass('on').siblings().removeClass('on');
+			clearTimeout(intRoll);
+			intRoll=setTimeout(function(){fnAuto();}, dataAuto+speed*2);
+			return;
+		}else if(value=='pause'){
+			tgW.find('.showPlay').find('.pause').addClass('on').siblings().removeClass('on');
+			clearTimeout(intRoll);
+			return;
+		};
+	};
+	//arrow버튼 비활성 체크
+	var fnArrowChk=function(){	
+		var reset=tgA.find('a').removeClass('off');	
+		if(tgR.find(item+'.on').next().hasClass('shadow')){
+			reset;
+			tgA.find('.next').addClass('off');
+		}else if(tgR.find(item+'.on').prev().hasClass('shadow')){
+			reset;
+			tgA.find('.prev').addClass('off');
+		}else{
+			reset;
+		};
+	};
+	if(pause){
+		var pausecon=(
+			'<div class="showPlay">'+
+			'<a href="#play" class="play"><span>Play</span></a>'+
+			'<a href="#pause" class="pause"><span>Pause</span></a>'+
+			'</div>'
+		);
+		$(pausecon).clone().appendTo(tgW);
+
+		tgW.find('.showPlay a').on({
+			click: function(){
+				if($(this).hasClass('play')){
+					fnPlay('play',auto,speed);
+					hoverChk=true;
+				}else if($(this).hasClass('pause')){
+					fnPlay('pause');
+					hoverChk=false;
+				};
+				$(this).addClass('on').siblings().removeClass('on');
+				return false;
+			}
+		});
+		if(auto) tgW.find('.showPlay a.play').addClass('on');
+	};
+	//hover pause
+	if(hover&&auto){
+		tgW.on({
+			mouseenter:function(){
+				if(hoverChk) fnPlay('pause');
+			},mouseleave:function(){
+				if(hoverChk) fnPlay('play',auto,speed);
+			}
+		});
+	};
+	//leave auto
+	/*
+	if(auto){
+		tgW.on({
+			mouseleave:function(){
+				fnPlay('play',auto,speed);
+			}
+		});
+	};
+	*/
+	//init
+	fnMove(first,'none');
+	if(auto!=0) fnPlay('play',auto,speed);
+
+	$(window).on({
+		load : function(){
+			fnMove(tgR.find(item+'.on').index(),'none');
+			if(auto!=0) fnPlay('play',auto,speed);
+		},
+		resize : function(){
+			fnMove(tgR.find(item+'.on').index(),'none');
+			if(auto!=0) fnPlay('play',auto,speed);
+		}
+	});
+
+};

@@ -1,0 +1,17 @@
+
+function checkForm( frm )
+{
+	if($("#userID").val() == ""){
+		alert("아이디를 입력해주세요");
+		$("#userID").focus();
+		return false;
+	}
+
+	if($("#userPWD").val() == ""){
+		alert("패스워드를 입력해주세요");
+		$("#userPWD").focus();
+		return false;
+	}
+
+	return true;
+}

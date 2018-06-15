@@ -1,0 +1,123 @@
+/* headBox.css */
+
+/* color :
+   unb bg-c : #08164e;
+   unb point : #a2a2a2;
+   gnb bg-c : #ffffff;
+   gnb border-c : #cccccc;
+*/
+
+
+
+#headBox {
+  position:fixed; z-index:1000;
+  width:100%; height:100px; background-color:#fa0;
+  box-shadow:0 3px 10px 5px rgba(0,0,0,0.1);}
+
+/* .unb ------------------------------------------------------ */
+#headBox > .unb {
+  width:100%; height:40px; background-color:#08164e;}
+
+  #headBox > .unb > .unb_menu {
+    margin:auto; margin-left:1018px;
+    width:412px; height:inherit;}
+
+    #headBox > .unb > .unb_menu > li {
+      float:left;
+      box-sizing:border-box; padding:0 5px;
+      width:103px; height:40px;
+      background-image:url("../../../img/sajo_img/img/headBox/unb.png");
+      background-repeat:no-repeat;}
+
+    #headBox > .unb > .unb_menu > li:nth-child(1) {
+      padding-left:0;
+      background-position:0 0;}
+    #headBox > .unb > .unb_menu > li:nth-child(2) {
+      background-position:-103px 0;}
+    #headBox > .unb > .unb_menu > li:nth-child(3) {
+      padding-right:0;
+      background-position:-206px 0;}
+    #headBox > .unb > .unb_menu > li:nth-child(4) {
+      padding:0;
+      background-position:-309px 0;}
+
+
+/* .gnb_area ------------------------------------------------------ */
+#headBox > .gnb_area {
+  margin:auto;
+  width:100%; height:140px;}
+
+  #headBox > .gnb_area > h1 {
+    margin:25px 0 0 490px;
+    float:left; 
+    width:124px; height:50px;}
+
+  #headBox > .gnb_area > h1 > a {
+    display:block; width:100%; height:100%;
+    background-image:url("../../../img/sajo_img/img/headBox/logo.png");}
+
+
+  /* .gnb_menu ------------------------------------------------------ */
+  #headBox > .gnb_area > .gnb {
+  box-sizing:border-box; padding:0 490px;
+  width:100%; height:100px; background-color:#fff;
+  border-bottom:1px solid #ccc;}
+
+  #headBox > .gnb_area > .gnb > .gnb_menu {
+    margin:25px 0 0 56px;
+    box-sizing:border-box; float:left;
+    width:540px; height:inherit;}
+
+    #headBox > .gnb_area > .gnb > .gnb_menu > li {
+      margin-right:41px;
+      float:left;
+      width:74px; height:50px;}
+    #headBox > .gnb_area > .gnb > .gnb_menu > li:first-child {
+      margin-right:38px; width:83px;}
+    #headBox > .gnb_area > .gnb > .gnb_menu > li:last-child {margin-right:0;}
+
+    #headBox > .gnb_area > .gnb > .gnb_menu > li > a {
+      background-image:url("../../../img/sajo_img/img/headBox/menu_list.png");
+      background-repeat:no-repeat;}
+    #headBox > .gnb_area > .gnb > .gnb_menu > li > a:hover {
+      height:75px;
+      background-image:url("../../../img/sajo_img/img/headBox/menu_list_on.png");
+      background-repeat:no-repeat;}
+    #headBox > .gnb_area > .gnb > .gnb_menu > li > a:focus {
+      box-sizing:border-box;
+      border-bottom:3px solid #fa0;}
+
+    #headBox > .gnb_area > .gnb > .gnb_menu > li:nth-child(1) > a {
+      background-position:0 0;}
+    #headBox > .gnb_area > .gnb > .gnb_menu > li:nth-child(2) > a {
+      background-position:-121px 0;}
+    #headBox > .gnb_area > .gnb > .gnb_menu > li:nth-child(3) > a {
+      background-position:-236px 0;}
+    #headBox > .gnb_area > .gnb > .gnb_menu > li:nth-child(4) > a {
+      background-position:-351px 0;}
+    #headBox > .gnb_area > .gnb > .gnb_menu > li:nth-child(5) > a {
+      background-position:-466px 0;}
+
+
+  /* .gnb_site_link ------------------------------------------------------ */
+  #headBox > .gnb_area > .gnb > .gnb_site_link {
+    margin-top:34px; margin-left:62px;
+    float:right;
+    width:116px; height:34px;}
+
+    #headBox > .gnb_area > .gnb > .gnb_site_link > li {
+      margin-right:7px;
+      float:left;
+      width:34px; height:34px;}
+    #headBox > .gnb_area > .gnb > .gnb_site_link > li:last-child {margin-right:0;}
+
+    #headBox > .gnb_area > .gnb > .gnb_site_link > li > a {
+      background-image:url("../../../img/sajo_img/img/headBox/link.png");
+      background-repeat:no-repeat;}
+
+    #headBox > .gnb_area > .gnb > .gnb_site_link > li:nth-child(1) > a {
+      background-position:0 0;}
+    #headBox > .gnb_area > .gnb > .gnb_site_link > li:nth-child(2) > a {
+      background-position:-41px 0;}
+    #headBox > .gnb_area > .gnb > .gnb_site_link > li:nth-child(3) > a {
+      background-position:-82px 0;}
