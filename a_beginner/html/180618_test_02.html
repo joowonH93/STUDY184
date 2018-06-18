@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- 180618_test_02.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+
+<!--   <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/src/180618_test_02.css" /> -->
+
+  <!-- [if lte IE9] >
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/pie/PIE_IE9.js"></script>
+  < ![endif] -->
+  
+  <link rel="apple-touch-icon" href="../favicon.gif">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.gif">
+
+  <title>180618_test_02 인디케이터</title>
+
+  <style>
+    html, body {margin:0; padding:0;}
+    ul, li {list-style:none;}
+    h1, h2 {margin:0; padding:0;}
+    .hidden, .hidden_wrap span {display:block; width:0; height:0; overflow:hidden;}
+
+    #wrap {
+      
+      padding-bottom:1rem;
+      width:100%; height:5000px; background-color:#ccc;}
+    
+    h1 {padding:1rem; background-color:#0af; text-align:center;}
+
+    .banner {position:relative;
+      width:100%; height:40vw; background-color:#faa;}
+
+
+      /* .indicator ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+      .indicator {
+        position:absolute; bottom:1rem; right:1rem; z-index:150;
+        box-sizing:border-box; padding:0.7rem;
+        width:auto; height:auto; background-color:#171717;
+        border-radius:3rem;}
+
+      .indicator > li {
+        margin-right:1rem; float: left;
+        box-sizing:border-box;
+        width:1.5rem; height:1.5rem;
+        border-radius:100%;
+        border:3px solid #fff;
+        background-color:inherit;}
+
+      .indicator > li:last-child {margin-right:0;}
+
+      /*.indicator > li:hover {background-color:#fff;}*/
+
+      .indicator > li.active {background-color:#fff;}
+
+      .indicator > li > a {
+        display:block; cursor:pointer;
+        width:100%; height:100%;}
+
+      .indicator > li > a:hover {background-color:#fff;}
+      .indicator > li > a:focus {
+        background-color:#fff;
+        border-radius:100%;
+        outline:2px solid #aaf; position:relative; z-index:1000;}
+
+
+      /* .banner ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+      .banner_box {width:100%; height:100%;}
+
+      /* 1차: 같은 자리에 광고 배너 겹칠 경우 */
+      .banner_wrap {
+        position:relative; width:100%; height:100%;}
+
+      .banner_wrap > div {
+        position:absolute; top:0; left:0; z-index:50;
+        width:100%; height:100%;
+        color:#fff; line-height:40vw; font-size:3rem; text-align:center;}
+
+      .banner_wrap > div.active {z-index:100;}
+
+      .banner_01 {background-color:#f61;}
+      .banner_02 {background-color:#a61;}
+      .banner_03 {background-color:#0b1;}
+
+
+  </style>
+</head>
+
+<body>
+  <!-- design -->
+  <div id="wrap">
+    <h1>slide banner</h1>
+    <section class="banner">
+      <h2 class="hidden">slide banner</h2>
+      <ul class="indicator hidden_wrap">
+        <li class="active"><a href="#"><span>배너 1</span></a></li>
+        <li><a href="#"><span>배너 2</span></a></li>
+        <li><a href="#"><span>배너 3</span></a></li>
+      </ul>
+
+      <div class="banner_box">
+        <div class="banner_wrap">
+          <div class="banner_01 active">banner_01</div>
+          <div class="banner_02">banner_02</div>
+          <div class="banner_03">banner_03</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+
+  <script type="text/javascript">
+    (function($) {
+      // indicator 선택자 변수로 처리
+      var banner = $('.banner');
+      var bannerUl = banner.children('ul');
+      var banLi = bannerUl.children('li');
+      // banner_wrap 내부 div 선택자를 변수로 처리
+      var bannerWrap = $('.banner_wrap');
+      var bannerIn = bannerWrap.children('div');
+
+
+      // banLi를 클릭하면,
+        // 선택되지 않은 요소에는 클래스 이름을 제거
+        // 해당 요소에 클래스이름을 부여('active')
+        // 선택된 요소의 순서값( index() ) 파악
+        // 광고배너의 클래스 이름을 제거
+        // 선택요소와 동일한 위치의 광고배너 클래스이름을 부여 ('active')
+
+      banLi.click(function(event){
+        event.preventDefault();
+        // // 선택되지 않은 요소에는 클래스 이름을 제거
+        // banLi.removeClass('active')
+        // // 해당 요소에 클래스이름을 부여('active')
+        // $(this).addClass('active')
+
+        // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~위 아래 같은 식인데 다르게 씀
+
+        // 해당 요소에 클래스이름을 부여('active')
+        $(this).addClass('active')
+        // 선택된 요소의 다른 형제 요소에는 클래스 이름을 제거
+        $(this).siblings('li').removeClass('active');
+
+        // ===
+
+        var i = $(this).index();
+        console.log(i); // 검증:순서값 파악
+        // 광고배너의 클래스 이름을 제거
+        bannerIn.removeClass('active');
+        // 선택요소와 동일한 순서의 광고배너 클래스 이름을 부여('active')
+        bannerIn.eq(i).addClass('active');
+
+      });
+
+
+    })(jQuery);
+
+  </script>
+
+</body>
+</html>

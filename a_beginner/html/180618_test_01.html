@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- 180618_test_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+
+  <!-- <link rel="stylesheet" href="../css/base/reset.css" /> -->
+
+  <!-- [if lte IE9] >
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/pie/PIE_IE9.js"></script>
+  < ![endif] -->
+  
+  <link rel="apple-touch-icon" href="../favicon.gif">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.gif">
+
+  <title>test_01</title>
+  
+  <style>
+
+  html,body {margin:0; padding:0; height:100%;}
+
+    .text_test {
+      box-sizing:border-box; padding:1rem;
+      width:800px; height:auto;
+      background-color: #faa;
+      margin-bottom:100px;}
+    .box {
+      width:150px; height:150px;
+      background-color:#07f;
+      margin-right:1rem; margin-bottom:1rem;
+      float:left;}
+    p {margin:0;
+      width:100%; height:auto;
+      font-size:1rem;
+      text-align:justify;}
+
+    /* -------------------------------------------------------------------------------------- */
+
+    .clearfix:after {content:" "; display:block; clear:both;}
+    ul, li {list-style:none;}
+    h1,h2,ul,li,p,div {margin:0; padding:0; border:0; outline:0;}
+
+    .more_box {
+      box-sizing:border-box; padding:3px;
+      width:921px; height:auto;
+      background-color:#07a;
+      margin-bottom:100px;}
+
+    .title_wrap {
+      margin-right:3px; margin-bottom:3px;
+      float: left;
+      box-sizing:border-box; padding:1rem;
+      width:303px; height:303px;
+      background-color:#faa;}
+    .more_box > ul {width:100%; height:100%;}
+
+    .more_box > ul > li {
+      float:left;
+      margin-right:3px; margin-bottom:3px;
+      width:150px; height:150px;
+      background-color:#faa;}
+
+    .more_box > ul > li > a {display:block; width:100%; height:100%; cursor:pointer;}
+
+    .more_box > ul > li:nth-child(4) {
+      float: right;
+      margin-right:0;
+      height:303px;}
+
+    .more_box > ul > li:nth-child(8),
+    .more_box > ul > li:nth-child(9),
+    .more_box > ul > li:nth-child(10),
+    .more_box > ul > li:nth-child(11),
+    .more_box > ul > li:nth-child(12) {margin-bottom:0;}
+    .more_box > ul > li:nth-child(13) {margin-right:0; margin-bottom:0;}
+
+    /* -------------------------------------------------------------------------------------- */
+
+    .banner {
+      position:relative;
+      margin:0;
+      margin-bottom:100px;
+      width:100%; height:40vw;
+      background-color:#ffa;}
+
+    .banner > .indicator {
+      position:absolute; bottom:1rem; right:1rem;
+      box-sizing:border-box; padding:0.7rem;
+      width:auto; height:auto; background-color:#000;
+      border-radius:0.7rem;}
+
+    .banner > .indicator > li {
+      float:left; box-sizing:border-box;
+      margin-right:1rem;
+      width: 1.5rem; height: 1.5rem;
+      border-radius:0.7rem;
+      border:2px solid #fff;}
+    .banner > .indicator > li:hover {background-color:#fff;}
+
+    .banner > .indicator > li:last-child {margin-right:0;}
+    .banner > .indicator > li > a {display:block; width:100%; height:100%;}
+    .banner > .indicator > li > a > span {display:block; width:0; height:0; position:relative; z-index:-100; overflow:hidden;}
+
+
+
+  </style>
+</head>
+
+<body>
+  <!-- design -->
+  <div class="text_test ">
+    <div class="box">
+      이미지
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis consequuntur rerum sed eius veritatis dolores, alias consectetur minima quos. Quidem ut autem quaerat minima, cum nihil ex molestias esse dicta tempora. Sint exercitationem modi, deserunt ullam perferendis temporibus voluptatibus! Animi doloribus dicta, quos earum illum error enim, laudantium eius molestiae deserunt deleniti. Quaerat quasi quam sed, velit officiis quia alias corporis odio dignissimos deserunt cumque mollitia in, sapiente autem possimus consequatur itaque maiores delectus iste incidunt placeat commodi, fuga ipsam quisquam! Facilis reiciendis totam, corrupti, mollitia eos, amet consequuntur optio aliquam laborum tenetur quas consectetur provident in voluptatibus odit ex beatae. Ipsa voluptate illum eum, doloremque laboriosam accusamus fugit, molestiae, adipisci, distinctio debitis earum totam quas architecto vero rerum eius numquam? Vero ipsam eius, a illum animi minima possimus suscipit, accusamus dicta minus laborum deleniti ipsum magnam ut impedit vel quia repudiandae. Provident dolorem consequuntur, facere exercitationem at unde neque similique nostrum. Accusantium autem dolores, officiis amet architecto corporis voluptatem distinctio debitis earum dolorum consequuntur ullam quos obcaecati quo magni! Atque similique ut, ad dolorum aspernatur, incidunt animi perferendis consequatur, a praesentium eaque maxime voluptas. Quia, asperiores, at modi sequi nihil obcaecati nam blanditiis a magni temporibus quod ullam, veniam?</p>
+  </div>
+
+  <div class="more_box clearfix">
+    <div class="title_wrap">
+      <h2>sub title</h2>
+      <p><br />Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, esse.</p>
+    </div>
+    <ul>
+      <li><a href="#">li_01</a></li>
+      <li><a href="#">li_02</a></li>
+      <li><a href="#">li_03</a></li>
+      <li><a href="#">li_04</a></li>
+      <li><a href="#">li_05</a></li>
+      <li><a href="#">li_06</a></li>
+      <li><a href="#">li_07</a></li>
+      <li><a href="#">li_08</a></li>
+      <li><a href="#">li_09</a></li>
+      <li><a href="#">li_10</a></li>
+      <li><a href="#">li_11</a></li>
+      <li><a href="#">li_12</a></li>
+      <li><a href="#">li_13</a></li>
+    </ul>
+  </div>
+
+  <div class="banner">
+    <ul class="indicator hidden_wrap">
+      <li><a href="#"><span>selector_01</span></a></li>
+      <li><a href="#"><span>selector_02</span></a></li>
+      <li><a href="#"><span>selector_03</span></a></li>
+    </ul>
+  </div>
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+
+  <script type="text/javascript">
+
+    // (function($){
+    //   var tWrap = $('.title_wrap');
+    //   var wrapUl = tWrap.children('ul');
+    //   var wrapLi = wrapUl.children('li');
+
+    //   wrapLi.click(function(event){
+    //     event.preventDefault();
+    //   // a.on('click'), function(e){
+    //   //   e.preventDefault();
+
+    //   })
+    // })(jQuery);
+  </script>
+</html>

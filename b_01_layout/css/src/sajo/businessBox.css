@@ -1,5 +1,68 @@
 /* businessBox.css */
 
+/* color : 
+   more button : #08164e
+*/
+
 #businessBox {
-  width:100%; height:871px;
-  background-image:url("../../../img/sajo_img/img/businessBox/business_bg_img.jpg");}
+  width:100%; height:871px;}
+
+  #businessBox > .business_wrap {
+    box-sizing:border-box; padding:100px 490px 91px;
+    width:100%; height:inherit;
+    background-image:url("../../../img/sajo_img/img/businessBox/business_bg_img.jpg");}
+
+  #businessBox > .business_wrap > h2 {
+    float:left;
+    font-size:40px;}
+
+  #businessBox > .business_wrap > .more_btn {
+    margin-top:24px;
+    float:right;
+    width:74px; height:27px;
+    background-color:#08164e;
+    border-radius:12px;
+    color:#fff; text-align:center;}
+    
+  #businessBox > .business_wrap > ul {
+    margin-top:75px;
+    width:940px; height:605px;}
+
+  #businessBox > .business_wrap > ul > li {
+    float:left;
+    margin-right:5px; margin-bottom:5px;
+    width:310px; height:300px;
+    background-repeat:no-repeat;}
+
+  #businessBox > .business_wrap > ul > li > a {
+    width:100%; height:100%; cursor:pointer;}
+
+  #businessBox > .business_wrap > ul > li:nth-child(1) {
+    background-image:url("../../../img/sajo_img/img/businessBox/business_img01.jpg");
+  }
+  #businessBox > .business_wrap > ul > li:nth-child(2) {
+    background-image:url("../../../img/sajo_img/img/businessBox/business_img02.jpg");
+  }
+  #businessBox > .business_wrap > ul > li:nth-child(3) {
+    margin-right:0;
+    background-image:url("../../../img/sajo_img/img/businessBox/business_img03.jpg");}
+  #businessBox > .business_wrap > ul > li:nth-child(4) {
+    margin-bottom:0;
+    background-image:url("../../../img/sajo_img/img/businessBox/business_img04.jpg");}
+  #businessBox > .business_wrap > ul > li:nth-child(5) {
+    margin-bottom:0;
+    background-image:url("../../../img/sajo_img/img/businessBox/business_img05.jpg");}
+  #businessBox > .business_wrap > ul > li:nth-child(6) {
+    margin-right:0; margin-bottom:0;
+    background-image:url("../../../img/sajo_img/img/businessBox/business_img06.jpg");}
+
+  #businessBox > .business_wrap > ul > li > dl {
+    margin:auto; margin-top:168px;
+    width:290px; height:122px;
+    background-image:url("../../../img/sajo_img/img/businessBox/b_box_dl.png");}
+
+  #businessBox > .business_wrap > ul > li > dl:hover {
+    margin:auto; margin-top:168px;
+    width:290px; height:122px;
+    color:#fff;
+    background-image:url("../../../img/sajo_img/img/businessBox/b_box_dl_on.png");}

@@ -23,3 +23,6 @@ header,nav,article,section,footer,aside,figure,figcaption {display:block;}
 .hidden, .hidden_wrap span {display:block; width:0; height:0; position:relative; z-index:-100; overflow:hidden;}
 
 .hidden_wrap span.view{width:auto; height:auto; position:static; overflow:normal;}
+
+/* 접근성 */
+a:focus, button:focus {outline:2px solid #fa0; position:relative; z-index:1000;}
