@@ -1,0 +1,39 @@
+/* 180621_test_01a.css */
+
+#wrap {
+  width: 100%; height: auto;}
+
+h1 {
+  margin-bottom:2rem;
+  padding:1rem;
+  background-color: #7fa;
+  color:#fff; text-align:center;}
+
+.accordion {
+  margin: auto; padding: 0.3rem;
+  width: 600px; height: auto; background-color: #ccc;}
+
+.accordion > dl {width: 100%; height: auto;}
+
+.accordion > dl > dt {
+  width: 100%; height: 50px; background-color: #067;
+  border-bottom: 1px solid #fff;}
+
+.accordion > dl > dt > button {
+  cursor:pointer;
+  width: 100%; height: 100%; 
+  color:#fff; font-size:1.2rem; text-align:left; font-weight:bold;
+  font-family:'myriad pro','돋움','sans-serif';
+  letter-spacing:0.05rem; word-spacing:0.2rem;
+  text-transform:uppercase;}
+
+.accordion > dl > dd {
+  box-sizing:border-box; padding:0.7rem;
+  width: 100%; height: auto; background-color: #ace;
+  text-align:justify;}
+
+.accordion > dl > dd {display:none;}
+/* step 01
+.accordion > dl > dd.view {display:block;}*/
+
+/*.accordion > dl > dt.view ~ dd {display:block;}*/
