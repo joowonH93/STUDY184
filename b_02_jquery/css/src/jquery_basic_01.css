@@ -1,0 +1,27 @@
+/*jquery_basic_01.css*/
+
+.wrap {
+  width:100%; height:auto;}
+
+h1 {
+  margin-bottom:2rem;
+  padding:1rem;
+  background-color:#037;
+  text-align:center;}
+
+p {
+  margin:auto;
+  box-sizing:border-box; padding:1rem;
+  width:800px; height:auto; background-color:#cff;
+  margin-bottom:2rem;
+  /*transition:all 800ms ease;*/}
+
+figcaption {margin:0; padding:0; display:block;}
+
+.img_place {
+  margin:auto;
+  width:800px; height:auto;}
+
+.img_place > img {
+  margin-bottom:2rem;
+  width:inherit; height:auto;}

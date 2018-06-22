@@ -4,7 +4,7 @@
 html,body {margin:0; padding:0; height:100%;}
 
 h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,
-p,pre,div,img {margin:0; padding:0; border:0; outline:0;}
+p,pre,div,img {margin:0; padding:0; border:0; outline:0; color:#333;}
 
 ul,ol,li{list-style:none;}
 
@@ -23,6 +23,3 @@ header,nav,article,section,footer,aside,figure,figcaption {display:block;}
 .hidden, .hidden_wrap span {display:block; width:0; height:0; position:relative; z-index:-100; overflow:hidden;}
 
 .hidden_wrap span.view{width:auto; height:auto; position:static; overflow:normal;}
-
-/* 접근성 */
-a:focus, button:focus {outline:2px solid #fa0; position:relative; z-index:1000;}
