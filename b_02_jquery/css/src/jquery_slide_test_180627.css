@@ -1,0 +1,92 @@
+/*jquery_slide_test_180627.css*/
+
+#wrap {width:100%; height:auto;}
+
+h1 {
+  margin-bottom:2rem;
+  width:100%; height:100px; background-color:#ccc;
+  color:#fff; font-size:3rem; text-align:center; line-height:90px;}
+
+#miniProduct {
+  position:relative;
+  margin:auto;
+  width:400px; height:300px; background-color:transparent;}
+
+
+
+.indicator {
+  position:absolute; top:320px; left:50%; margin-left:-102px;
+  box-sizing:border-box; padding:5px;
+  width:auto; height:auto; background-color:#aaa;
+  border-radius:18px;}
+
+.indicator > li {
+  margin-right:16px;
+  float:left;
+  width:26px; height:26px; background-color:#fff;
+  border-radius:100%;}
+.indicator > li:last-child {margin-right:0;}
+
+.indicator > li.active {background-color:#fa0;}
+
+.indicator > li > a {
+  display:block;
+  width:inherit; height:inherit;
+  border-radius:100%;}
+
+.indicator > li > a:hover {background-color:#fa0;}
+.indicator > li > a:focus {
+  /*position:relative; z-index:200;*/
+  box-sizing:border-box;
+  border:3px solid #a0f;}
+
+
+
+/* slide_btn 영역의 height값을 꼭 0으로! */
+.slide_btn {
+  position:absolute; top:50%; left:-100px;
+  margin-top:-50px;
+  width:600px; height:0;}
+
+.slide_btn > button {
+  width:100px; height:100px; background-color:#333;
+  border-radius:100%;}
+.slide_btn > button:hover,
+.slide_btn > button:focus {background-color:#3335;}
+
+.slide_btn > .prev_btn {float:left;}
+
+.slide_btn > .next_btn {float:right;}
+
+.slide_btn > button > i {
+  font-size:40px; color:#fff;}
+
+
+
+.product_wrap {
+  overflow:hidden;
+  width:100%; height:100%;}
+
+.product_wrap > .product {
+  width:2000px; height:100%;}
+
+.product_wrap > .product > li {
+  float:left; width:400px; height:100%;}
+
+.product_wrap > .product > li > a {
+  display:block;
+  width:100%; height:100%;
+  background-repeat:no-repeat;
+  background-size:contain;}
+
+.product_wrap > .product > li:nth-child(1) > a {
+  background-image:url(../../img/cake/cake_1.png);}
+.product_wrap > .product > li:nth-child(2) > a {
+  background-image:url(../../img/cake/cake_2.png);}
+.product_wrap > .product > li:nth-child(3) > a {
+  background-image:url(../../img/cake/cake_3.png);}
+.product_wrap > .product > li:nth-child(4) > a {
+  background-image:url(../../img/cake/cake_4.png);}
+.product_wrap > .product > li:nth-child(5) > a {
+  background-image:url(../../img/cake/cake_5.png);}
+  
