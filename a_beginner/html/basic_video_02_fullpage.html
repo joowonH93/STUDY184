@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- basic_video_02_fullpage.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Roboto" />
+  <link rel="stylesheet" href="../css/base/reset.css" />
+
+  <!-- [if lte IE9] >
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/pie/PIE_IE9.js"></script>
+  < ![endif] -->
+  
+  <link rel="apple-touch-icon" href="../favicon.gif">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.gif">
+
+  <title>basic_video_02_fullpage</title>
+
+  <!-- design -->
+  <style type="text/css">
+
+    body {overflow-x:hidden;}
+
+    .wrap {width:100%; height:100%;}
+
+    .title {position:absolute; top:2rem; left:2rem; z-index:100; color:#fff;}
+     .title > h1 {font-size:3rem; border-bottom:1px solid #fa0; color:#fff;}
+     .title > h2 {font-size:1.5rem; color:#ff0;}
+
+
+     #fullVideo {position:relative; width:100%; height:100%; background-color:#fa0;}
+
+     #fullVideo > video {
+      width:auto; height:auto; min-width:100%; min-height:100%;
+      position:absolute; top:50%; left:50%;
+      transform:translateX(-50%) translateY(-50%);
+      backface-visibility:visible; /*영상의 뒷면에 앞면과 같이 영상을 보여주냐 공란으로 보여주냐*/}
+
+      /*transform은 벤더프리픽스를 달아줘야 함*/
+
+  </style>
+
+
+
+
+</head>
+
+<body>
+  <!-- design -->
+  <div class="wrap">
+    <hgroup class="title">
+      <h1>video를 화면 전체에 나타나게 만들기...☆</h1>
+      <h2>video 내용이 반응형에서도 돌아가게 만들어 보기</h2>
+    </hgroup>
+
+    <div id="fullVideo">
+      <video controls="controls" loop="loop" autoplay="autoplay" muted="muted">
+        <source src="../media/video/PRISTIN_V_Get It.mp4" type="video/mp4" />
+        <p>사용하고 계신 브라우저는 비디오 지원이 되지 않습니다. 크롬권장<br />
+          <a href="http://google.com/chrome">권장 브라우저 받으러 가기</a></p>
+      </video>
+    </div>
+
+  </div>
+
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+
+</body>
+</html>

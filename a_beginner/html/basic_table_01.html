@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- basic_table_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/src/basic_table_01.css" />
+
+  <!-- [if lte IE9] >
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/pie/PIE_IE9.js"></script>
+  < ![endif] -->
+  
+  <link rel="apple-touch-icon" href="../favicon.gif">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.gif">
+
+  <title>basic_table_01</title>
+
+  <style type="text/css">
+
+    table, th, td {border:1px dotted #333; border-spacing:0;
+      border-collapse:collapse;}
+
+    table {width:500px;}
+
+    thead {background-color:#ac0;}
+      thead > tr {height:50px;}
+
+    tfoot {background-color:#fcc;}
+      tfoot > tr {height:50px;}
+
+    tbody {background-color:#acc;}
+      tbody > tr {height:80px;}
+
+    .table_01 {width:100px;}
+    .table_02 {width:200px;}
+    .table_03 {width:300px;}
+    .table_04 {width:400px;}
+
+  </style>
+
+
+</head>
+
+<body>
+  <!-- design -->
+  <h1>table 01</h1>
+
+  <table summary="2018년 6월 29일. 표에 대한 내용을 작성. 테이블 기초 이해하기">
+
+    <caption>테이블의 제목을 작성하는 곳
+      <span class="hidden">2018년 6월 29일. 표에 대한 내용을 작성. 테이블 기초 이해하기</span>
+    </caption>
+
+
+    <colgroup>
+      <col class="table_01">
+      <col class="table_02">
+      <col class="table_03">
+      <col class="table_04">
+    </colgroup>
+
+
+    <thead>
+      <tr>
+        <th>셀 제목 01</th>
+        <th>셀 제목 02</th>
+        <th>셀 제목 03</th>
+        <th>셀 제목 04</th>
+      </tr>
+    </thead>
+
+    <tfoot>
+      <tr>
+        <td>티풋 01</td>
+        <td>티풋 02</td>
+        <td>티풋 03</td>
+        <td>티풋 04</td>
+      </tr>
+    </tfoot>
+
+    <tbody>
+      <tr>
+        <td colspan="2">셀 내용 작성 01~02</td>
+        <!-- <td>셀 내용 작성 02</td> -->
+        <td>셀 내용 작성 03</td>
+        <td>셀 내용 작성 04</td>
+      </tr>
+      <tr>
+        <td rowspan="2">셀 내용 작성 01</td>
+        <td>셀 내용 작성 02</td>
+        <td>셀 내용 작성 03</td>
+        <td>셀 내용 작성 04</td>
+      </tr>
+      <tr>
+        <!-- <td>셀 내용 작성 01</td> -->
+        <td>셀 내용 작성 02</td>
+        <td colspan="2" rowspan="3">셀 내용 작성 03</td>
+        <!-- <td>셀 내용 작성 04</td> -->
+      </tr>
+      <tr>
+        <td>셀 내용 작성 01</td>
+        <td>셀 내용 작성 02</td>
+        <!-- <td colspan="2">셀 내용 작성 03</td> -->
+        <!-- <td>셀 내용 작성 04</td> -->
+      </tr>
+      <tr>
+        <td>셀 내용 작성 01</td>
+        <td>셀 내용 작성 02</td>
+        <!-- <td colspan="2">셀 내용 작성 03</td> -->
+        <!-- <td>셀 내용 작성 04</td> -->
+      </tr>
+    </tbody>
+
+  </table>
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+
+</body>
+</html>

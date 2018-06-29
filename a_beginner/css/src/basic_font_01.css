@@ -1,0 +1,102 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/*basic_font_01.css*/
+
+
+/* font-family:영문, 영문의 대체, 대체, 한글, 한글의 대체, 대체, 전체의 기본 서체; */
+
+/* 
+   디자인, 사용서체가, 웹상에서 써야하기 때문에 내 컴퓨터를 기준으로 작성하는 것은 아니다.
+   1. 웹 폰트를 사용할 것을 권장(https://fonts.google.com/)
+   2. 강제로 웹폰트를 만들자!
+   3. 그래픽 프로그램(포토샵/일러스트)을 통한 이미지 서체
+   4. 포기하면 편해
+*/
+
+/*
+   font-weight:regular;(기본 굵기-400)
+   thin, right,(얇은 굵기는 보통 100~300)
+   bold, bolder, extrabold
+*/
+
+
+
+
+
+
+
+h1, h2, hr {margin-bottom:2rem;}
+
+p {
+  margin-bottom:2rem;
+  padding:1rem; background-color:#eee;
+}
+
+.font_01 {
+  font-size:1rem;
+  font-family:'돋움', '굴림';
+}
+
+.font_02 {
+  font-size:2rem;
+  font-family:Raleway, Roboto, sans-serif;
+  font-weight:100;
+}
+
+.font_03 {
+  font-family:'Noto Sans KR', sans-serif;
+  font-weight:100;
+}
+
+.font_04 {
+  font-size:1.5rem;
+  font-family:'Black Han Sans', sans-serif;
+  font-weight:100;
+}
+
+.font_05 {
+  margin-bottom:2rem;
+  padding:1rem; background-color:#eee;
+
+  color:#555;
+  /*글씨와 글씨 사이의 간격*/
+  letter-spacing:-30%;
+
+  /*단어와 단어 사이의 간격*/
+  word-spacing:0;
+
+  /*줄간격 기본 120%. 단위를 쓰지 않는다면 기본 단위는 rem*/
+  line-height:2;
+
+  /*기울기. italic / normal*/
+  /*font-style:italic;*/
+
+  /*글자를 변화시킬 거냐~
+    모두대문자 = uppercase
+    모두소문자 = lowercase
+    단어첫글자 대문자 = capitalize
+  */
+  /*text-transform:;*/
+
+  /*정렬. justify의 경우 반드시 br이 없어야 함*/
+  text-align:justify;
+
+  /*장평. 지원 안됨. 쓰지 말어라*/
+  /*font-stretch:50%;*/
+}
+
+.of {background-color:#0af;
+     margin-bottom:20rem;}
+.of > p {width:250px; background-color:#fa0;
+  white-space:nowrap; /*의미없는 공백*/
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/*
+  font 설정 시 축약 방법
+  font : 기울임 굵기 서체크기/행간(line-height) 서체명, 서체명, 서체명...;
+*/
+.wrap > p {font:italic bold 2rem/200% 'myriad pro', arial, 'nanumGothic', sans-serif;}
+/*.wrap > p::first-line {color:#f06;}*/
+/*.wrap > p::first-letter {font-size:5rem;}*/
