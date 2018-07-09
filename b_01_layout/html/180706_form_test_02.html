@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- 180706_form_test_02.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="../fontawesome5/css/all.css" />
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/src/180706_form_test_02.css" />
+
+  <!-- [if lte IE9] >
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/pie/PIE_IE9.js"></script>
+  < ![endif] -->
+  
+  <link rel="apple-touch-icon" href="../favicon.gif">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.gif">
+
+  <title>180706_form_test_02</title>
+</head>
+
+<body>
+  <!-- design -->
+  <div id="wrap">
+    <form action="" method="post">
+      <fieldset>
+        <legend>awesome freelancers at the right price</legend>
+        
+        <div class="big_box">
+          <div class="list_select">
+            <select name="category" id="category" placeholder="category">
+              <option>category</option>
+              <optgroup>
+                <option value="01">선택지 01</option>
+                <option value="02">선택지 02</option>
+                <option value="03">선택지 03</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="list_select">
+            <select name="subcategory" id="subcategory">
+              <option>subcategory</option>
+              <optgroup>
+                <option value="01">선택지 01</option>
+                <option value="02">선택지 02</option>
+                <option value="03">선택지 03</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="find_btn">
+            <input type="submit" id="" name="" value="find a freelancer" />
+          </div>
+        </div>
+
+        <div class="list_check">
+          <input type="checkbox" id="check01" name="checkchech" value="Accepts Bitcoin" />
+          <label for="check01">Accepts Bitcoin</label>
+
+          <input type="checkbox" id="check02" name="checkchech" value="Featured" />
+          <label for="check02">Featured</label>
+
+          <input type="checkbox" id="check03" name="checkchech" value="Endorsed" />
+          <label for="check03">Endorsedn</label>
+
+          <input type="checkbox" id="check04" name="checkchech" value="Popular" />
+          <label for="check04">Popular</label>
+        </div>
+
+        <div class="how_it_work">
+          <a href="#">
+          How it works
+            <i class="fas fa-angle-double-right"></i>
+          </a>
+          
+        </div>
+      </fieldset>
+
+    </form>
+  </div>
+
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+
+</body>
+</html>

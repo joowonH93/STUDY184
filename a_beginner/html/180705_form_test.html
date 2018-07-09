@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- 180705_form_test.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap-theme.min.css" />
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+
+  <!-- [if lte IE9] >
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/pie/PIE_IE9.js"></script>
+  < ![endif] -->
+  
+  <link rel="apple-touch-icon" href="../favicon.gif">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.gif">
+
+  <title>180705_form_test</title>
+
+  <style>
+    #wrap {
+      margin:auto;
+      box-sizing:border-box; padding:342px 240px 330px 240px;
+      width:1280px; height:1280px; background-color:#9fb9ac;}
+
+    form {
+      width:802px; height:610px; background-color:transparent;}
+
+    .log_in_box {
+      position:relative;
+      box-sizing:border-box; padding:124px 50px 78px 66px;
+      width:802px; height:551px; background-color:#fff;
+      box-shadow:10px 10px 20px 5px #888;}
+
+    .log_in_box > legend {
+      position:absolute; top:-60px; left:50%; margin-left:-324px; margin-bottom:0;
+      border:0;
+      width:648px; height:120px; background-color:rgba(25, 113, 153, 0.9);
+      font-size:3rem; text-align:center; line-height:120px; color:#fff; text-transform:uppercase;}
+
+    .log_in_box > div {width:688px;}
+    .log_in_box > div > label {
+      float: left; 
+      top:0;
+      margin:0; border:0;}
+
+    .log_in_box > .box_01 {
+      margin-bottom:30px;
+      border:0; padding:0;
+      border-radius:10px;
+      height:101px; background-color:#dbdbdb;}
+
+      .log_in_box > .box_01 > label {
+        width:96px; height:101px; background-color:inherit;
+        font-size:3rem; text-align:center; line-height:101px; color:#90929e;}
+
+      .log_in_box > .box_01 > input {
+        float: left; border:0;
+        width:592px; height:101px; background-color:inherit;
+        font-size:2rem; text-align:left; line-height:101px; color:#90929e;}
+
+    .log_in_box > .box_02 {
+      margin-bottom:27px;
+      border:0; padding:0;
+      border-radius:10px;
+      height:103px; background-color:#dbdbdb;}
+
+      .log_in_box > .box_02 > label {
+        width:96px; height:103px; background-color:inherit;
+        font-size:3rem; text-align:center; line-height:103px; color:#90929e;}
+
+      .log_in_box > .box_02 > input {
+        float: left; border:0;
+        width:592px; height:103px; background-color:inherit;
+        font-size:2rem; text-align:left; line-height:103px; color:#90929e;}
+
+    .log_in_box > .box_03 {
+      border:0; padding:0;
+      width:688px; height:93px; background-color:#01628d;
+      font-size:2rem; font-weight:bold; color:#fff;}
+    
+  </style>
+
+</head>
+
+<body>
+  <!-- design -->
+  <div id="wrap">
+    <form action="" method="post">
+      <fieldset class="log_in_box">
+        <legend>member login</legend>
+        
+        <div class="box_01">
+          <label for="userName" class="glyphicon glyphicon-user"><span class="hidden">아이디를 입력하세요</span></label>
+          <input type="text" id="userName" name="userName" value="" placeholder="username" required="required" />
+        </div>
+
+        <div class="box_02">
+          <label for="pwText" class="glyphicon glyphicon-lock"><span class="hidden">비밀번호를 입력하세요</span></label>
+          <input type="password" id="pwText" name="pwText" value="" placeholder="password" required="required" />
+        </div>
+
+        <input class="box_03" type="submit" id="logInBtn" name="logInBtn" value="LOGIN" />
+        <label for="logInBtn"><span class="hidden">로그인을 눌러주세요</span></label>
+
+
+      </fieldset>
+    </form>
+  </div>
+
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+
+  <!-- bootstrap -->
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

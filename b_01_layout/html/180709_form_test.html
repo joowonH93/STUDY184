@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- 180709_form_test.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="../fontawesome5/css/all.css" />
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/src/180709_form_test.css" />
+
+  <!-- [if lte IE9] >
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/pie/PIE_IE9.js"></script>
+  < ![endif] -->
+  
+  <link rel="apple-touch-icon" href="../favicon.gif">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.gif">
+
+  <title>180709_form_test</title>
+</head>
+
+<body>
+  <!-- design -->
+  <div id="wrap">
+    <div id="member">
+      <form action="" method="post">
+        <fieldset>
+          <legend class="hidden">회원 로그인 페이지</legend>
+
+          <div class="login">
+            <input type="text" id="idName" name="idName" value="" placeholder="ID 입력하기" required="required" />
+            <label for="idName" class="hidden">id를 입력하세요</label>
+
+            <input type="password" id="pwName" name="pwName" value="" placeholder="PW 입력하기" required="required" />
+            <label for="pwName" class="hidden">비밀번호를 입력하세요</label>
+
+            <input type="submit" name="ok" value="LOGIN" />
+          </div>
+
+          <div class="remember clearfix">
+              <input type="checkbox" id="rememberId" name="rememberId" value="rememberId" />
+              <label for="rememberId">
+                <span class="hidden">작성한</span>
+                <i class="fas fa-square"></i>
+                <i class="fas fa-check-square"></i>
+                ID 기억하기</label>
+            <ul class="find_member">
+              <li><a href="#">ID 찾기</a></li>
+              <li><a href="#">비밀번호 찾기</a></li>
+            </ul>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="show_btn">
+      <button type="button" class="fa">닫기</button>
+    </div>
+  </div>
+
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+  
+  <script src="../js/src/180709_form_test.js"></script>
+</body>
+</html>

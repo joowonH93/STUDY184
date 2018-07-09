@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- 180709_form_test_alone.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="../fontawesome5/css/all.css" />
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/src/180709_form_test_alone.css" />
+
+  <!-- [if lte IE9] >
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/pie/PIE_IE9.js"></script>
+  < ![endif] -->
+  
+  <link rel="apple-touch-icon" href="../favicon.gif">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.gif">
+
+  <title>180709_form_test_alone</title>
+
+</head>
+
+<body>
+  <!-- design -->
+  <div id="wrap">
+    <h1 class="hidden">make login form</h1>
+
+    <div class="login_wrap">
+      <form action="" method="post">
+        <fieldset class="hidden_wrap">
+          <legend><span>로그인 창을 만들어야 해...</span></legend>
+          
+          <div class="id_and_pw">
+            <input type="text" id="idBox" name="idBox" value="" placeholder="ID 입력하기" required="required" />
+            <label for="idBox" class="hidden">ID를 입력하세요</label>
+
+            <input type="text" id="pwBox" name="pwBox" value="" placeholder="PW 입력하기" required="required" />
+            <label for="pwBox" class="hidden">비밀번호를 입력하세요</label>
+          </div>
+
+          <div class="login_btn">
+            <input type="submit" id="loginBtn" name="loginBtn" value="LOGIN" />
+            <label for="loginBtn" class="hidden">버튼을 눌러 로그인합니다</label>
+          </div>
+
+          <div class="check_remember">
+            <input type="checkbox" id="rememberId" name="remember" value="ID 기억하기" />
+            <label for="rememberId">ID 기억하기</label>
+          </div>
+
+          <div class="find_btn">
+            <a href="#">ID 찾기</a> <p class="vertical"> | </p> <a href="#">비밀번호 찾기</a>
+          </div>
+        </fieldset>
+      </form>
+      <div class="close_btn">
+        <button type="button">
+          <i class="fas fa-caret-up"></i> 
+          닫기
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+  
+  <!-- <script src="../js/src/180709_form_test_alone.js"></script> -->
+</body>
+</html>

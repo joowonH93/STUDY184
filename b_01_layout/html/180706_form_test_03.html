@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- 180706_form_test_03.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="../fontawesome5/css/all.css" />
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/src/180706_form_test_03.css" />
+
+  <!-- [if lte IE9] >
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/pie/PIE_IE9.js"></script>
+  < ![endif] -->
+  
+  <link rel="apple-touch-icon" href="../favicon.gif">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.gif">
+
+  <title>180706_form_test_03</title>
+</head>
+
+<body>
+  <!-- design -->
+  <div id="wrap">
+
+    <h1>simple tab forms</h1>
+
+    <div id="formAll">
+
+      <ul class="gnb">
+        <li class="gnb_tab"><a href="#">sign up</a></li>
+        <li class="gnb_tab"><a href="#">sign in</a></li>
+        <li class="gnb_tab"><a href="#">subscribe</a></li>
+        <li class="gnb_tab"><a href="#">contact</a></li>
+      </ul>
+
+      <div class="form_box">
+        <form action="" method="post">
+          <fieldset>
+            <legend class="hidden">sign up</legend>
+
+            <input type="text" id="idName" name="idName" value="" placeholder="name" required="required" />
+            <label for="idName"><span class="hidden">이곳에 성함을 입력하세요</span></label>
+
+            <input type="text" id="emailName" name="emailName" value="" placeholder="email address" required="required" />
+            <label for="emailName" class="hidden">이곳에 이메일 주소를 입력하세요</label>
+
+            <input type="text" id="pwName" name="pwName" value="" placeholder="password" required="required" />
+            <label for="pwName" class="hidden">이곳에 비밀번호를 입력하세요</label>
+
+            <input type="text" id="pwAgain" name="pwAgain" value="" placeholder="confirm password" required="required" />
+            <label for="pwAgain" class="hidden">비밀번호를 다시 한 번 입력하세요</label>
+
+            <input type="checkbox" id="iAgree" name="iAgree" value="I Agree To All Terms And Conditions" />
+            <option value="I Agree To All Terms And Conditions">I Agree To All Terms And Conditions</option>
+
+            <input type="submit" id="signUpBtn" name="signUpBtn" value="sign up" />
+
+          </fieldset>
+        </form>
+
+        <form action="" method="post">
+          <fieldset>
+            <legend class="hidden">sign in</legend>
+          </fieldset>
+        </form>
+
+        <form action="" method="post">
+          <fieldset>
+            <legend class="hidden">subscribe</legend>
+          </fieldset>
+        </form>
+
+        <form action="" method="post">
+          <fieldset>
+            <legend class="hidden">contact</legend>
+          </fieldset>
+        </form>
+      </div>
+      
+    </div>
+
+    <footer>
+      <p>© 2017 Simple Tab Forms. All Rights Reserved | Design by <a href="https://w3layouts.com/">W3layouts</a></p>
+    </footer>
+
+  </div>
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+  
+  <script src="../js/src/180706_form_test_03.js"></script>
+</body>
+</html>
+
+<!-- https://p.w3layouts.com/demos_new/template_demo/09-06-2017/simple_tab_forms-demo_Free/1086528030/web/index.html -->

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- 180709_form_test_alon_2.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="../fontawesome5/css/all.css" />
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/src/180709_form_test_alon_2.css" />
+
+  <!-- [if lte IE9] >
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/pie/PIE_IE9.js"></script>
+  < ![endif] -->
+  
+  <link rel="apple-touch-icon" href="../favicon.gif">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.gif">
+
+  <title>180709_form_test_alon_2</title>
+</head>
+
+<body>
+  <!-- design -->
+  <div id="wrap">
+    <h1 class="hidden">logo라고 치자</h1>
+
+    <div id="certify">
+      <h2>본인 인증 서비스</h2>
+
+      <div class="certify_box">
+        <h3>휴대폰 인증</h3>
+        <p>
+          입력하시는 정보는 암호화 처리되며,<br />
+          어떠한 비용도 발생하지 않습니다.
+        </p>
+
+        <form action="" method="post">
+          <fieldset class="certify_num">
+            <legend class="hidden">번호 확인 영역</legend>
+            <div class="cell_phone">
+              <dl class="number">
+                <dt>휴대폰번호</dt>
+                <dd>
+                  <select name="firstNum" id="firstNum" required="required">
+                    <option>선택하세요</option>
+                    <option value="010">010</option>
+                    <option value="011">011</option>
+                    <option value="012">012</option>
+                    <option value="013">013</option>
+                    <option value="014">014</option>
+                    <option value="015">015</option>
+                  </select>
+                </dd>
+                <dd>
+                  <input type="tel" id="secondNum" name="secondNum" value="" required="required" />
+                </dd>
+                <dd>
+                  <input type="tel" id="lastNum" name="lastNum" value="" required="required" />
+                </dd>
+              </dl>
+              <dl class="telecom">
+                <dt>이동통신사</dt>
+                <dd>
+                  <input type="radio" id="skt" name="telecomCheck" value="skt" />
+                  <label for="skt">skt</label>
+                </dd>
+                <dd>
+                  <input type="radio" id="kt" name="telecomCheck" value="kt" />
+                  <label for="kt">kt</label>
+                </dd>
+                <dd>
+                  <input type="radio" id="lg u plus" name="telecomCheck" value="lg u plus" />
+                  <label for="lg u plus">lg u plus</label>
+                </dd>
+              </dl>
+            </div>
+            <p class="check">
+              <input type="checkbox" id="agree" name="agree" value="agree" />
+              <label for="agree">
+                <i class="fas fa-square"></i>
+                <i class="fas fa-check-square"></i>
+                개인 정보 제공 및 활용에 동의합니다.
+              </label>
+            </p>
+          </fieldset>
+
+          <fieldset class="certify_btn">
+            <legend class="hidden">확인 및 취소 버튼</legend>
+            <input type="submit" id="ok" value="확인" />
+            <input type="reset" id="reset" value="취소" />
+          </fieldset>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+  
+  <script src="../js/src/180709_form_test_alon_2.js"></script>
+</body>
+</html>

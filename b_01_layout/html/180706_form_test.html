@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- 180706_form_test.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap-theme.min.css" />
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/src/180706_form_test.css" />
+
+  <!-- [if lte IE9] >
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/pie/PIE_IE9.js"></script>
+  < ![endif] -->
+  
+  <link rel="apple-touch-icon" href="../favicon.gif">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.gif">
+
+  <title>180706_form_test</title>
+
+
+</head>
+
+<body>
+  <!-- design -->
+  <div id="wrap">
+    <h1 class="hidden">2018년 7월 6일 form 테스트</h1>
+    
+    <form action="" method="post">
+
+      <fieldset>
+        <legend>sign in</legend>
+
+        <div class="id_name_box">
+          <input type="text" id="idName" name="idName" value="" placeholder="Email" required="required" />
+          <label for="idName">
+            <i class="glyphicon glyphicon-envelope"></i>
+          </label>
+        </div>
+
+        <div class="pw_name_box">
+          <input type="password" id="pwName" name="pwName" value="" placeholder="Password" required="required" />
+          <label for="pwName">
+            <i class="glyphicon glyphicon-lock"></i>
+          </label>
+        </div>
+
+        <input type="button" id="pwForgot" name="pwForgot" value="Forgot Password?" />
+
+        <input type="submit" id="signInBtn" name="signInBtn" value="Sign In" />
+
+        <div class="sign_check_box">
+          <input type="checkbox" id="signCheck" name="signCheck" value="Keep me signed in" />
+          <label for="signCheck">Keep me signed in</label>
+        </div>
+
+        <div class="sign_up_box">
+          <div class="sign_up_01">
+            <input type="button" id="signUp" name="signUp" value="Sign Up" />
+          </div>
+          <p>or Sign In With</p>
+          <div class="sign_up_02">
+            <input type="button" id="signWithGoogle" name="signWithGoogle" value="google" />
+            <input type="button" id="signWithTwitter" name="signWithTwitter" value="twitter" />
+            <input type="button" id="signWithFacebook" name="signWithFacebook" value="fackbook" />
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+  </div>
+
+
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+
+  <!-- bootstrap -->
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

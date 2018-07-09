@@ -83,6 +83,8 @@ p {
 
   /*장평. 지원 안됨. 쓰지 말어라*/
   /*font-stretch:50%;*/
+
+  /* text-indent : 들여쓰기*/
 }
 
 .of {background-color:#0af;

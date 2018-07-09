@@ -1,0 +1,118 @@
+/* 180706_form_test.css */
+
+#wrap {
+  box-sizing:border-box; padding-top:75px;
+  width:100%; min-width:60rem; height:auto; min-height:60rem;
+  background-color:#1787fb;
+/*  background-image:url(../../img/form_bg.png);
+  background-repeat:no-repeat;
+  background-size:cover;*/}
+
+form {
+  margin:auto;
+  box-sizing:border-box; padding:30px 35px 0;
+  width:450px; height:450px;
+  background-color:rgba(255,255,255,0.6);
+  border-radius:3px;}
+
+fieldset {
+  width:100%; height:100%;}
+
+fieldset > legend {
+  border:0; margin:0; margin-bottom:30px;
+  width:380px; height:27px;
+  color:#fff; line-height:27px; text-align:center; font-size:25px; text-transform:capitalize;}
+
+.id_name_box {
+  margin-bottom:20px;
+  box-sizing:border-box; border-bottom:1px solid rgba(255,255,255,0.5);
+  width:380px; height:40px; background-color:transparent;}
+
+.id_name_box > input {
+  float:left;
+  border:0; padding:0;
+  width:354px; height:inherit;
+  background-color:transparent;
+  font-size:18px; color:#fff;}
+
+.id_name_box > label {
+  float: left;
+  width:26px; height:inherit;
+  font-size:18px; line-height:40px; color:#fff;
+  background-color:transparent;}
+
+.pw_name_box {
+  margin-bottom:21px;
+  box-sizing:border-box; border-bottom:1px solid rgba(255,255,255,0.5);
+  width:380px; height:40px; background-color:transparent;}
+
+.pw_name_box > input {
+  border:0; padding:0;
+  float:left;
+  width:354px; height:inherit;
+  background-color:transparent;
+  font-size:18px; color:#fff;}
+
+.pw_name_box > label {
+  float:left;
+  width:26px; height:inherit;
+  font-size:18px; line-height:40px; color:#fff;}
+
+#pwForgot {
+  border:0; padding:0;
+  margin-bottom:20px;
+  box-sizing:border-box; border-bottom:1px solid rgba(255,255,255,0.5);
+  width:auto; height:16px; background-color:transparent;
+  border:auto solid #fff;
+  font-size:12px; line-height:16px; color:#fff; text-align:left;}
+
+#signInBtn {
+  margin-bottom:23px;
+  border:0; padding:0;
+  width:380px; height:60px; background-color:#1787fb;
+  color:#fff; line-height:60px; text-align:center; font-size:25px; text-transform:capitalize;
+  border-radius:3px;}
+
+.sign_check_box {
+  margin-bottom:40px;
+  width:380px; height:20px;}
+
+.sign_check_box > input {
+  /*border:0; padding:0;*/
+  margin:0;
+  float: left; margin-right:9px;
+  width:20px; height: 20px;
+  color:#fff; font-size:15px;}
+
+.sign_check_box > label {
+  float:left;
+  width:351px; height:20px;
+  font-size:15px; line-height:20px; color:#fff;}
+
+.sign_up_box {width:415px; height:60px;}
+
+.sign_up_box >.sign_up_01 {
+  float:left;
+  width:66px; height:60px;}
+
+.sign_up_box >.sign_up_01 > input {
+  border:0; padding:0;
+  width:66px; height:60px; background-color:transparent;
+  color:#fff; font-size:15px; line-height:60px; text-decoration:underline;}
+
+.sign_up_box > p {
+  float: left; margin-right:40px;
+  width: 127px; height: 60px;
+  color:#fff; font-size:15px; line-height:60px; text-transform:capitalize;}
+
+.sign_up_box >.sign_up_02 {float: left;}
+
+.sign_up_box >.sign_up_02 > input {
+  border:0; padding:0;
+  float: left; margin-right:1px;
+  width:60px; height:60px;
+background-color:rgba(255,255,255,0.5);}
+
+.sign_up_box >.sign_up_02 > input:last-of-type {
+  float: left; margin-right:0;
+  width:60px; height:60px;}

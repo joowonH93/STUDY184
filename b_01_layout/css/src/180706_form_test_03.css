@@ -1,0 +1,70 @@
+/* 180706_form_test_03.css */
+
+#wrap {
+  box-sizing:border-box; padding-top:66px;
+  width:100%; height:100%;
+  background-image:url(../../img/night_bg.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;}
+
+h1 {
+  margin-bottom:100px;
+  width:100%; height:40px;
+  color:#fff; text-align:center; font-size:40px;
+  letter-spacing:20px; text-transform:uppercase;}
+
+#formAll {
+  margin:auto;
+  width:540px; height:auto;}
+
+.gnb {width:100%; height:37px;}
+
+.gnb_tab {
+  float:left;
+  width:25%; height:100%;}
+
+.gnb_tab > a {
+  display:block;
+  width:100%; height:100%;
+  color:#e2e2e2; text-align:center; font-size:18px;
+  line-height:37px; font-weight:bold; text-transform:uppercase;}
+
+.gnb_tab > a:hover,
+.gnb_tab > a:focus {background-color:#ce224d;}
+
+.form_box {
+  margin-bottom:60px;
+  box-sizing:border-box; padding:40px 43px;
+  width:100%; height:auto;
+  border:2px solid rgba(255,255,255,0.25);
+  background-color:rgba(0,0,0,0.5);
+  /*background-image:url(../../img/night_bg_blur.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;*/}
+
+form > fieldset {
+  width:100%; height:auto;}
+
+form > fieldset > input {
+  border:0; margin-bottom:20px;
+  width:100%; height:46px;
+  background-color:rgba(255,255,255,0.25);}
+
+
+
+footer {width:100%; height:18px;}
+
+footer > p {
+  width:100%; height:100%;
+  color:#e2e2e2; text-align:center; font-size:13px;
+  line-height:18px; font-weight:bold; text-transform:uppercase;}
+
+footer > p > a {
+  width:100%; height:100%;
+  color:#e2e2e2; text-align:center; font-size:13px;
+  line-height:18px; text-transform:uppercase;}
+
+footer > p > a:hover {
+  text-decoration:underline;}
