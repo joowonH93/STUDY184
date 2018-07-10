@@ -1,0 +1,101 @@
+/* 180709_form_test_2.css */
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+#wrap {
+  width:100%; height:auto;}
+
+h1 {
+  padding:1rem; margin-bottom: 4rem;
+  background-color:#560;
+  text-align:center; color:#fff;}
+
+.quotation {
+  margin:auto;
+  box-sizing:border-box; padding:0 2.375rem;
+  width:28.125rem; height:auto;
+  background-color:#fff;
+  box-shadow:2px 2px 2px #ddd;}
+
+.quotation > h2 {
+  margin-left:-2.375rem;
+  box-sizing:border-box; padding-top:1.3rem; padding-left:2.375rem;
+  width:inherit; height:4.5625rem;
+  background-color:#f03;
+  background-image:url(../../img/login_join/quotatioin/bg.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-image:linear-gradient(60deg, #f06 75%, #fe7fb2 75%, #ec6da0);
+  color:#fff; font-size:1.625rem;
+  font-family:'Nanum Gothic';}
+
+.quotation > h3 {
+  margin-top:1rem; margin-bottom:0.5rem;
+  width:100%;}
+
+.quotation > p {
+  margin-bottom:0.75rem;
+  width:100%;
+  line-height:110%;}
+
+form {width:100%; height:auto;}
+
+form > fieldset:first-of-type {
+  margin-bottom:0.875rem;
+  padding-bottom:0.625rem;
+  border-bottom:0.0625rem solid #777;
+  width:100%; height:auto;}
+
+.tel {
+  box-sizing:border-box; padding:1.25rem 0.625rem;
+  width:100%; height:auto;}
+
+.tel > dl {
+  width:100%; height:auto;}
+
+.tel > dl:first-of-type {margin-bottom:1.125rem;}
+
+.tel > dl > dt, .tel > dl > dd {
+  float:left; height:1.25rem;
+  background-color:#7ff;}
+
+.tel > dl > dt {
+  margin-right:0.5625rem;
+  width:4.4375rem; letter-spacing:-0.18rem;}
+
+.tel > dl > dd {
+  position:relative;
+  margin-right:1.375rem;
+  width:4.6875rem;}
+
+.tel > dl > dd:last-of-type {
+  margin-right:0;}
+
+.tel > dl.number > dd:after {
+  content:""; display:block;
+  position:absolute; top:0; right:-12px;
+  width:4px; height:50%; border-bottom:1px solid #777;}
+
+.tel > dl.number > dd:last-of-type:after {display:none;}
+
+.tel > dl > dd > input {
+  border:0;
+  box-sizing:border-box; border:1px solid #ccc;
+  float: left;
+  width: 100%; height: 100%;}
+
+.telecom > dd > input {width:10px; height:10px;}
+.telecom > dd > input, .telecom > dd > label {float: left;}
+
+
+
+.check {width: 100%; height: auto; text-indent:0.625rem;} 
+
+
+
+form > fieldset:last-of-type {
+  box-sizing:border-box; padding:0 5.625rem;
+  width:100%;}
+
+form > fieldset:last-of-type > input {width: 4.375rem; height: 2.5rem;}
+#ok {float: left; background-color: #f06; color:#fff;}
+#reset {float: right; background-color: #fff; color:#333;}

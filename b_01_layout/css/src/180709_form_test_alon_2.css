@@ -70,8 +70,9 @@ form {
   width:75px; height:100%;}
 
 .number > dd:after {
-  content:"-"; display:block;
-  position:absolute; top:0; left:84px;}
+  content:" "; display:block;
+  position:absolute; top:50%; left:83px;
+  width:5px; height:1px; background-color:#333;}
 
 .number > dd:last-child {margin-right:0;}
 
@@ -89,6 +90,7 @@ form {
   width:100%; height:100%;}
 
 
+
 .telecom {
   width:352px; height:20px;
   font-size:12px;}
@@ -101,7 +103,8 @@ form {
 .telecom > dd {
   margin-right:22px;
   float:left;
-  width:75px; height:100%;}
+  width:75px; height:100%;
+  text-transform:uppercase;}
 
 .telecom > dd:last-child {margin-right:0;}
 
