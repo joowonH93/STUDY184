@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- 180712_banner_practice.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="../fontawesome5/css/all.css" />
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/src/180712_banner_practice.css" />
+
+  <!-- [if lte IE9] >
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/pie/PIE_IE9.js"></script>
+  < ![endif] -->
+  
+  <link rel="apple-touch-icon" href="../favicon.gif">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.gif">
+
+  <title>180712_banner_practice</title>
+
+</head>
+
+<body>
+  <!-- design -->
+  <div id="wrap">
+    <h1 class="hidden">배너 연습하기</h1>
+
+
+
+    <div id="banner01">
+      <h2 class="hidden">슬라이드 배너</h2>
+
+      <div class="indicator">
+        <ul class="selector hidden_wrap">
+          <li><a href="#"><span>제품 설명 01</span></a></li>
+          <li><a href="#"><span>제품 설명 02</span></a></li>
+          <li><a href="#"><span>제품 설명 03</span></a></li>
+          <li><a href="#"><span>제품 설명 04</span></a></li>
+          <li><a href="#"><span>제품 설명 05</span></a></li>
+        </ul>
+        <div class="slide_btn hidden_wrap">
+          <button type="button" class="prev_btn">
+            <a href="#">
+              <span>이전 제품 보기</span>
+              <i class="fas fa-arrow-left"></i>
+            </a>
+          </button>
+          <button type="button" class="next_btn">
+            <a href="#">
+              <span>다음 제품 보기</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </button>
+        </div>
+      </div>
+
+      <article class="banner_wrap">
+        <ul class="banner_img hidden_wrap">
+          <li class="img_01"><span>배너 이미지 01</span></li>
+          <li class="img_02"><span>배너 이미지 02</span></li>
+          <li class="img_03"><span>배너 이미지 03</span></li>
+          <li class="img_04"><span>배너 이미지 04</span></li>
+          <li class="img_05"><span>배너 이미지 05</span></li>
+        </ul>
+      </article>
+    </div>
+
+
+
+    <div id="banner02">
+      <h2 class="hidden">이미지가 제자리에서 바뀌는 배너</h2>
+
+      <div class="indicator">
+        <ul class="selector hidden_wrap">
+          <li><a href="#"><span>제품 설명 01</span></a></li>
+          <li><a href="#"><span>제품 설명 02</span></a></li>
+          <li><a href="#"><span>제품 설명 03</span></a></li>
+          <li><a href="#"><span>제품 설명 04</span></a></li>
+          <li><a href="#"><span>제품 설명 05</span></a></li>
+        </ul>
+        <div class="slide_btn hidden_wrap">
+          <button type="button" class="prev_btn"><a href="#"><span>이전 제품 보기</span></a></button>
+          <button type="button" class="next_btn"><a href="#"><span>다음 제품 보기</span></a></button>
+        </div>
+      </div>
+      
+      <article class="banner_wrap">
+        <ul class="banner_img hidden_wrap">
+          <li class="img_01"><span>배너 이미지 01</span></li>
+          <li class="img_02"><span>배너 이미지 02</span></li>
+          <li class="img_03"><span>배너 이미지 03</span></li>
+          <li class="img_04"><span>배너 이미지 04</span></li>
+          <li class="img_05"><span>배너 이미지 05</span></li>
+        </ul>
+      </article>
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+  
+  <script src="../js/src/180712_banner_practice.js"></script>
+</body>
+</html>

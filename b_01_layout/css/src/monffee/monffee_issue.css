@@ -1,0 +1,126 @@
+/* monffee_issue.css */
+
+.issue_text {
+  position:relative; margin-bottom:100px; width:100%; height:100%; background-color:#afc;}
+
+.issue_text .btn{position: absolute; z-index: 500; right:13%; bottom:15%; box-sizing: border-box; padding: 0.5rem; 
+              width:auto; height:3rem; background-color: #555;}
+
+.issue_text .indicator{float: left; width: auto; height: 100%;}
+
+.issue_text .indicator>li{margin-right:1rem; float: left; width: 30px; height: 30px;}
+
+.issue_text .indicator>li>a{display: block; width: 100%; height: 100%; background-color: #fff; border-radius:100%;}
+
+.issue_text .indicator>li.active>a{background-color: #a30;}
+
+.issue_text .indicator>li>a:hover{background-color:rgba(151,70,0,0.5);}
+
+.issue_text div{float:left; width: auto; height: 100%;}
+
+.issue_text div>button{float:left; width: 30px; height: 30px; color:#fff; font-size: 1.7rem;}
+
+.issue_text div>button.pause{margin-right: 1rem;}
+
+/*.issue_text div>button.play{}*/
+
+.issue_text div>button.active{color:#a30;}
+
+.issue_text .issue_banner{width:100%; height: 100%; overflow:hidden;}
+
+.issue_text .issue_banner>ul{width: 500%; height: 100%;}
+
+.issue_text .issue_banner>ul>li{
+  position: relative; width:calc(100% / 5); height: 100%; float: left;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;}
+
+.issue_text .issue_banner > ul > li.issue_ban_01 {background-image:url("../../../img/mongffee/issueBanner/issue_banner_01.png");}
+.issue_text .issue_banner > ul > li.issue_ban_02 {background-image:url("../../../img/mongffee/issueBanner/issue_banner_02.png");}
+.issue_text .issue_banner > ul > li.issue_ban_03 {background-image:url("../../../img/mongffee/issueBanner/issue_banner_03.png");}
+.issue_text .issue_banner > ul > li.issue_ban_04 {background-image:url("../../../img/mongffee/issueBanner/issue_banner_04.png");}
+
+.issue_text .issue_banner>ul>li:nth-child(2n){background-color: #caa;}
+
+.issue_text .issue_banner>ul>li:nth-child(2n-1){background-color: #caf;}
+
+.issue_text .issue_banner dl{position: absolute; top:10%; left:10%; width: 80%; height:70%; padding: 3rem; background-color:rgba(0,160,133,0.9);}
+
+.issue_text .issue_banner dl>dt{font-size: 3rem; font-weight: bold; border-bottom: 1px solid  #333;}
+
+.issue_text .issue_banner dl>dd{font-size: 1.5rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.issue_icon {
+  position:relative;
+  margin:auto; margin-bottom:100px;
+  width:960px; height:300px;}
+
+.issue_icon > div {
+  width:300px; height:300px; background-color:#fac;
+  border-radius:100%;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;}
+
+.issue_icon > div > a {
+  position:relative; z-index:100;
+  display:block;
+  box-sizing:border-box; padding-top:5rem;
+  width:100%; height:100%;
+  font-size:2rem; color:#fff; text-align:center; font-weight:bold;}
+
+/*.issue_icon > div > a > span:nth-of-type(2) {font-size:5rem; font-weight:bold;}*/
+
+.issue_icon > div:last-of-type > a {padding-top:7rem;}
+
+.issue_icon > div > a:after {
+  content:" "; display: block;
+  position:absolute; top:0; left:0; z-index:-100;
+  width: 100%; height: 100%;
+  background-color:rgba(151,70,0,0.7);
+  border-radius:100%;
+  opacity:0; transition:all 300ms ease;}
+
+.issue_icon > div > a:before {
+  content:" "; display:block;
+  box-sizing:border-box;
+  position:absolute; z-index:-50; top:5%; left:5%;
+  width:90%; height:90%; border:7px solid #fff;
+  border-radius:100%;
+  opacity:0; transition:all 300ms 100ms ease;}
+
+.issue_icon > div > a > span {opacity:0; transition:all 300ms ease;}
+
+.issue_icon > div > a:hover > span,
+.issue_icon > div > a:focus > span,
+.issue_icon > div > a:hover:after,
+.issue_icon > div > a:focus:after,
+.issue_icon > div > a:hover:before,
+.issue_icon > div > a:focus:before {opacity:1;}
+
+.icon_01 {
+  float:left;
+  background-image:url("../../../img/mongffee/issue/issue_icon_01.png");}
+
+.icon_02 {
+  position:absolute; left:50%; top:0;
+  margin-left:-150px;
+  background-image:url("../../../img/mongffee/issue/issue_icon_02.png");}
+
+.icon_03 {
+  float:right;
+  background-image:url("../../../img/mongffee/issue/issue_icon_03.png");}

@@ -1,6 +1,6 @@
 /* reset.css */
 /* 크로스브라우징이 가능하도록 각 브라우저의 기본 형태의 상태를 동일하게 변경 */
-:root{font-size:16px;}
+/*:root{font-size:16px;}*/
 
 html,body {margin:0; padding:0; height:100%;}
 
@@ -43,6 +43,7 @@ tfoot {background-color:#faa;}
 
 ul,ol,li{list-style:none;}
 a {text-decoration:none; color:#333;}
+a:hover {text-decoration:none; color:#333;}
 
 
 /* html5*/

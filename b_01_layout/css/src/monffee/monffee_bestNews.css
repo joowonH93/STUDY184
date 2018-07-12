@@ -1,0 +1,93 @@
+/* monffee_bestNews.css */
+
+#bestNews {
+  margin:auto;
+  box-sizing:border-box; padding:70px 10px 0;
+  width:960px; min-height:100%; height:auto;}
+
+#bestNews > h2 {
+  margin-bottom:2rem;
+  font-size:2rem; text-transform:capitalize;
+  text-decoration:underline;}
+
+#bestNews > ul {
+  width:100%; height:auto;}
+
+#bestNews > ul > li {
+  float:left;
+  margin-right:20px; margin-bottom:60px;
+  width:220px; height:410px;
+  border-radius:10px;
+  overflow:hidden;}
+
+#bestNews > ul > li:nth-child(4n) {margin-right:0;}
+
+#bestNews > ul > li > a {
+  display:block; width:100%; height:100%;}
+
+#bestNews > ul > li:last-child > a {
+  cursor:default;}
+
+#bestNews > ul > li > a > .news_img {
+  position:relative;
+  margin-bottom:18px;
+  width:100%; height:260px;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+  border-radius:10px;
+  overflow:hidden;}
+
+#bestNews > ul > li > a > .news_img:after {
+  content:"새로운 메뉴"; display:block;
+  position:absolute;
+  width:100%; height:100%; background-color:rgba(151,70,0,0.6);
+  background-image:url("../../../img/mongffee/new_menu/menu_on.png");
+  color:#fff; font-size:1.3rem; text-align:center; line-height:500px;
+  opacity:0; transition:all 300ms ease;}
+
+#bestNews > ul > li:last-child > a > .news_img:after {
+  display:none;}
+
+#bestNews > ul > li > a > .news_img:hover,
+#bestNews > ul > li > a > .news_img:focus {text-decoration:none; color:#333;}
+
+#bestNews > ul > li > a > .news_img:hover:after,
+#bestNews > ul > li > a > .news_img:focus:after {opacity:1; line-height:400px; /*background-position:center -10px;*/}
+
+#bestNews > ul > li > a > dl {
+  box-sizing:border-box; padding:0 25px 20px;
+  width:100%; height:auto;}
+
+#bestNews > ul > li > a > dl > dt {
+  margin-bottom:5px;
+  width:100%; margin:auto;
+  font-size:1.875rem; font-weight:bold; text-transform:capitalize;}
+
+#bestNews > ul > li > a > dl > dd {
+  width:100%; margin:auto;
+  font-size:0.875rem; line-height:1.2;}
+
+/*.news_01 > a > .news_img {
+  background-image:url(../../../img/mongffee/new_menu/menu_01.png);}*/
+
+/*.news_02 > a > .news_img {
+  background-image:url(../../../img/mongffee/new_menu/menu_02.png);}
+
+.news_03 > a > .news_img {
+  background-image:url(../../../img/mongffee/new_menu/menu_03.png);}
+
+.news_04 > a > .news_img {
+  background-image:url(../../../img/mongffee/new_menu/menu_04.png);}
+
+.news_05 > a > .news_img {
+  background-image:url(../../../img/mongffee/new_menu/menu_05.png);}
+
+.news_06 > a > .news_img {
+  background-image:url(../../../img/mongffee/new_menu/menu_06.png);}
+
+.news_07 > a > .news_img {
+  background-image:url(../../../img/mongffee/new_menu/menu_07.png);}
+
+.news_08 > a > .news_img {
+  background-image:url(../../../img/mongffee/new_menu/default_menu.png);}*/

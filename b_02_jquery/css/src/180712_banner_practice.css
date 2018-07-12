@@ -1,0 +1,81 @@
+/* 180712_banner_practice.css */
+
+#wrap {
+  width:100%; height:100%;}
+
+#wrap > div {
+  position:relative;
+  width:100%; height:50%;}
+
+#wrap > div > .indicator {
+  position:absolute; left:50%; bottom:2rem;
+  width:auto; height:20px;
+  background-color:#000;}
+
+#wrap > div > .indicator > .selector {
+  float:left;
+  width:auto; height:100%;}
+
+#wrap > div > .indicator > .selector > li {
+  margin-right:10px;
+  float:left;
+  width:20px; height:100%;}
+
+#wrap > div > .indicator > .selector > li > a {
+  display:block;
+  width:100%; height:100%;
+  background-color:#fff;
+  border-radius:100%;}
+
+#wrap > div > .indicator > .selector > li > a:hover,
+#wrap > div > .indicator > .selector > li > a:focus {background-color:#ddd;}
+
+
+
+#wrap > div > .indicator > .slide_btn {
+  float:right;
+  width:auto; height:100%;}
+
+#wrap > div > .indicator > .slide_btn > button {
+  margin-right:10px;
+  float:left; width:auto; height:100%;}
+
+#wrap > div > .indicator > .slide_btn > button:last-of-type {margin-right:0;}
+
+#wrap > div > .indicator > .slide_btn > button > a {
+  display:block;
+  width:auto; height:100%;}
+
+#wrap > div > .indicator > .slide_btn > button > a > i {
+  width:auto; height:100%;
+  color:#fff; font-size:18px;}
+
+
+
+
+
+#banner01 {background-color:#f0a;}
+
+  #banner01 > .banner_wrap {}
+
+  #banner01 > .banner_wrap > .banner_img {}
+
+  #banner01 > .banner_wrap > .banner_img > li {}
+
+  #banner01 > .banner_wrap > .banner_img > li.img_01 {}
+  #banner01 > .banner_wrap > .banner_img > li.img_02 {}
+  #banner01 > .banner_wrap > .banner_img > li.img_03 {}
+  #banner01 > .banner_wrap > .banner_img > li.img_04 {}
+  #banner01 > .banner_wrap > .banner_img > li.img_05 {}
+
+
+
+
+
+
+
+
+
+
+
+#banner02 {background-color:#a0f;}
