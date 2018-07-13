@@ -8,9 +8,8 @@
   width:100%; height:50%;}
 
 #wrap > div > .indicator {
-  position:absolute; left:50%; bottom:2rem;
-  width:auto; height:20px;
-  background-color:#000;}
+  position:absolute; left:60%; bottom:2rem;
+  width:auto; height:20px;}
 
 #wrap > div > .indicator > .selector {
   float:left;
@@ -28,7 +27,11 @@
   border-radius:100%;}
 
 #wrap > div > .indicator > .selector > li > a:hover,
-#wrap > div > .indicator > .selector > li > a:focus {background-color:#ddd;}
+#wrap > div > .indicator > .selector > li > a:focus {background-color:#fa0;}
+
+#wrap > div > .indicator > .selector > li.active > a {
+  box-sizing:border-box; border:1px solid #fff;
+  background-color:#c0c;}
 
 
 
@@ -37,7 +40,7 @@
   width:auto; height:100%;}
 
 #wrap > div > .indicator > .slide_btn > button {
-  margin-right:10px;
+  margin-right:5px;
   float:left; width:auto; height:100%;}
 
 #wrap > div > .indicator > .slide_btn > button:last-of-type {margin-right:0;}
@@ -45,6 +48,13 @@
 #wrap > div > .indicator > .slide_btn > button > a {
   display:block;
   width:auto; height:100%;}
+
+#wrap > div > .indicator > .slide_btn > button.active > a > i {
+  box-sizing:border-box; border:1px solid #fff;
+  color:#c0c;}
+
+#wrap > div > .indicator > .slide_btn > button > a:hover > i,
+#wrap > div > .indicator > .slide_btn > button > a:focus > i {color:#fa0;}
 
 #wrap > div > .indicator > .slide_btn > button > a > i {
   width:auto; height:100%;
@@ -54,28 +64,41 @@
 
 
 
+#wrap > div > .banner_wrap {
+  width:100%; height:100%;
+  overflow:hidden;}
+
+#wrap > div > .banner_wrap > .banner_img {
+  width:500%; height:100%;}
+
+#wrap > div > .banner_wrap > .banner_img > li {
+  float:left; width:20%; height:100%;}
+
+#wrap > div > .banner_wrap > .banner_img > li > span {
+  display:block;  width:100%; height:100%;
+  box-sizing:border-box; padding-top:150px;
+  color:#fff; font-size:3rem; font-weight:bold; text-align:center;}
+
+
+
+
+
 #banner01 {background-color:#f0a;}
 
-  #banner01 > .banner_wrap {}
-
-  #banner01 > .banner_wrap > .banner_img {}
-
-  #banner01 > .banner_wrap > .banner_img > li {}
-
-  #banner01 > .banner_wrap > .banner_img > li.img_01 {}
-  #banner01 > .banner_wrap > .banner_img > li.img_02 {}
-  #banner01 > .banner_wrap > .banner_img > li.img_03 {}
-  #banner01 > .banner_wrap > .banner_img > li.img_04 {}
-  #banner01 > .banner_wrap > .banner_img > li.img_05 {}
-
-
-
-
-
-
+#banner01 > .banner_wrap > .banner_img > li.img_01 {background-color:#f9f;}
+#banner01 > .banner_wrap > .banner_img > li.img_02 {background-color:#6cf;}
+#banner01 > .banner_wrap > .banner_img > li.img_03 {background-color:#f67;}
+#banner01 > .banner_wrap > .banner_img > li.img_04 {background-color:#a5f;}
+#banner01 > .banner_wrap > .banner_img > li.img_05 {background-color:#f00;}
 
 
 
 
 
 #banner02 {background-color:#a0f;}
+
+#banner02 > .banner_wrap > .banner_img > li.img_01 {background-color:#0cf;}
+#banner02 > .banner_wrap > .banner_img > li.img_02 {background-color:#ffc;}
+#banner02 > .banner_wrap > .banner_img > li.img_03 {background-color:#acf;}
+#banner02 > .banner_wrap > .banner_img > li.img_04 {background-color:#f0c;}
+#banner02 > .banner_wrap > .banner_img > li.img_05 {background-color:#0df;}

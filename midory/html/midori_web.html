@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-- midori_web.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="../fontawesome5/css/all.css" />
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/src/midori_web.css" />
+
+  <!-- [if lte IE9] >
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/pie/PIE_IE9.js"></script>
+  < ![endif] -->
+  
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+
+  <title>Midori</title>
+</head>
+
+<body>
+  <!-- design -->
+  <div id="wrap">
+
+    <header id="headBox">
+      <h1><span class="hidden">midori 메인 화면으로</span></h1>
+
+      <nav id="gnb">
+        <ul class="language hidden_wrap">
+          <h2><span class="hidden">midori language menu</span></h2>
+          <li class="korean">
+            <h2><span class="hidden">한국어 korean</span></h2>
+            <a href="#"></a>
+          </li><!-- .lang_01 -->
+          <li class="japanese">
+            <h2><span class="hidden">일본어 japanese</span></h2>
+            <a href="#"></a>
+          </li><!-- .lang_02 -->
+        </ul><!-- .language -->
+
+        <ul class="global_menu hidden_wrap">
+          <h2><span class="hidden">midori global navigation</span></h2>
+          <li class="gnb_01">
+            <h2><span class="hidden">product 상품</span></h2>
+            <a href="#"></a>
+          </li><!-- .gnb_01 -->
+          <li class="gnb_02">
+            <h2><span class="hidden">shop info 쇼핑 정보</span></h2>
+            <a href="#"></a>
+          </li><!-- .gnb_02 -->
+          <li class="gnb_03">
+            <h2><span class="hidden">company 회사 소개</span></h2>
+            <a href="#"></a>
+          </li><!-- .gnb_03 -->
+          <li class="gnb_04">
+            <h2><span class="hidden">contact us</span></h2>
+            <a href="#"></a>
+          </li><!-- .gnb_04 -->
+        </ul><!-- .global_menu -->
+      </nav><!-- #gnb -->
+    </header><!-- #headBox -->
+    <article id="videoBox">
+      <div class="text_box">
+        <p>영상을 감상하실 수 있습니다.</p>
+        <button type="button" class="play_btn">
+          <a href="#"><span>play movie</span></a>
+        </button>
+      </div><!-- .text_box -->
+      <button type="button" class="scroll">
+        <span class="hidden">스크롤 내려서 상품보기</span>
+      </button>
+    </article><!-- #videoBox -->
+    <article id="productBox" class="clearfix">
+      <ul>
+        <li class="product_01">
+          <a href="#">
+            <dl>
+              <dt>traveler's notebook</dt>
+              <dd>여행을 좋아하는 사람들을 위한 가죽커버 노트</dd>
+            </dl>
+          </a>
+        </li>
+        <li class="product_02">
+          <a href="#">
+            <dl>
+              <dt>MD PAPER PRODUCTS</dt>
+              <dd>MD Paper로 제작된 필기감이 뛰어난 노트</dd>
+            </dl>
+          </a>
+        </li>
+        <li class="product_03">
+          <a href="#">
+            <dl>
+              <dt>BRASS PRODUCTS</dt>
+              <dd>황동 재질의 독특한 멋이 있는 문구</dd>
+            </dl>
+          </a>
+        </li>
+        <li class="product_04">
+          <a href="#">
+            <dl>
+              <dt>THE MEISTER'S NOTE</dt>
+              <dd>세계와 일본의 소재와 기술의 공동작업</dd>
+            </dl>
+          </a>
+        </li>
+        <li class="product_05">
+          <a href="#">
+            <dl>
+              <dt>SPIRAL RING NOTEBOOK</dt>
+              <dd>모양과 종이와 질감이 자극시키는 상상력, 자유롭게 사용할 수 있는 노트</dd>
+            </dl>
+          </a>
+        </li>
+        <li class="product_06">
+          <a href="#">
+            <dl>
+              <dt>KRAFT ENVELOPE</dt>
+              <dd>어딘가 아련함, 그리움이 느껴지는 종이 봉투</dd>
+            </dl>
+          </a>
+        </li>
+        <li class="product_07">
+          <a href="#">
+            <dl>
+              <dt>D-CLIPS</dt>
+              <dd>귀여운 모양의 클립, 간단한 메모나 서류를 끼우는 데 이상적인 클립</dd>
+            </dl>
+          </a>
+        </li>
+      </ul>
+    </article><!-- #productBox -->
+    <section id="shopInfoBox"></section><!-- #shopInfoBox -->
+
+    <footer id="footBox">
+      <p>Copyright © 2015 Designphil Inc. All right reserved.</p>
+    </footer><!-- #footBox -->
+
+  </div><!-- #wrap -->
+
+
+
+
+<!-- <div id="fullVideo">
+        <video controls="controls" loop="loop" autoplay="autoplay" muted="muted">
+          <source src="../media/video/md_paper_image_movie.mp4" />
+          <p>사용하고 계신 브라우저는 비디오 지원이 되지 않습니다. 크롬 권장<br />
+            <a href="http://google.com/chrome">권장 브라우저 받으러 가기</a>
+          </p>
+        </video>
+      </div> -->
+
+
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+  
+  <script src="../js/src/midori_web.js"></script>
+</body>
+</html>

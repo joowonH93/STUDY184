@@ -1,0 +1,258 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(//fonts.googleapis.com/earlyaccess/kopubbatang.css);
+
+/* midori_web.css */
+
+/*
+  (포인트색) #006544
+  (기본 서체 컬러) color:#333;
+  (기본 서체) font-family: 'Noto Sans KR', sans-serif;
+*/
+
+
+
+/*common area*/
+#wrap {
+  width:100%; height:100%;
+  background-color:#ddd;
+  }
+
+#headBox {
+  position:fixed; z-index:1000;
+  width:100%;
+  }
+
+#headBox > h1 {
+  margin-right:30px;
+  float:left;
+  width:185px; height:100%;
+  background-color:#fff;
+}
+
+#headBox > #gnb {
+  float:right;
+  width:calc(100% - 215px); height:100%;
+}
+
+#headBox > #gnb > .language {
+  float:left;
+  box-sizing:border-box; padding:15px 0;
+  width:auto; height:50px;
+  background-color:#ddd;
+}
+
+#headBox > #gnb > .language > li {
+  margin-right:30px;
+  float:left;
+  width:20px; height:100%;
+  background-color:#fa9;
+}
+#headBox > #gnb > .language > li:last-child {margin-right:0;}
+
+#headBox > #gnb > .language > li > a {
+  display:block;
+  width:100%; height:100%;
+}
+
+#headBox > #gnb > .global_menu {
+  float:right;
+  width:50px; height:50px;
+  background-color:#ddd;
+  cursor:pointer;
+}
+
+#videoBox {
+  position:relative;
+  width:100%; height:100%;
+  }
+
+#videoBox > .text_box {
+  margin-top:-62.5px; margin-left:-125px;
+  position:absolute; top:50%; left:50%;
+  width:250px; height:125px;
+}
+
+#videoBox > .text_box > p {
+  width:100%; height:50px;
+  color:#333; font-size:16px; text-align:center;
+  font-family:'KoPub Batang', serif;
+}
+
+#videoBox > .text_box > .play_btn {
+  margin-left:25px;
+  box-sizing:border-box;
+  width:200px; height:75px;
+  border:1px solid #333;
+  color:#333; font-size:25px; text-align:center;
+  font-family:'Noto Sans KR', sans-serif; text-transform:capitalize;
+}
+
+#videoBox > .scroll {
+  margin-left:-40px;
+  position:absolute; left:50%; bottom:35px;
+  width:80px; height:40px;
+  background-color:#fff;
+}
+
+#productBox {
+  width:100%;
+  }
+
+#shopInfoBox {
+  width:100%;
+  }
+
+#footBox {
+  width:100%; height:150px;
+  background-color:#006544;
+}
+
+#footBox > p {
+  width:100%; height:100%;
+  color:#fff; font-size:10px; text-align:center;
+  font-family:'Noto Sans KR', sans-serif;
+  font-weight:lighter; line-height:150px;
+}
+
+
+
+
+
+/*mobile*/
+@media screen and (max-width:480px) {
+  #headBox {
+    box-sizing:border-box; padding:35px;
+    height:120px;
+    background-color:#008080;
+  }
+
+  #videoBox {
+    background-color:#ffd0cd;
+  }
+
+  #productBox {
+    box-sizing:border-box; padding:75px 35px;
+    height:auto;
+    background-color:#6e6eff;
+  }
+
+  #productBox > ul {
+    width:100%; height:100%;
+  }
+
+  #productBox > ul > li {
+    margin-bottom:20px;
+    float:left;
+    width:100%; height:200px;
+    background-color:#ddd;
+  }
+
+  #productBox > ul > li > a {
+    display:block;
+    width:100%; height:100%;
+  }
+
+  #productBox > ul > li > a > dl {
+    position:relative;
+    width:100%; height:100%;
+  }
+
+  #productBox > ul > li > a > dl > dt {
+    position:absolute; bottom:110px;
+    box-sizing:border-box; padding:0 20px;
+    width:100%; height:auto;
+    color:#fff; font-size:25px; text-align:center;
+    font-family:'Noto Sans KR', sans-serif;
+    line-height:25px; letter-spacing:4px;
+    text-transform:uppercase;
+  }
+
+  #productBox > ul > li > a > dl > dd {
+    position:absolute; top:110px;
+    box-sizing:border-box; padding:0 20px;
+    width:100%; height:auto;
+    color:#fff; font-size:16px; text-align:center;
+    font-family:'Noto Sans KR', sans-serif;
+    line-height:20px;
+  }
+
+  #shopInfoBox {
+    height:1120px;
+    background-color:#ffdc3c;
+  }
+}
+
+
+
+/*tablet*/
+@media screen and (min-width:481px) and (max-width:768px) {
+  #headBox {
+    box-sizing:border-box; padding:35px;
+    height:120px;
+    background-color:#8221de;
+  }
+
+  #videoBox {
+    background-color:#ff6a89;
+  }
+
+  #productBox {
+    height:1700px;
+    background-color:#ff9364;
+  }
+
+  #shopInfoBox {
+    height:1040px;
+    background-color:#e47a20;
+  }
+}
+
+
+
+/*pc*/
+@media screen and (min-width:769px) and (max-width:1366px) {
+  #headBox {
+    box-sizing:border-box; padding:50px;
+    height:150px;
+    background-color:#008080;
+  }
+
+  #videoBox {
+    background-color:#ffd0cd;
+  }
+
+  #productBox {
+    height:2260px;
+    background-color:#6e6eff;
+  }
+
+  #shopInfoBox {
+    height:1320px;
+    background-color:#ffdc3c;
+  }
+}
+
+
+
+/*pc-full*/
+@media screen and (min-width:1366px) {
+  #headBox {
+    box-sizing:border-box; padding:50px;
+    height:150px;
+    background-color:#8221de;
+  }
+
+  #videoBox {
+    background-color:#ff6a89;
+  }
+
+  #productBox {
+    height:2260px;
+    background-color:#ff9364;
+  }
+
+  #shopInfoBox {
+    height:1320px;
+    background-color:#e47a20;
+  }
+}

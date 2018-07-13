@@ -12,7 +12,8 @@
 
 
   // indicator 클릭 시 배너 이동
-  var issueBtn = $('.issue_text').children('.btn');
+  var issue = $('.issue_text');
+  var issueBtn = issue.children('.btn');
   var indi = issueBtn.find('.indicator');
   var indiLi = indi.children('li');
   var i = 0;
@@ -53,10 +54,82 @@
 
   // 일정시간마다 움직이는 자동 슬라이드 기능 (setInterval, clearInterval)
   var timed = 1000;
+  var autoStart;
 
-  setInterval(function(){
-    ( i < isBanLen-1 ) ? i+=1 : i = 1;
-    issueBanner(i);
-  }, timed*2);
+  var startSlide = function(){
+      autoStart  =  setInterval(function(){
+                    ( i < isBanLen-1 ) ? i+=1 : i = 1;
+                    issueBanner(i);  },  timed*2); };
+  var stopSlide = function(){ clearInterval( autoStart ); };
+
+  startSlide();
+
+
+
+  // issue mouseenter/leave 했을 때
+
+  issue.off( 'mouseleave' );
+  issue.on('mouseleave', function(){
+    // event.stopPropagation();
+    startSlide();
+    play.addClass('active');
+    pause.removeClass('active');
+  });
+
+  issue.on('mouseenter', function(){
+    // event.stopPropagation(); 이걸 써도 버블링 제거X 일단 주석!
+    stopSlide();
+    pause.addClass('active');
+    play.removeClass('active');
+  });
+
+
+
+  var play = issue.find('.play');
+  var pause = issue.find('.pause');
+  play.addClass('active');
+
+  
+  play.off('click');
+  play.on('click', function(e){
+    // event.stopPropagation();
+    e.preventDefault();
+    issue.trigger('mouseleave');
+    $(this).off('click');
+    // startSlide();
+    // play.addClass('active');
+    // pause.removeClass('active');
+  });
+
+  pause.unbind('click');
+  pause.on('click', function(e){
+    // event.stopPropagation();
+    e.preventDefault();
+    issue.trigger('mouseenter');
+    // clearInterval( autoStart );
+    // pause.addClass('active');
+    // play.removeClass('active');
+  });
+
+
+  // setInterval(function(){}, 시간);
+  // clearInterval(setInterval이름);
+
+
 
 })(jQuery);
+
+
+/*
+var A;
+
+function start(){
+  A = setInterval(function(){}, 2000);
+};
+
+start();
+
+click => clearInterval( A );
+
+start();
+*/
