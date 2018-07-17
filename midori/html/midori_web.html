@@ -34,8 +34,8 @@
     <header id="headBox">
       <h1><span class="hidden">midori 메인 화면으로</span></h1>
       <nav id="gnb">
+        <h2><span class="hidden">midori language menu</span></h2>
         <ul class="language hidden_wrap">
-          <h2><span class="hidden">midori language menu</span></h2>
           <li class="korean">
             <h2><span class="hidden">한국어 korean</span></h2>
             <a href="#"></a>
@@ -45,14 +45,12 @@
             <a href="#"></a>
           </li><!-- .lang_02 -->
         </ul><!-- .language -->
-
+        <h2><span class="hidden">midori global navigation</span></h2>
         <ul class="global_menu hidden_wrap">
-          <h2><span class="hidden">midori global navigation</span></h2>
           <li class="gnb_01"><a href="#"></a></li><!-- .gnb_01 -->
           <li class="gnb_02"><a href="#"></a></li><!-- .gnb_02 -->
           <li class="gnb_03"><a href="#"></a></li><!-- .gnb_03 -->
-          <li class="gnb_04"><a href="#"></a>
-          </li><!-- .gnb_04 -->
+          <li class="gnb_04"><a href="#"></a></li><!-- .gnb_04 -->
         </ul><!-- .global_menu -->
       </nav><!-- #gnb -->
     </header><!-- #headBox -->
@@ -61,22 +59,18 @@
       <h2><span class="hidden">메인 비디오 재생 화면</span></h2>
       <div class="text_box">
         <p><span class="hidden">영상을 감상하실 수 있습니다.</span></p>
-        <button type="button" class="play_btn">
-          <a href="#"><span>play movie</span></a>
-        </button>
+        <button type="button" class="play_btn"><span>play movie</span></button>
       </div><!-- .text_box -->
-
       <button type="button" class="scroll">
         <span class="hidden">스크롤 내려서 상품보기</span>
       </button>
-
       <div id="fullVideo">
-        <!-- <video loop="loop" autoplay="autoplay" muted="muted"> -->
-          <!-- <source src="../media/video/md_paper_image_movie.mp4" type="video/mp4" /> -->
-          <!-- <p>
+        <video loop="loop" autoplay="autoplay" muted="muted">
+          <source src="../media/video/md_paper_image_movie.mp4" type="video/mp4" />
+          <p>
             사용하고 계신 브라우저는 비디오 지원이 되지 않습니다. 크롬권장<br />
             <a href="http://google.com/chrome">권장 브라우저 받으러 가기</a>
-          </p> -->
+          </p>
         </video>
       </div><!-- #fullVideo -->
     </article><!-- #videoBox -->
@@ -145,46 +139,114 @@
 
     <section id="shopInfoBox">
       <h2><span class="hidden">shop info 쇼핑 정보</span></h2>
-      <div class="online_shop">
-        <h3>online-shop</h3>
-        <div class="content">
-          <p>오늘도 미도리 세상</p>
-          <button type="button" class="omise_btn"><a href="http://www.omise.co.kr/">오미세 바로 가기</a></button>
-        </div>
-      </div><!-- .online_shop -->
-
-      <div class="offline_shop">
-        <h3>offline-shop</h3>
-        <div class="content_wrap">
-          <div class="content_01">
-            <div class="name">
-              <a href="http://www.omise.co.kr"><span>가든파이브 midori</span></a>
-              <button type="button" class="tel"><span class="hidden">전화번호</span></button>
-              <button type="button" class="map"><span class="hidden">위치 정보</span></button>
-            </div><!-- .name -->
-
-            <ul class="info">
-              <li class="info_01">
+      <div class="shop_info_wrap">
+        <div class="online_shop">
+          <h3><span class="hidden">online-shop</span></h3>
+          <div class="box">
+            <p>오늘도 미도리 세상</p>
+            <button type="button" class="omise_btn"><span>오미세 바로 가기</span></button>
+          </div>
+        </div><!-- .online_shop -->
+        <div class="offline_shop">
+          <h3><span class="hidden">offline-shop</span></h3>
+          <div class="content_wrap clearfix">
+            <ul class="content_01 clearfix">
+              <li>
+                <p class="title">
+                  가든 파이브
+                  <button type="button">
+                    <span class="hidden">전화걸기</span>
+                    <i class="fas fa-phone"></i>
+                  </button>
+                  <button type="button">
+                    <span class="hidden">지도보기</span>
+                    <i class="fas fa-map-marker-alt"></i>
+                  </button>
+                </p>
                 <dl>
                   <dt>주소</dt>
                   <dd>서울특별시 송파구 충민로 66 가든파이브라이프 리빙관 5층 L-5058</dd>
                 </dl>
-              </li>
-              <li class="info_02">
                 <dl>
-                  <dt>이용시간</dt>
-                  <dd>월-금 10:30~20:00,<br />점심시간 12:00~13:00<br />토,일,공휴일 휴무</dd>
+                  <dt>이용 시간</dt>
+                  <dd>월-금 10:30 ~ 20:00, 점심시간 12:00 ~ 13:00, 토,일,공휴일 휴무<br />(운영 시간 변경시 오미세 'MIDORI NEWS'에 공지)</dd>
+                </dl>
+                <dl>
+                  <dt>전화</dt>
+                  <dd>02-2157-0272</dd>
+                </dl>
+                <dl>
+                  <dt>오시는 길</dt>
+                  <dd><p><a href="#">지도보기</a>(올라오는 에스컬레이터 이용시 에스컬레이터 우측)</p></dd>
+                </dl>
+                <dl>
+                  <dt>온라인 샵</dt>
+                  <dd><a href="#">http://www.omise.co.kr</a></dd>
                 </dl>
               </li>
-            </ul>
-          </div><!-- .content_01 -->
-          <div class="content_02"></div><!-- .content_02 -->
-        </div><!-- .content_wrap -->
-        <button type="button"><a href="#">전체 보기</a></button>
-      </div>
+              <li>
+                <p class="title">판매 상품(군)</p>
+                <p class="content">
+                  MIDORI, TRV<br /><br />온라인샵 '오미세' 에서 판매 제품 확인하실 수 있습니다.<br />(B-shop, 세트/패키지 등 일부 제품 제외)
+                </p>
+              </li>
+            </ul><!-- .content_01 -->
+            <ul class="content_02 clearfix">
+              <li>
+                <p class="title">
+                  THE T.I.ME
+                  <button type="button">
+                    <span class="hidden">전화걸기</span>
+                    <i class="fas fa-phone"></i>
+                  </button>
+                  <button type="button">
+                    <span class="hidden">지도보기</span>
+                    <i class="fas fa-map-marker-alt"></i>
+                  </button>
+                </p>
+                <dl>
+                  <dt>주소</dt>
+                  <dd>서울특별시 서대문구 신촌로 261 준빌딩 4층</dd>
+                </dl>
+                <dl>
+                  <dt>이용 시간</dt>
+                  <dd>월-금 10:30 ~ 19:00, 토 11:00 ~ 18:00, 점심시간 12:00 ~ 13:00, 매주 일요일 휴무<br />(운영시간 변경시 네이버 트래블러스노트 카페 및 쇼핑몰 팝업창에 공지)</dd>
+                </dl>
+                <dl>
+                  <dt>전화</dt>
+                  <dd>070-7790-0498</dd>
+                </dl>
+                <dl>
+                  <dt>오시는 길</dt>
+                  <dd><a href="#">지도보기</a>(2호선 아현역 1번 출구 2 ~ 3분 소요)</dd>
+                </dl>
+                <dl>
+                  <dt>온라인 샵</dt>
+                  <dd><a href="http://www.the-time.kr">http://www.the-time.kr</a></dd>
+                </dl>
+              </li>
+              <li>
+                <p class="title">판매 상품(군)</p>
+                <p class="content">
+                  TRV, MD, MIDORI(XS·CL,etc), TOOLS to LIVEBY, TOUCH & FLOW(오프라인 단독 판매)<br /><br />온라인샵 '더타임' 에서 판매 제품 확인하실 수 있습니다.<br />(세트/패키지 등 일부 제품 제외)
+                </p>
+              </li>
+            </ul><!-- .content_02 -->
+          </div><!-- .content_wrap -->
+          <button type="button"><span>전체 보기</span></button>
+        </div><!-- .offline_shop -->
+      </div><!-- .shop_info_wrap -->
     </section><!-- #shopInfoBox -->
 
+    <div id="topBtn">
+      <button type="button">
+        <span class="hidden">최상단으로 올라가기</span>
+      </button>
+    </div>
+
     <footer id="footBox">
+      <h2 class="hidden">company info</h2>
+      <address class="hidden">회사명 (주)와이티인터내셔널 주소 서울시 송파구 충민로 66(가든파이브 리빙관) L-5058 전화번호 02-2157-0272 FAX 02-2157-0273 E-MAIL young-trade@daum.net 대표이사 신승준 사업자 등록번호 140-81-28926 통신판매업 신고번호 제 2012-서울 송파-0330호</address>
       <p>Copyright © 2015 Designphil Inc. All right reserved.</p>
     </footer><!-- #footBox -->
 

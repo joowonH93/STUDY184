@@ -20,50 +20,33 @@
 #wrap {
   width:100%; height:100%;
   background-color:#ddd;
-  }
+}
 
-#shopInfoBox {
-  width:100%;
-  }
+#topBtn {
+  position:fixed; right:50px; bottom:50px;
+  width:50px; height:50px;
+}
 
-
+#topBtn > button {
+  width:100%; height:100%;
+  background-image:url("../../img/wrap/top_btn.png");
+  background-repeat:no-repeat;
+  background-size:100%;
+  background-position:center;
+}
 
 
 
 /*mobile*/
 @media screen and (min-width:281px) and (max-width:480px) {
-  #shopInfoBox {
-    height:1120px;
-    background-color:#ffdc3c;
-  }
+  #topBtn {right:35px; bottom:35px;}
 }
+
+
 
 
 
 /*tablet*/
 @media screen and (min-width:481px) and (max-width:768px) {
-  #shopInfoBox {
-    height:1040px;
-    background-color:#e47a20;
-  }
-}
-
-
-
-/*pc*/
-@media screen and (min-width:769px) and (max-width:1366px) {
-  #shopInfoBox {
-    height:1320px;
-    background-color:#ffdc3c;
-  }
-}
-
-
-
-/*pc-full*/
-@media screen and (min-width:1366px) {
-  #shopInfoBox {
-    height:1320px;
-    background-color:#e47a20;
-  }
+  #topBtn {right:35px; bottom:35px;}
 }

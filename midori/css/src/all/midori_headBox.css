@@ -6,13 +6,13 @@
 #headBox {
   position:fixed; z-index:2000;
   box-sizing:border-box;
-  width:100%;
+  width:100%; height:0;
   }
 
 #headBox > h1 {
   margin-right:30px;
   float:left;
-  width:185px; height:100%;
+  width:185px; height:50px;
   background-image:url("../../../img/headBox/midori_ci.png");
   background-repeat:no-repeat;
   background-size:100%;
@@ -21,7 +21,7 @@
 
 #headBox > #gnb {
   float:right;
-  width:calc(100% - 215px); height:100%;
+  width:calc(100% - 215px); height:0;
 }
 
 #headBox > #gnb > .language {
@@ -72,7 +72,7 @@
 @media screen and (max-width:480px) {
   #headBox {
     padding:35px 7.291666vw;/*35/480*100*/
-    height:120px;
+    height:0;
   }
 
   #headBox > h1 {
@@ -82,6 +82,7 @@
 
   #headBox > #gnb {
     width:calc(100% - 44.791666vw);/*215/480*100*/
+    height:0;
   }
 
   #headBox > #gnb > .language > li {
@@ -101,7 +102,7 @@
 @media screen and (min-width:481px) and (max-width:768px) {
   #headBox {
     padding:35px;
-    height:120px;
+    height:0;
     transition:300ms all ease;
   }
 }
@@ -112,7 +113,7 @@
 @media screen and (min-width:769px) and (max-width:1366px) {
   #headBox {
     padding:50px;
-    height:150px;
+    height:0;
     transition:300ms all ease;
   }
 }
@@ -123,6 +124,6 @@
 @media screen and (min-width:1366px) {
   #headBox {
     padding:50px;
-    height:150px;
+    height:0;
   }
 }
