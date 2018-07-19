@@ -4,12 +4,18 @@
 
 /*common area*/
 #headBox {
-  position:fixed; z-index:2000;
-  box-sizing:border-box;
+  position:fixed; z-index:1500;
   width:100%; height:0;
   }
 
-#headBox > h1 {
+#headBox > .head_wrap {
+  position:relative; z-index:100;
+  box-sizing:border-box;
+  padding:35px 7.291666vw;/*35/480*100*/
+  width:100%; height:0;
+}
+
+#headBox > .head_wrap > h1 {
   margin-right:30px;
   float:left;
   width:185px; height:50px;
@@ -19,18 +25,21 @@
   background-position:center;
 }
 
-#headBox > #gnb {
-  float:right;
-  width:calc(100% - 215px); height:0;
+#headBox > .head_wrap > h1 > a {
+  display:block; width:100%; height:100%; 
 }
 
-#headBox > #gnb > .language {
+#headBox > .head_wrap > #language {
   float:left;
   box-sizing:border-box; padding:15px 0;
   width:auto; height:50px;
 }
 
-#headBox > #gnb > .language > li {
+#headBox > .head_wrap > #language > ul {
+  width:100%; height:100%;
+}
+
+#headBox > .head_wrap > #language > ul > li {
   margin-right:30px;
   float:left;
   width:20px; height:100%;
@@ -39,29 +48,133 @@
   background-position:center;
 }
 
-#headBox > #gnb > .language > li:last-child {margin-right:0;}
+#headBox > .head_wrap > #language > ul > li:last-child {margin-right:0;}
 
-#headBox > #gnb > .language > li > a {
+#headBox > .head_wrap > #language > ul > li > a {
   display:block;
   width:100%; height:100%;
 }
 
-#headBox > #gnb > .language > .korean > a {
+#headBox > .head_wrap > #language > ul > .korean > a {
   background-image:url("../../../img/headBox/lang_kr.png");
 }
 
-#headBox > #gnb > .language > .japanese > a {
+#headBox > .head_wrap > #language > ul > .japanese > a {
   background-image:url("../../../img/headBox/lang_jp.png");
 }
 
-#headBox > #gnb > .global_menu {
-  float:right;
+#headBox > .head_wrap > .gnb_btn {
+  position:absolute; top:50px; right:50px;
   width:50px; height:50px;
-  cursor:pointer;
-  background-image:url("../../../img/headBox/gnb_btn.png");
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size:contain;
+}
+
+#headBox > .head_wrap > .gnb_btn > button {
+  display:block; padding:0;
+  width:100%; height:100%;
+}
+
+#headBox > .head_wrap > .gnb_btn > button > .icon {
+  display:block;
+  width:100%; height:3px;
+  background-color:#006544;
+  transition:all 500ms ease;
+}
+
+#headBox > .head_wrap > .gnb_btn > button > .icon:before {
+  position:absolute; top:5px;
+  display:block; content:" ";
+  width:100%; height:3px;
+  background-color:#006544;
+  transition:all 500ms ease;
+}
+
+#headBox > .head_wrap > .gnb_btn > button > .icon:after {
+  position:absolute; bottom:5px;
+  display:block; content:" ";
+  width:100%; height:3px;
+  background-color:#006544;
+  transition:all 300ms ease;
+}
+
+/*#headBox > .head_wrap > .gnb_btn > button.active > .icon {transform:rotateY(180deg);}*/
+
+#headBox > .head_wrap > .gnb_btn > button.active > .icon {height:0;}
+
+#headBox > .head_wrap > .gnb_btn > button.active > .icon:before {
+  position:absolute; top:25px; right:-8px;
+  width:130%; height:2px; transform:rotate(-45deg);
+  background-color:#333;}
+
+#headBox > .head_wrap > .gnb_btn > button.active > .icon:after {
+  position:absolute; top:25px; right:-8px;
+  width:130%; height:2px; transform:rotate(45deg);
+  background-color:#333;}
+
+#headBox > .head_wrap > .gnb_wrap {
+  width:100%; height:100%;}
+
+#gnb {
+  margin-top:-100px;
+  width:100%; height:100%;
+  background-color:rgba(255,255,255,0.8);
+  /*backdrop-filter:blur(10px);*/
+}
+  
+#gnb > .global_menu {
+  margin:auto;
+  box-sizing:border-box; padding:125px 0 120px;
+  width:186px; height:auto;
+}
+
+#gnb > .global_menu > li {
+  margin-bottom:16px;
+  margin:auto;
+  width:auto; height:auto;
+}
+
+#gnb > .global_menu > li:last-child {margin-bottom:0;}
+
+#gnb > .global_menu > li > a {
+  display:block;
+  width:auto; height:auto;
+  font-size:30px; text-transform:uppercase;
+  font-weight:300; text-align:center;
+}
+
+#gnb > .global_menu > li > ul {
+  margin:auto;
+  margin-bottom:20px;
+  width:110px; height:auto;}
+
+#gnb > .global_menu > li > ul > li {
+  margin:auto;
+  width:auto; height:100%;
+}
+
+#gnb > .global_menu > li > ul > li > a {
+  margin:auto;
+  display:block; width:auto; height:100%;
+  font-size:16px; text-transform:uppercase;
+  font-weight:300; text-align:center;
+  position:relative;
+}
+  
+#gnb > .global_menu > li:hover > a {
+  font-weight:bold; color:#006544;
+  transition:all 500ms ease;
+}
+
+#gnb > .global_menu > li > ul > li > a:after {
+  position:absolute; left:0; bottom:0;
+  content:" "; display:block;
+  width:0; height: 1px;
+  transition:all 500ms ease;
+}
+
+#gnb > .global_menu > li > ul > li:hover > a:after {
+  position:absolute; left:0; bottom:0;
+  content:" "; display:block;
+  width:100%; height: 1px; border-bottom:1px solid #999;
 }
 
 
@@ -70,12 +183,7 @@
 
 /*mobile*/
 @media screen and (max-width:480px) {
-  #headBox {
-    padding:35px 7.291666vw;/*35/480*100*/
-    height:0;
-  }
-
-  #headBox > h1 {
+  #headBox > .head_wrap > h1 {
     margin-right:6.25vw;/*30/480*100*/
     width:38.541666vw;/*185/480*100*/ min-width:100px;
   }
@@ -85,12 +193,34 @@
     height:0;
   }
 
-  #headBox > #gnb > .language > li {
+  #headBox > .head_wrap > #language > ul > li {
     margin-right:4.166666666666667vw;/*20/480*100*/
   }
 
-  #headBox > #gnb > .global_menu {
+  #headBox > .head_wrap > .gnb_btn {
+    top:35px; right:35px;
     width:10.416666vw; min-width:35px;
+  }
+
+  #gnb {
+    height:auto;}
+  
+  #gnb > .global_menu {
+    padding:180px 0 100%;
+    width:100%;
+    transition:all 300ms ease;
+  }
+
+  #gnb > .global_menu > li {
+    margin-bottom:30px;
+  }
+  
+  #gnb > .global_menu > li > ul {
+    margin-bottom:40px;
+  }
+  
+  #gnb > .global_menu > li > ul > li {
+    margin-bottom:10px;
   }
 }
 
@@ -100,10 +230,17 @@
 
 /*tablet*/
 @media screen and (min-width:481px) and (max-width:768px) {
-  #headBox {
-    padding:35px;
-    height:0;
+  #headBox > .head_wrap {
     transition:300ms all ease;
+  }
+
+  #headBox > .head_wrap > .gnb_btn {
+    top:35px; right:35px;
+    transition:300ms all ease;
+  }
+
+  #gnb > .global_menu {
+    padding:150px 0 120px;
   }
 }
 
@@ -111,9 +248,8 @@
 
 /*laptop*/
 @media screen and (min-width:769px) and (max-width:1366px) {
-  #headBox {
+  #headBox > .head_wrap {
     padding:50px;
-    height:0;
     transition:300ms all ease;
   }
 }
@@ -122,8 +258,5 @@
 
 /*pc-full*/
 @media screen and (min-width:1366px) {
-  #headBox {
-    padding:50px;
-    height:0;
-  }
+  #headBox > .head_wrap {padding:50px;}
 }

@@ -25,10 +25,18 @@
 
 #videoBox > .text_box > .play_btn {
   margin-left:25px;
-  box-sizing:border-box;
+  box-sizing:border-box; border:1px solid #333;
   width:200px; height:75px;
-  border:1px solid #333;
   font-size:25px; text-align:center; text-transform:capitalize;
+}
+
+#videoBox > .text_box > .play_btn:hover {
+  background-color:#006544; color:#fff;
+}
+
+#videoBox > .text_box > .play_btn:focus {
+  border:3px solid #333;
+  text-decoration:underline;
 }
 
 #videoBox > .scroll {
@@ -46,7 +54,7 @@
 }
 
 #fullVideo > video {
-  width:auto; height:auto; min-width:100%; min-height:100%;
+  width:auto; height:auto; min-width:101%; min-height:101%;
   position:absolute; top:50%; left:50%;
   transform:translateX(-50%) translateY(-50%);
   backface-visibility:visible;

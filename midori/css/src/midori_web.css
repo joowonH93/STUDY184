@@ -35,6 +35,14 @@
   background-position:center;
 }
 
+#topBtn > button:hover {
+  background-image:url("../../img/wrap/top_btn_hover.png");
+}
+
+#topBtn > button:focus {
+  background-image:url("../../img/wrap/top_btn_focus.png");
+}
+
 
 
 /*mobile*/
