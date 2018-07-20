@@ -18,7 +18,7 @@
 #headBox > .head_wrap > h1 {
   margin-right:30px;
   float:left;
-  width:185px; height:50px;
+  width:150px; height:40px;
   background-image:url("../../../img/headBox/midori_ci.png");
   background-repeat:no-repeat;
   background-size:100%;
@@ -31,8 +31,8 @@
 
 #headBox > .head_wrap > #language {
   float:left;
-  box-sizing:border-box; padding:15px 0;
-  width:auto; height:50px;
+  box-sizing:border-box; padding:10px 0;
+  width:auto; height:40px;
 }
 
 #headBox > .head_wrap > #language > ul {
@@ -40,12 +40,10 @@
 }
 
 #headBox > .head_wrap > #language > ul > li {
-  margin-right:30px;
+  margin-right:20px;
   float:left;
-  width:20px; height:100%;
-  background-repeat:no-repeat;
-  background-size:100%;
-  background-position:center;
+  width:22px; height:20px;
+  transition:all 300ms ease;
 }
 
 #headBox > .head_wrap > #language > ul > li:last-child {margin-right:0;}
@@ -53,6 +51,9 @@
 #headBox > .head_wrap > #language > ul > li > a {
   display:block;
   width:100%; height:100%;
+  background-repeat:no-repeat;
+  background-size:90%;
+  background-position:center;
 }
 
 #headBox > .head_wrap > #language > ul > .korean > a {
@@ -64,8 +65,8 @@
 }
 
 #headBox > .head_wrap > .gnb_btn {
-  position:absolute; top:50px; right:50px;
-  width:50px; height:50px;
+  position:absolute; top:35px; right:35px;
+  width:40px; height:40px;
 }
 
 #headBox > .head_wrap > .gnb_btn > button {
@@ -98,15 +99,15 @@
 
 /*#headBox > .head_wrap > .gnb_btn > button.active > .icon {transform:rotateY(180deg);}*/
 
-#headBox > .head_wrap > .gnb_btn > button.active > .icon {height:0;}
+#headBox > .head_wrap > .gnb_btn > button.active > .icon {background-color:transparent;}
 
 #headBox > .head_wrap > .gnb_btn > button.active > .icon:before {
-  position:absolute; top:25px; right:-8px;
+  position:absolute; top:19px; right:-6px;
   width:130%; height:2px; transform:rotate(-45deg);
   background-color:#333;}
 
 #headBox > .head_wrap > .gnb_btn > button.active > .icon:after {
-  position:absolute; top:25px; right:-8px;
+  position:absolute; top:19px; right:-6px;
   width:130%; height:2px; transform:rotate(45deg);
   background-color:#333;}
 
@@ -185,7 +186,7 @@
 @media screen and (max-width:480px) {
   #headBox > .head_wrap > h1 {
     margin-right:6.25vw;/*30/480*100*/
-    width:38.541666vw;/*185/480*100*/ min-width:100px;
+    width:31.25vw;/*150/480*100*/ min-width:100px;
   }
 
   #headBox > #gnb {
@@ -194,29 +195,34 @@
   }
 
   #headBox > .head_wrap > #language > ul > li {
-    margin-right:4.166666666666667vw;/*20/480*100*/
+    margin-right:8px;
+    width:22px;
+  }
+
+  #headBox > .head_wrap > #language > ul > li > a {
+    background-size:90%;
   }
 
   #headBox > .head_wrap > .gnb_btn {
     top:35px; right:35px;
-    width:10.416666vw; min-width:35px;
+    width:7.291666vw;/*35/480*100*/ min-width:30px;
   }
 
   #gnb {
     height:auto;}
   
   #gnb > .global_menu {
-    padding:180px 0 100%;
+    padding:150px 0 120px;
     width:100%;
     transition:all 300ms ease;
   }
 
   #gnb > .global_menu > li {
-    margin-bottom:30px;
+    margin-bottom:25px;
   }
   
   #gnb > .global_menu > li > ul {
-    margin-bottom:40px;
+    margin-bottom:10px;
   }
   
   #gnb > .global_menu > li > ul > li {
@@ -231,16 +237,16 @@
 /*tablet*/
 @media screen and (min-width:481px) and (max-width:768px) {
   #headBox > .head_wrap {
+    padding:35px 35px;
     transition:300ms all ease;
   }
 
   #headBox > .head_wrap > .gnb_btn {
     top:35px; right:35px;
-    transition:300ms all ease;
   }
 
   #gnb > .global_menu {
-    padding:150px 0 120px;
+    padding:125px 0 120px;
   }
 }
 
@@ -249,7 +255,12 @@
 /*laptop*/
 @media screen and (min-width:769px) and (max-width:1366px) {
   #headBox > .head_wrap {
-    padding:50px;
+    padding:35px 35px;
+    transition:300ms all ease;
+  }
+
+  #headBox > .head_wrap > .gnb_btn {
+    top:35px; right:35px;
     transition:300ms all ease;
   }
 }
@@ -258,5 +269,30 @@
 
 /*pc-full*/
 @media screen and (min-width:1366px) {
-  #headBox > .head_wrap {padding:50px;}
+  #headBox > .head_wrap {
+    padding:50px;
+    transition:all 500ms ease;}
+
+  #headBox > .head_wrap > h1 {
+    width:185px; height:50px;
+  }
+
+  #headBox > .head_wrap > #language {
+    height:50px;
+  }
+
+  #headBox > .head_wrap > .gnb_btn {
+    top:50px; right:50px;
+    width:50px; height:50px;
+  }
+
+  #headBox > .head_wrap > .gnb_btn > button.active > .icon:before {
+    position:absolute; top:25px; right:-8px;
+    width:130%; height:2px; transform:rotate(-45deg);
+    background-color:#333;}
+  
+  #headBox > .head_wrap > .gnb_btn > button.active > .icon:after {
+    position:absolute; top:25px; right:-8px;
+    width:130%; height:2px; transform:rotate(45deg);
+    background-color:#333;}
 }

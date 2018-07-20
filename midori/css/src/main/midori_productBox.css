@@ -16,25 +16,32 @@
   margin:auto;
 }
 
-#productBox > .product_wrap > li > a {
-  display:block;
-  box-sizing:border-box; padding:0 20px;
-  width:100%; height:100%;
-}
-
 #productBox > .product_wrap > li {
   background-repeat:no-repeat;
   background-position:center;
   background-size:cover;
 }
 
-#productBox > .product_wrap > li:nth-child(1) {background-image:url("../../../img/productBox/product_img_01.jpg");}
-#productBox > .product_wrap > li:nth-child(2) {background-image:url("../../../img/productBox/product_img_02.jpg");}
-#productBox > .product_wrap > li:nth-child(3) {background-image:url("../../../img/productBox/product_img_03.jpg");}
-#productBox > .product_wrap > li:nth-child(4) {background-image:url("../../../img/productBox/product_img_04.jpg");}
-#productBox > .product_wrap > li:nth-child(5) {background-image:url("../../../img/productBox/product_img_05.jpg");}
-#productBox > .product_wrap > li:nth-child(6) {background-image:url("../../../img/productBox/product_img_06.jpg");}
-#productBox > .product_wrap > li:nth-child(7) {background-image:url("../../../img/productBox/product_img_07.jpg");}
+#productBox > .product_wrap > li > a {
+  display:block;
+  box-sizing:border-box; padding:0 20px;
+  width:100%; height:100%;
+}
+
+#productBox > .product_wrap > li:nth-child(1) {
+  background-image:url("../../../img/productBox/product_img_01.jpg");}
+#productBox > .product_wrap > li:nth-child(2) {
+  background-image:url("../../../img/productBox/product_img_02.jpg");}
+#productBox > .product_wrap > li:nth-child(3) {
+  background-image:url("../../../img/productBox/product_img_03.jpg");}
+#productBox > .product_wrap > li:nth-child(4) {
+  background-image:url("../../../img/productBox/product_img_04.jpg");}
+#productBox > .product_wrap > li:nth-child(5) {
+  background-image:url("../../../img/productBox/product_img_05.jpg");}
+#productBox > .product_wrap > li:nth-child(6) {
+  background-image:url("../../../img/productBox/product_img_06.jpg");}
+#productBox > .product_wrap > li:nth-child(7) {
+  background-image:url("../../../img/productBox/product_img_07.jpg");}
 
 #productBox > .product_wrap > li:hover > a {
   display:block;
@@ -58,7 +65,8 @@
 #productBox > .product_wrap > li:nth-child(7):hover > a {
   background-image:url("../../../img/productBox/product_img_07_hover.png");}
 
-#productBox > .product_wrap > li:hover > a > dl {display:block;}
+#productBox > .product_wrap > li:hover > a > dl {
+  display:block;}
 
 #productBox > .product_wrap > li > a > dl {
   position:relative;
