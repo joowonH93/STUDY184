@@ -22,7 +22,7 @@
                 "j07.jpg",
                 "j08.jpg",
                 "j09.jpg",
-                "j10.jpg"]
+                "j10.jpg"];
   var useImgBig = ["j01_big.jpg",
                    "j02_big.jpg",
                    "j03_big.jpg",
@@ -32,7 +32,7 @@
                    "j07_big.jpg",
                    "j08_big.jpg",
                    "j09_big.jpg",
-                   "j10_big.jpg"]
+                   "j10_big.jpg"];
 
   /*
   list.eq(0).children('a').css({backgroundImage:'url('+ addr + useImg[0] + ')'});
