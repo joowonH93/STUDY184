@@ -33,7 +33,7 @@
 }
 
 #contentBox > div > .body_text {
-  margin-bottom:25px;
+  margin-bottom:50px;
   width:100%; height:auto;
   font-size:16px; line-height:32px;
   font-weight:300; word-break:keep-all;
@@ -113,7 +113,6 @@
 #companyInfo {
   margin:auto;
   width:940px; height:auto;
-  background-color:#fff;
   font-size:15px; line-height:30px;
   font-weight:300; word-break:keep-all;
 }
@@ -172,11 +171,6 @@
 
 
 
-
-
-
-
-
 /*mobile*/
 @media screen and (max-width:480px) {
   #contentBox > .company_intro,
@@ -190,7 +184,13 @@
 
   #contentBox > .company_intro > .sign {
     margin-left:calc(100% - 220px);
-    width:220px; height:auto;}
+    width:220px; height:auto;
+  }
+
+  #contentBox > .company_brand > .img_box {
+    margin-left:-35px;
+    width:calc(100% + 70px);
+  }
 }
 
 
@@ -205,6 +205,11 @@
 
   #companyInfo {
     width:100%; max-width:698px;
+  }
+
+  #contentBox > .company_brand > .img_box {
+    margin-left:-35px;
+    width:calc(100% + 70px);
   }
 }
 

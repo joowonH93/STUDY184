@@ -1,4 +1,4 @@
-// company.js
+// contact_us.js
 
 (function($){
 
@@ -65,22 +65,3 @@
   });
 
 })(jQuery);
-
-
-
-
-
-
-/*
-
-  // 5. scroll 버튼 클릭시 product 영역이 보임
-  scrollBtn.on('click', function(e){
-    e.preventDefault();
-
-    var thisLink = $(this).children('a').attr('href');
-    var thisOffset = $(thisLink).offset().top;
-
-    $('html, body').animate({scrollTop:thisOffset}, 1200, 'easeInOutBack');
-  });
-
-*/

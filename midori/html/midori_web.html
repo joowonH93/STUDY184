@@ -33,7 +33,7 @@
 
     <header id="headBox">
       <div class="head_wrap">
-        <h1><a href="../html/midori_web.html"><span class="hidden">midori 메인 화면으로</span></a></h1>
+        <h1><a href="./midori_web.html"><span class="hidden">midori 메인 화면으로</span></a></h1>
 
         <nav id="language">
           <h2><span class="hidden">midori language menu</span></h2>
@@ -80,7 +80,7 @@
             </li><!-- .gnb_02 -->
 
             <li class="gnb_03">
-              <a href="../html/midori_web_company.html">company</a>
+              <a href="./company.html">company</a>
               <ul>
                 <li><a href="#">brand midori</a></li>
                 <li><a href="#">infomation</a></li>
@@ -88,7 +88,7 @@
             </li><!-- .gnb_03 -->
 
             <li class="gnb_04">
-              <a href="#">contact us</a>
+              <a href="./contact_us.html">contact us</a>
             </li><!-- .gnb_04 -->
 
           </ul><!-- .global_menu -->
@@ -121,23 +121,23 @@
             <a href="http://google.com/chrome">권장 브라우저 받으러 가기</a>
           </p>
         </video>
-        <ul class="video_banner">
-          <li class="banner_img_01 ">
-            <span class="hidden">md paper products movie image</span>
-          </li>
-          <li class="banner_img_02 ">
-            <span class="hidden">md paper products movie image</span>
-          </li>
-          <li class="banner_img_03 ">
-            <span class="hidden">md paper products movie image</span>
-          </li>
-          <li class="banner_img_04 ">
-            <span class="hidden">md paper products movie image</span>
-          </li>
-          <li class="banner_img_05 ">
-            <span class="hidden">md paper products movie image</span>
-          </li>
-        </ul>
+        <div class="banner_wrap">
+          <ul class="indicator hidden_wrap">
+            <li><span>md paper products movie image 01</span></li>
+            <li><span>md paper products movie image 02</span></li>
+            <li><span>md paper products movie image 03</span></li>
+            <li><span>md paper products movie image 04</span></li>
+            <li><span>md paper products movie image 05</span></li>
+          </ul><!-- .indicator -->
+
+          <ul class="video_banner hidden_wrap">
+            <li class="banner_img_01"><span>md paper products movie image</span></li>
+            <li class="banner_img_02"><span>md paper products movie image</span></li>
+            <li class="banner_img_03"><span>md paper products movie image</span></li>
+            <li class="banner_img_04"><span>md paper products movie image</span></li>
+            <li class="banner_img_05"><span>md paper products movie image</span></li>
+          </ul><!-- .video_banner -->
+        </div>
       </div><!-- #fullVideo -->
 
     </article><!-- #videoBox -->
@@ -213,7 +213,7 @@
           <h3><span class="hidden">online-shop</span></h3>
           <div class="box">
             <p>오늘도 미도리 세상</p>
-            <button type="button" class="omise_btn"><span>오미세 바로 가기</span></button>
+            <button type="button" class="omise_btn" onclick="window.open('http://www.omise.co.kr/')">오미세 바로 가기</button>
           </div>
         </div><!-- .online_shop -->
         <div class="offline_shop">
@@ -248,11 +248,11 @@
                 </dl>
                 <dl class="map_link">
                   <dt>오시는 길</dt>
-                  <dd><a href="#">지도보기</a>(올라오는 에스컬레이터 이용시 에스컬레이터 우측)</dd>
+                  <dd><a href="http://naver.me/5Ln433u7" target="_blank">지도보기</a>(올라오는 에스컬레이터 이용시 에스컬레이터 우측)</dd>
                 </dl>
                 <dl class="shop_link">
                   <dt>온라인 샵</dt>
-                  <dd><a href="http://www.omise.co.kr">http://www.omise.co.kr</a></dd>
+                  <dd><a href="http://www.omise.co.kr" target="_blank">http://www.omise.co.kr</a></dd>
                 </dl>
               </li>
               <li>
@@ -291,11 +291,11 @@
                 </dl>
                 <dl class="map_link">
                   <dt>오시는 길</dt>
-                  <dd><a href="#">지도보기</a>(2호선 아현역 1번 출구 2 ~ 3분 소요)</dd>
+                  <dd><a href="http://naver.me/5GSL7pir" target="_blank">지도보기</a>(2호선 아현역 1번 출구 2 ~ 3분 소요)</dd>
                 </dl>
                 <dl class="shop_link">
                   <dt>온라인 샵</dt>
-                  <dd><a href="http://www.the-time.kr">http://www.the-time.kr</a></dd>
+                  <dd><a href="http://www.the-time.kr" target="_blank">http://www.the-time.kr</a></dd>
                 </dl>
               </li>
               <li>
@@ -306,9 +306,7 @@
               </li>
             </ul><!-- .content_02 -->
           </div><!-- .content_wrap -->
-          <button type="button" class="all_list_btn">
-              <span>전체 보기</span>
-          </button>
+          <button type="button" class="all_list_btn" onclick="location.href='#'">전체 보기</button>
         </div><!-- .offline_shop -->
       </div><!-- .shop_info_wrap -->
     </section><!-- #shopInfoBox -->
