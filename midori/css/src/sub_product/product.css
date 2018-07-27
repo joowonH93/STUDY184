@@ -1,10 +1,11 @@
 @import url('./../common/midori_headBox.css');
-@import url('./contact_us_contentBox.css');
+@import url('./../main/midori_productBox.css');
+@import url('./product_midori.css');
 @import url('./../common/midori_footBox.css');
 
 
 
-/* contact_us.css */
+/* product.css */
 
 /*
   (포인트색) #006544
@@ -17,9 +18,11 @@
 /*common area*/
 #wrap {
   width:100%; height:auto;
+  /*
   background-image:url("../../../img/wrap/grid.png");
   background-repeat:repeat;
   background-size:59px 60px;
+  */
 }
 
 .sub_title {

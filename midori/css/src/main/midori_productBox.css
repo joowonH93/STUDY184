@@ -9,7 +9,6 @@
   background-image:url("../../../img/wrap/grid.png");
   background-repeat:repeat;
   background-size:59px 60px;
-  /*transition:all 300ms ease;*/
 }
 
 #productBox > .product_wrap {
@@ -42,28 +41,6 @@
   background-image:url("../../../img/productBox/product_img_06.jpg");}
 #productBox > .product_wrap > li:nth-child(7) {
   background-image:url("../../../img/productBox/product_img_07.jpg");}
-
-#productBox > .product_wrap > li:hover > a {
-  display:block;
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size:cover;
-}
-
-#productBox > .product_wrap > li:nth-child(1):hover > a {
-  background-image:url("../../../img/productBox/product_img_01_hover.png");}
-#productBox > .product_wrap > li:nth-child(2):hover > a {
-  background-image:url("../../../img/productBox/product_img_02_hover.png");}
-#productBox > .product_wrap > li:nth-child(3):hover > a {
-  background-image:url("../../../img/productBox/product_img_03_hover.png");}
-#productBox > .product_wrap > li:nth-child(4):hover > a {
-  background-image:url("../../../img/productBox/product_img_04_hover.png");}
-#productBox > .product_wrap > li:nth-child(5):hover > a {
-  background-image:url("../../../img/productBox/product_img_05_hover.png");}
-#productBox > .product_wrap > li:nth-child(6):hover > a {
-  background-image:url("../../../img/productBox/product_img_06_hover.png");}
-#productBox > .product_wrap > li:nth-child(7):hover > a {
-  background-image:url("../../../img/productBox/product_img_07_hover.png");}
 
 #productBox > .product_wrap > li:hover > a > dl {
   display:block;}
@@ -192,6 +169,7 @@
   }
 
   #productBox > .product_wrap > li {
+    opacity:0;
     position:absolute;
     width:32%; height:36.60322108345534vw;
     /*min-width:210px;*/ max-width:300px;
@@ -219,6 +197,12 @@
     top:114.2020497803807vw; /*top:1560px;*/
     left:0;}
 
+  #productBox > .product_wrap > li:hover {
+    background-color:#6f6f6f;
+    background-blend-mode:multiply;
+    transition:all 300ms ease;
+  }
+
 
   #productBox > .product_wrap > li > a > dl {
     display:none;
@@ -241,6 +225,7 @@
   }
 
   #productBox > .product_wrap > li {
+    opacity:0;
     position:absolute;
     width:300px; height:500px;
   }
@@ -261,6 +246,12 @@
     top:1300px;}
   #productBox > .product_wrap > li:nth-child(7) {
     top:1560px; left:0;}
+
+  #productBox > .product_wrap > li:hover {
+    background-color:#6f6f6f;
+    background-blend-mode:multiply;
+    transition:all 300ms ease;
+  }
 
   #productBox > .product_wrap > li > a > dl {
     display:none;

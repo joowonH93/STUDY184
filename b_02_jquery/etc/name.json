@@ -1,0 +1,12 @@
+[
+  {"name":"xido", "gender":"male", "address":"ansan", "old":"나이나이"},
+  {"name":"axido", "gender":"female", "address":"anyang", "old":"나이나이"},
+  {"name":"xido", "gender":"male", "address":"suwon", "old":"나이나이"},
+  {"name":"xido", "gender":"female", "address":"ansan", "old":"나이나이"},
+  {"name":"bxido", "gender":"male", "address":"ansan", "old":"나이나이"},
+  {"name":"xido", "gender":"female", "address":"anyang", "old":"나이나이"},
+  {"name":"xido", "gender":"male", "address":"suwon", "old":"나이나이"},
+  {"name":"cxido", "gender":"female", "address":"ansan", "old":"나이나이"},
+  {"name":"xiddo", "gender":"male", "address":"anyang", "old":"나이나이"},
+  {"name":"xido", "gender":"female", "address":"ansan", "old":"나이나이"}
+]
