@@ -4,19 +4,24 @@
 
   var win = $(window);
   var winW = win.outerWidth();
-  var proLi = $('#productBox').find('li');
+  var winH = win.outerHeight(true);
+
+  var proBox = $('#productBox');
+  var proLi = proBox.find('li');
+  var LiOffT = proLi.offset().top;
+
+  var myH = winH/5*4;
+
 
   if(winW >= 769){
-    win.scroll(function(){
-      proLi.each(function(){
+    win.on('scroll', function(){
+      var nowTop = win.scrollTop();
 
-        var bottom_of_element = $(this).offset().top + $(this).outerHeight();
-        var bottom_of_window = win.scrollTop() + win.height();
-
-        if ( bottom_of_window > bottom_of_element ){
-          $(this).animate({'opacity':'1'}, 300);
-        }
-      });
+      if ( nowTop >= LiOffT-(myH) ){
+        proLi.addClass('landing');
+      } else {
+        proLi.removeClass('landing');
+      }
     });
   };
 
