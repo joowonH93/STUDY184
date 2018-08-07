@@ -16,32 +16,42 @@
   banner = bannerWrap.children('div');
 
 
-
+  
+  banner.eq(2).addClass('active');
   banner.eq(3).addClass('active');
-
+  banner.eq(4).addClass('active');
+  
   var nbtn = $('.nbtn');
   var pbtn = $('.pbtn');
 
   nbtn.on('click',function(e) {
     e.preventDefault();
+    banner.eq(2).removeClass('active');
     banner.eq(3).removeClass('active');
+    banner.eq(4).removeClass('active');
     bannerWrap.animate({marginLeft:-(l+divWidth)},function(){
       banner.eq(0).appendTo(bannerWrap);
       bannerWrap.css({marginLeft:-divWidth});
       banner = bannerWrap.children('div');
+      banner.eq(2).addClass('active');
       banner.eq(3).addClass('active');
+      banner.eq(4).addClass('active');
     });
   });
 
 
   pbtn.on('click',function(e) {
     e.preventDefault();
+    banner.eq(2).removeClass('active');
     banner.eq(3).removeClass('active');
+    banner.eq(4).removeClass('active');
     bannerWrap.animate({marginLeft:0},function(){
       banner.eq(-1).prependTo(bannerWrap);
       bannerWrap.css({marginLeft:-divWidth});
       banner = bannerWrap.children('div');
+      banner.eq(2).addClass('active');
       banner.eq(3).addClass('active');
+      banner.eq(4).addClass('active');
     });
   });
 
