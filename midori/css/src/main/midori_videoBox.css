@@ -85,6 +85,11 @@
   background-image:url("../../../img/videoBox/scroll_btn_hover.png");
 }
 
+#videoBox > .scroll > a:focus {
+  border:0;
+  background-image:url("../../../img/videoBox/scroll_btn_focus.png");
+}
+
 @keyframes scroll {
   0% {transform:translateY(0);}
   /*50% {transform:translateY(5px);}*/
@@ -115,12 +120,14 @@
 }
 
 #fullVideo > .banner_wrap > .video_banner {
-  width:600%; height:100%;
+  position:relative;
+  width:100%; height:100%;
 }
 
 #fullVideo > .banner_wrap > .video_banner > li {
+  position:absolute; top:0; left:0;
   float:left;
-  width:calc(100% / 6); height:100%;
+  width:100%; height:100%;
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
@@ -143,23 +150,33 @@
 }
 
 #fullVideo > .banner_wrap > .indicator {
-  position:absolute; top:50%; margin-top:-50px; right:35px;
+  position:absolute; top:50%; margin-top:-50px; right:35px; z-index:100;
   width:12px; height:auto;
 }
 
 #fullVideo > .banner_wrap > .indicator > li {
   width:100%; height:12px; margin-bottom:10px;
+  border-radius:100%;
+}
+
+#fullVideo > .banner_wrap > .indicator > li > a {
+  width:100%; height:100%;
   background-color:rgba(255,255,255,0.4);
   border-radius:100%;
-  cursor:pointer;
 }
+
 #fullVideo > .banner_wrap > .indicator > li:last-child {margin-bottom:0;}
 
-#fullVideo > .banner_wrap > .indicator > li:hover {
-  background-color:rgba(255,255,255,0.9);
+#fullVideo > .banner_wrap > .indicator > li:hover > a {
+  background-color:#006544;
 }
 
-#fullVideo > .banner_wrap > .indicator > li.active {
+#fullVideo > .banner_wrap > .indicator > li > a:focus {
+  border:0;
+  background:linear-gradient(90deg, #a6c0fe 0%, #f68084 100%);
+}
+
+#fullVideo > .banner_wrap > .indicator > li.active > a {
   background-color:rgba(255,255,255,0.9);
 }
 
@@ -182,6 +199,10 @@
     display:block;
   }
 
+  #fullVideo > .banner_wrap > .indicator {
+    right:15px;
+  }
+
   #fullVideo > .modal_frame {display:none;}
   #fullVideo > .modal_bg {display:none;}
 }
@@ -192,6 +213,10 @@
 @media screen and (min-width:481px) and (max-width:768px) {
   #fullVideo > .banner_wrap {
     display:block;
+  }
+
+  #fullVideo > .banner_wrap > .indicator {
+    right:25px;
   }
 
   #fullVideo > .modal_frame {display:none;}

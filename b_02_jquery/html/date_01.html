@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- date_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+
+  <!-- [if lte IE9] >
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/pie/PIE_IE9.js"></script>
+  < ![endif] -->
+
+  <title>date_01</title>
+</head>
+
+<body>
+  <!-- design -->
+  <div id="wrap"></div>
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+  
+  <script>
+    (function($){
+
+      // 월, 일 표기는 0의 값부터 시작함
+      // 작업하는 컴퓨터 기준
+      var date = new Date();
+      var month = ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'];
+      var week = ['일', '월', '화', '수', '목', '금', '토'];
+
+      console.log( date );
+      console.log( date.getFullYear() + '년' );
+      console.log( date.getMonth() + 1 + '월' );
+      console.log( date.getDate() );
+      console.log( date.getDay() + 1 );
+
+      var myM = date.getMonth();
+      console.log( '=> 지금은 : ' + month[myM] + ' 입니다.' );
+
+      var myW = date.getDay();
+      console.log('=> 오늘은 : ' + week[myW] + '요일 입니다.' );
+
+
+
+
+
+      console.log( date.getHours() + '시' );
+      console.log( date.getMinutes() + '분' );
+
+      var Time = function(){
+        var date = new Date();
+
+        var month = ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'];
+        var week = ['일', '월', '화', '수', '목', '금', '토'];
+        var myM = date.getMonth();
+        var myW = date.getDay();
+
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        var sec = date.getSeconds();
+
+        if (min < 10){min = '0' + min;}
+        if (sec < 10){sec = '0' + sec;}
+
+        // console.log(hour + ':' + min + ':' + sec);
+        $('body').text( hour + ':' + min + ':' + sec );
+
+      };
+
+      setInterval(function(){
+        Time();
+      }, 1000);
+
+
+    })(jQuery);
+  </script>
+
+</body>
+</html>
