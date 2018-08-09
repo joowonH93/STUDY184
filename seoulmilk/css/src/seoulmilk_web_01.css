@@ -1,0 +1,277 @@
+/* seoulmilk_web_01.css */
+
+/*
+  logo color : #ED1C24;
+*/
+
+
+
+/* common area */
+#wrap {
+  width:100%; height:300%;
+}
+
+#headBox {
+  position:relative;
+  width:100%; height:0;
+}
+
+#headWrap {
+  position:fixed; z-index:1000;
+  width:100%; height:0;
+}
+
+h1 {
+  position:absolute; top:30px; left:30px;
+  width:200px; height:30px;
+  background-image:url("../../img/headBox/seoulmilk_logo_01.png");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
+}
+
+h1 > a {
+  display: block;
+  width:100%; height:100%;
+}
+
+#language {
+  position:absolute; top:35px;
+  margin-left:240px;
+  width:75px; height:15px;
+}
+
+#language > li {
+  margin-right:10px;
+  float:left;
+  width:15px; height:15px;
+}
+
+#language > li > a {
+  display:block;
+  width:100%; height:100%;
+  font-size:12px; text-transform:uppercase;
+  /*font-family:"kopub dotum";
+  font-weight:600;*/
+  font-family:'Noto Sans KR', sans-serif;
+  font-weight:900;
+  color:#aaa;
+  transition:all 300ms ease;
+}
+
+#language > li > a:after {
+  content:" "; display:block;
+  width:0; height:2px; background-color:#ED1C24;
+  transition:all 300ms ease;
+}
+#language > li > a:hover {color:#CA181F;}
+#language > li > a:focus {outline:0; width:100%;}
+#language > li > a:focus:after {width:100%;}
+
+#gnbBtn {
+  position:absolute; top:30px; right:30px;
+  width:30px; height:30px;
+  /*background-color:#fa0;*/
+}
+
+#gnbBtn > a {
+  display:block;
+  width:100%; height:100%;
+}
+
+#gnbBtn > a > span {
+  float:left;
+  margin-bottom:4px;
+  display:block;
+  width:100%; height:6px; background-color:#fff;
+  box-sizing:border-box; border:1px solid #333;
+  border-radius:3px;
+  transition:all 300ms linear;
+}
+#gnbBtn > a > span:nth-of-type(1) {display:none;}
+#gnbBtn > a > span:nth-of-type(2) {margin-top:2px;}
+#gnbBtn > a > span:nth-of-type(4) {float:right; margin-bottom:2px;}
+
+#gnbBtn:hover > a > span {
+  border:0;
+  background-color:#ED1C24;
+}
+#gnbBtn:hover > a > span:nth-of-type(2) {width:40%;}
+#gnbBtn:hover > a > span:nth-of-type(4) {width:40%;}
+
+#gnbBtn.close {
+  transform:rotate(360deg);}
+#gnbBtn.close > a > span {
+  background-color:transparent;}
+#gnbBtn.close > a > span:nth-of-type(2) {
+  width:35px; transform:translateX(-2.5px) translateY(10px) rotate(-45deg);}
+#gnbBtn.close > a > span:nth-of-type(3) {
+  width:35px; transform:translateX(-2.5px) translateY(0) rotate(45deg);}
+#gnbBtn.close > a > span:nth-of-type(4) {opacity:0;}
+
+#gnbBtn.close:hover > a > span {background-color:#ED1C24;}
+
+#navBox {
+  /*display:none;*/
+  position:fixed; z-index:0;
+  width:100%; height:100%;
+  background-color:#eee;
+}
+
+#navBox > #navWrap {
+  width:100%; height:100%;
+}
+
+#navWrap > .global_menu {
+  position:absolute; top:50%; left:55%;
+  margin-top:-160px;
+  width:45%; height:auto;
+}
+
+#navWrap > .global_menu > li {
+  /*margin-bottom:30px;*/
+  width:100%; min-width:115px; height:auto;
+  /*background-color:#fff;*/
+}
+
+#navWrap > .global_menu > li:last-child {
+  margin-bottom:0;
+}
+
+#navWrap > .global_menu > li > a {
+  display:block;
+  width:100%; height:100%;
+}
+
+#navWrap > .global_menu > li > a:focus {
+  outline:0;
+}
+
+#navWrap > .global_menu > li > a > h3 {
+  margin-bottom:30px;
+  position:relative;
+  width:100%; height:100%;
+  font-family:'Noto Sans KR', sans-serif;
+  font-weight:500; font-size:35px; line-height:35px;
+  color:#888;
+  transition:all 300ms linear;
+}
+
+#navWrap > .global_menu > li:hover > a > h3 {
+  color:#ED1C24;
+}
+
+#navWrap > .global_menu > li > a > h3:before {
+  position:absolute; left:0; top:2px; z-index:-1;
+  content:" "; display:block;
+  width:0; height:33px;
+  background-color:#fff;
+  transition:all 300ms ease;
+}
+
+#navWrap > .global_menu > li:nth-child(1):hover h3:before {width:260px;}
+#navWrap > .global_menu > li:nth-child(2):hover h3:before {width:65px;}
+#navWrap > .global_menu > li:nth-child(3):hover h3:before {width:130px;}
+#navWrap > .global_menu > li:nth-child(4):hover h3:before {width:175px;}
+#navWrap > .global_menu > li:nth-child(5):hover h3:before {width:130px;}
+
+
+#navWrap > .global_menu > li > a > h3:after {
+  position:absolute; left:0; bottom:-5px;
+  content:" "; display:block;
+  width:0; height:2px;
+  background-color:#ED1C24;
+  transition:all 150ms ease;
+}
+
+#navWrap > .global_menu > li:nth-child(1) > a:focus > h3:after {width:260px;}
+#navWrap > .global_menu > li:nth-child(2) > a:focus > h3:after {width:65px;}
+#navWrap > .global_menu > li:nth-child(3) > a:focus > h3:after {width:130px;}
+#navWrap > .global_menu > li:nth-child(4) > a:focus > h3:after {width:175px;}
+#navWrap > .global_menu > li:nth-child(5) > a:focus > h3:after {width:130px;}
+
+#navWrap > .global_menu > li > ul {
+  margin-bottom:40px;
+  width:100%; height:auto;
+}
+
+#navWrap > .global_menu > li > ul > li {
+  margin-bottom:10px;
+  width:100%; height:20px;
+}
+
+#navWrap > .global_menu > li > ul > li > a {
+  display:block;
+  width:100%; height:100%;
+  font-family:'Noto Sans KR', sans-serif;
+  font-weight:500; font-size:18px; line-height:18px;
+  color:#888;
+  transition:all 300ms linear;
+}
+
+#navWrap > .global_menu > li > ul > li:hover > a,
+#navWrap > .global_menu > li > ul > li:focus > a {color:#ED1C24;}
+
+#navWrap > .utility_menu {
+  position:absolute; top:32px; right:90px;
+  width:auto; height:25px;
+}
+
+#navWrap > .utility_menu > li {
+  margin-right:15px;
+  float:left;
+  width:20px; height:100%;
+}
+#navWrap > .utility_menu > li:last-child {margin-right:0;}
+
+#navWrap > .utility_menu > li > a {
+  display:block; width:100%; height:100%;
+}
+
+#navWrap > .utility_menu > li > a > i {
+  width:100%; height:100%;
+  font-size:20px; text-align:center; line-height:25px;
+  transition:all 300ms ease;
+}
+
+#navWrap > .utility_menu > li:hover > a > i {color:#CA181F;}
+
+#navWrap > .utility_menu > li:after {
+  display:block;
+  margin-left:-12px;
+  width:60px; height:auto;
+  font-size:12px;
+}
+#navWrap > .utility_menu > li:nth-child(1):hover:after {content:"로그인";  margin-left:-5px;}
+#navWrap > .utility_menu > li:nth-child(2):hover:after {content:"회원가입";}
+#navWrap > .utility_menu > li:nth-child(3):hover:after {content:"고객센터";}
+
+
+#navWrap > .utility_menu > li > h3 {}
+
+#navWrap > .utility_menu > li > a {}
+
+
+
+
+
+
+
+
+/* mobile */
+@media screen and ( max-width:480px ) {}
+
+
+
+/*tablet*/
+@media screen and ( min-width:481px ) and ( max-width:768px ) {}
+
+
+
+/*laptop*/
+@media screen and ( min-width:769px ) and ( max-width:1366px ) {}
+
+
+
+/*pc-full*/
+@media screen and ( min-width:1366px ) {}
