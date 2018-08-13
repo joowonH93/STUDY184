@@ -1,0 +1,10 @@
+/*google_map_01.css*/
+
+#map1 {
+  margin:auto;
+  width:700px; height:400px; background-color:#ccc;
+  background-image:url("../../img/googlemaptest.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+

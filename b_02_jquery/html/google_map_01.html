@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- google_map_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5" />
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="../fontawesome5/css/all.css" />
+
+  <link rel="stylesheet" href="../css/base/reset.css" />
+  <link rel="stylesheet" href="../css/src/google_map_01.css" />
+
+  <!-- [if lte IE9] >
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../ie/pie/PIE_IE9.js"></script>
+  < ![endif] -->
+  
+  <link rel="apple-touch-icon" href="../favicon.gif">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.gif">
+
+  <title>google_map_01</title>
+</head>
+
+<body>
+  <!-- design -->
+  <h1>google map</h1>
+
+  <!-- 
+    * google map 사용법 *
+
+    1. google api key를 받아 등록(미도리 => AIzaSyBewhyr8ZmUxMMUGDYcyEBZrnyxQcD9lXU)
+    2. 반드시 서버가 구동된 상태여야 함
+    3. google 맵 코드를 가져와야 하며, 키를 입력
+    4. google map은 굳이 jQuery를 사용하지 않아도 됨!(순수 자바스크립트)
+    5. 디테일한 사용법은 google '개발자 모드' or 'w3school'에서 참조
+  -->
+
+  <div id="map1"></div>
+
+
+
+
+
+  <!-- javascript -->
+  <script src="../js/base/jquery-3.3.1.min.js"></script>
+  <script src="../js/base/jquery-ui.min.js"></script>
+  <!-- <script src="../js/src/google_map_01.js"></script> -->
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <!-- 실제로는 이렇게 써야 함 -->
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
+
+  <script>
+    function initMap() {
+      var myLatLng = {lat:37.266098, lng:126.999718}; // 위도, 경도
+      var select = document.getElementById('map1');
+
+      var map = new google.maps.Map(select, {
+          center: myLatLng,
+          zoom:17,
+          mapTypeId: google.maps.MapTypeId.SATELLITE
+      });
+
+      var marker = new google.maps.Marker({
+          map: map,
+          position: myLatLng,
+          title:'google map api 배우기',
+          animation:google.maps.Animation.BOUNCE
+      });
+    }
+    initMap();
+  </script>
+
+</body>
+</html>
