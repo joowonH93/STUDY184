@@ -1,0 +1,37 @@
+/* test.css */
+// test.scss
+
+$primary : #ccc;
+
+@mixin full($c){
+  width:100%; height:100%;
+  background-color:$c;
+}
+
+#wrap {@include full( $primary );}
+#headBox {@include full( darken($primary, 15%) );}
+#adBox {@include full( lighten($primary, 15%) );}
+#contentBox {@include full( rgba($primary, 0.5) );}
+#footBox {@include full( darken(rgba($primary, 0.3), 10%) );}
+
+
+
+$url : "../../b_02_jquery/img/cake/";
+$imgList : 'a', 'b', 'c', 'd', 'e';
+
+@for $i from 1 through 5 {
+  li:nth-child( #{$i} ){ background-image:url( $url + nth($imgList, $i) + '.jpg' ); }
+}
+
+
+
+$imgListvalue : 10, 30, 50, 40, 30;
+
+@for $i from 1 through length($imgList) {
+  $a:unquote(nth($imgList, $i));
+  .#{$a}_box {width:nth($imgListvalue, $i) + px;}
+}
+
+// js방식과 scss방식이 다르다 하지만 비슷~
+// $imgList[0] === js방식
+// nth($imgList, 3) === scss방식

@@ -1,0 +1,48 @@
+/*plugin_02_banner.css*/
+#wrap {
+  width:100%; height:500px;
+}
+
+h1 {
+  padding:1rem; background-color:#0af; 
+  text-align:center; color:#fff;
+}
+
+#adBanner {
+  margin:auto;
+  position:relative;
+  width:800px; height:400px;
+  border:1px solid #777;
+}
+
+.btn {
+  position:absolute; top:50%; left:0; z-index:1500;
+  width:100%; height:0;
+}
+
+.btn>button{
+  margin-top:-50px;
+  width:100px; height:100px; background-color:rgba(255,255,255,0.7);
+}
+
+.prev_btn{float:left;}
+
+.next_btn{float:right;}
+
+.banner_wrap{
+  width:100%; height:100%;
+  overflow:hidden;
+}
+
+.banner_wrap > ul{
+  margin-left:-100%;
+  width:300%; height:100%; 
+}
+
+.banner_wrap > ul > li{
+  float:left;
+  width:calc(100% / 3); height:100%;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
+}
