@@ -1,0 +1,87 @@
+/* main.scss */
+@import "./_var/var.scss";
+
+#wrap {
+  width:100%; 
+  height:100%; 
+  background-color:$gray; 
+}
+
+#headBox {
+  margin:auto; 
+  width:80%; 
+  height:100px; 
+  background-color:$main;
+}
+
+/*
+
+h1 {width:150px; height:100%; float:left;}
+h1>a {display:block; width:100%; height:100%;}
+h1>a>span {display: block; font-size:2rem; text-align:center; color:$white;}
+
+*/
+
+h1 {width:150px; height:100%; float:left;
+  >a {display:block; width:100%; height:100%; background-color:$black;
+    >span {font-size:3rem; color:$white;}
+  &:hover {background-color:rgba($point,0.7);}
+  &:focus {background-color:rgba($point,0.4);}
+  &:active {background-color:rgba($point,0.1);}
+  }// a
+}// h1
+
+
+
+ul{
+  // 첫번째 방법
+  >li{}
+  >li:nth-child(1){}
+
+  // 두번째 방법
+  >li{
+    &:nth-child(1){}
+    &:nth-child(2){}
+    &:nth-child(3){}
+    &:last-child{}
+
+    // 중첩은 4단계까지만 하는 게 좋아용
+
+  }// li
+}// ul
+
+
+
+#bannerBox {
+  margin:auto; 
+  width:70%; 
+  height:500px; 
+  background-color:lighten($point,30%); // 밝게
+  // background-color:darken($point,10%); // 어둡게
+  // background-color:rgba($point,0.5); // 투명도
+}
+
+$url : '../../../../b_01_layout/img/';
+
+@mixin Button_img($u, $r:no-repeat, $m:center){
+  display: block; width: 100%; height: 100%;
+  background-image: url($u + 'icon_check.png');
+  background-repeat:$r;
+  background-position:$m;
+  background-size:cover;
+}
+
+.btn { @include Button_img($url+'icon_check.png', $m:0 0); }
+.btn2 { @include Button_img($url+'b.jpg'); }
+
+
+/*
+
+  scss : css 편하게 쓸 수 있도록 도와준다
+  @import ""; => (하나의 파일로 병합) : @import url(""); => (링크의 개념)
+  $변수명:값; : 있긴 있음
+  @mixin 이름(임의의 변수) => (여러 기능을 묶어서 처리) : 있긴 있지만 좀 그럼
+  list, object, function, if... : 아직 없음!
+  less, scss/sass, stylus, nextCss(postCSS)=>(이건 플러그인임)... 같은 게 있다
+
+*/
